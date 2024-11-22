@@ -46,6 +46,10 @@
     <Compile Include="Services\Category\ICategoryService.cs" />
     <Compile Include="Services\Customer\CustomerService.cs" />
     <Compile Include="Services\Customer\ICustomerService.cs" />
+    <Compile Include="Services\GoodsReceiptDetails\GoodsReceiptDetailsService.cs" />
+    <Compile Include="Services\GoodsReceiptDetails\IGoodsReceiptDetailsService.cs" />
+    <Compile Include="Services\GoodsReceipt\GoodsReceiptService.cs" />
+    <Compile Include="Services\GoodsReceipt\IGoodsReceiptService.cs" />
     <Compile Include="Services\Material\MaterialService.cs" />
     <Compile Include="Services\Material\IMaterialService.cs" />
     <Compile Include="Services\OrderDetail\IOrderDetailService.cs" />
@@ -60,8 +64,14 @@
     <Compile Include="Services\Recipe\RecipeService.cs" />
     <Compile Include="Services\Recipe_material\Recipe_materialService.cs" />
     <Compile Include="Services\Recipe_material\IRecipe_materialService.cs" />
+    <Compile Include="Services\Role\IRoleService.cs" />
+    <Compile Include="Services\Role\RoleService.cs" />
     <Compile Include="Services\Size\ISizeService.cs" />
     <Compile Include="Services\Size\SizeService.cs" />
+    <Compile Include="Services\Staff\IStaffService.cs" />
+    <Compile Include="Services\Staff\StaffService.cs" />
+    <Compile Include="Services\Supplier\ISupplierService.cs" />
+    <Compile Include="Services\Supplier\SupplierService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

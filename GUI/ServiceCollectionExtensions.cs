@@ -1,15 +1,22 @@
 ﻿using BLL.Services;
 using BLL.Services.Category;
 using BLL.Services.Customer;
+using BLL.Services.GoodsReceipt;
+using BLL.Services.GoodsReceiptDetails;
 using BLL.Services.Material;
 using BLL.Services.Order;
 using BLL.Services.OrderDetail;
 using BLL.Services.ProductDetail;
 using BLL.Services.Recipe;
 using BLL.Services.Recipe_material;
+using BLL.Services.Role;
 using BLL.Services.Size;
+using BLL.Services.Staff;
+using BLL.Services.Supplier;
 using DAL.Repositories.Category;
+using DAL.Repositories.Category.GoodsReceipt;
 using DAL.Repositories.Customer;
+using DAL.Repositories.GoodsReceiptDetails;
 using DAL.Repositories.Material;
 using DAL.Repositories.Order;
 using DAL.Repositories.OrderDetail;
@@ -17,9 +24,14 @@ using DAL.Repositories.Product;
 using DAL.Repositories.ProductDetail;
 using DAL.Repositories.Recipe;
 using DAL.Repositories.Recipe_material;
+using DAL.Repositories.Role;
 using DAL.Repositories.Size;
+using DAL.Repositories.Staff;
+using DAL.Repositories.Supplier;
 using GUI.Forms;
 using GUI.Forms.Manager;
+using GUI.Forms.Manager.GoodsReceipt;
+using GUI.Forms.Manager.Staff;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -45,7 +57,13 @@ namespace GUI
             services.AddTransient<ICustomerRepository, CustomerRepository>();
             services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddTransient<IOrderDetailRepository, OrderDetailRepository>();
-
+            services.AddTransient<IRoleRepository, RoleRepository>();
+            services.AddTransient<IStaffRepository, StaffRepository>();
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
+            services.AddTransient<ISupplierRepository, SupplierRepository>();
+            services.AddTransient<IGoodsReceiptRepository, GoodsReceiptRepository>();
+            services.AddTransient<IGoodsReceiptDetailsRepository, GoodsReceiptDetailsRepository>();
+            
 
         }
         public static void AddServices(this IServiceCollection services)
@@ -60,6 +78,13 @@ namespace GUI
             services.AddTransient<ICustomerService, CustomerService>();
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<IOrderDetailService, OrderDetailService>();
+            services.AddTransient<IRoleService, RoleService>();
+            services.AddTransient<IStaffService, StaffService>();
+            services.AddTransient<ICustomerService, CustomerService>();
+            services.AddTransient<ISupplierService, SupplierService>();
+            services.AddTransient<IGoodsReceiptService, GoodsReceiptService>();
+            services.AddTransient<IGoodsReceiptDetailsService, GoodsReceiptDetailsService>();
+            
 
 
 
@@ -72,10 +97,14 @@ namespace GUI
             services.AddTransient<frmMainManagement>();
             services.AddTransient<frmProductManagement>();
             services.AddTransient<frmMaterialManagement>();
-            services.AddTransient<frmCustomerManagement>();
+           // services.AddTransient<frmCustomerManagement>();
             services.AddTransient<frmMainSale>();
             services.AddTransient<frmCreateOrderSaff>();
             services.AddTransient<frmOrderManagement>();
+            services.AddTransient<frmStaffManagement>();
+
+            services.AddTransient<frmGoodsReceiptManagement>();
+
 
         }
     }

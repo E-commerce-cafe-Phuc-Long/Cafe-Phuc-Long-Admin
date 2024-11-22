@@ -39,7 +39,7 @@ namespace GUI
                     // Đăng ký DbContext với Connection String
                     services.AddTransient(provider =>
                     {
-                        string connectionString = "Data Source=KAMLING;Initial Catalog=E-Commerce_Coffee_And_Tea;Integrated Security=True";
+                        string connectionString = "Data Source=MSI;Initial Catalog=E-Commerce_Coffee_And_Tea;Integrated Security=True;Encrypt=False";
                         return new E_Commerce_Coffee_And_TeaDataContext(connectionString);
                     });
 
