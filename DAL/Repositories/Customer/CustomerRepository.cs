@@ -20,8 +20,7 @@ namespace DAL.Repositories.Customer
             return _context.KhachHangs.ToList();
         }
 
-      
-
+     
 
         public bool InsertCustomer(KhachHang p)
         {
@@ -85,23 +84,43 @@ namespace DAL.Repositories.Customer
 
                 return false;
             }
-        }
-        public List<KhachHang> SearchCustomer(string keyword)
+        }      
+        public dynamic SearchCustomer(string keyword)
         {
             try
             {
-                var result = _context.KhachHangs
+                //Nếu từ khóa tìm kiếm rỗng, trả về danh sách nhân viên mà không cần lọc
+                if (string.IsNullOrEmpty(keyword))
+                {
+                    return GetCustomersList();
+                }
+
+                    var result = _context.KhachHangs
                     .Where(nv => nv.maKH.Contains(keyword) ||
                                  nv.tenKH.Contains(keyword))
-                    .ToList();
+                       .Select(staff => new
+                       {
+                           staff.maKH,
+                           staff.username,
+                           staff.matKhau,
+                           staff.tenKH,
+                           staff.ngaySinh,
+                           staff.soDT,
+                           staff.diaChi,
+                           staff.email,
+                          
+                       })
+                                       .ToList();
 
                 return result;
             }
+
             catch
             {
                 return new List<KhachHang>();
             }
         }
+
 
     }
 }

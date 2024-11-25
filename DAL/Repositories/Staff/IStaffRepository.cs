@@ -11,13 +11,17 @@ namespace DAL.Repositories.Staff
     {
         List<NhanVien> GetStaffList();
 
+        dynamic GetStaffWithRoleNames();
+
         bool InsertStaff(NhanVien staff);
 
         bool DeleteStaff(string maNV);
 
         bool UpdateStaff(NhanVien updated);
 
-        List<NhanVien> SearchStaff(string keyword);
+        dynamic SearchStaff(string keyword);
+
+
 
     }
 }

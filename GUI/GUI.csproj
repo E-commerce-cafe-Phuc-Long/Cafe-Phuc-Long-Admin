@@ -173,11 +173,23 @@
     <Compile Include="Forms\frmMainSale.Designer.cs">
       <DependentUpon>frmMainSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Manager\Customer\frmCustomerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\Customer\frmCustomerManagement.Designer.cs">
+      <DependentUpon>frmCustomerManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Manager\frmMainManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Manager\frmMainManagement.Designer.cs">
       <DependentUpon>frmMainManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\GoodsReceiptDetails\frmGoodsReceiptDetailsManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\GoodsReceiptDetails\frmGoodsReceiptDetailsManagement.Designer.cs">
+      <DependentUpon>frmGoodsReceiptDetailsManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Manager\GoodsReceipt\frmGoodsReceiptManagement.cs">
       <SubType>Form</SubType>
@@ -202,6 +214,12 @@
     </Compile>
     <Compile Include="Forms\Manager\Staff\frmStaffManagement.Designer.cs">
       <DependentUpon>frmStaffManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\Supplier\frmSupplierManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\Supplier\frmSupplierManagement.Designer.cs">
+      <DependentUpon>frmSupplierManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Staff\Order\frmCreateOrderSaff.cs">
       <SubType>Form</SubType>
@@ -233,8 +251,14 @@
     <EmbeddedResource Include="Forms\frmMainSale.resx">
       <DependentUpon>frmMainSale.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\Customer\frmCustomerManagement.resx">
+      <DependentUpon>frmCustomerManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manager\frmMainManagement.resx">
       <DependentUpon>frmMainManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\GoodsReceiptDetails\frmGoodsReceiptDetailsManagement.resx">
+      <DependentUpon>frmGoodsReceiptDetailsManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manager\GoodsReceipt\frmGoodsReceiptManagement.resx">
       <DependentUpon>frmGoodsReceiptManagement.cs</DependentUpon>
@@ -247,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manager\Staff\frmStaffManagement.resx">
       <DependentUpon>frmStaffManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\Supplier\frmSupplierManagement.resx">
+      <DependentUpon>frmSupplierManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Staff\Order\frmCreateOrderSaff.resx">
       <DependentUpon>frmCreateOrderSaff.cs</DependentUpon>

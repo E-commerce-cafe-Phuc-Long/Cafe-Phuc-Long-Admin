@@ -11,11 +11,13 @@ namespace BLL.Services.Staff
     {
      
         List<NhanVien> GetStaffList();
+
+         dynamic GetStaffWithRoleNames();
         bool InsertStaff(NhanVien newStaff);
 
         bool DeleteStaff(string maNV);
         bool UpdateStaff(NhanVien nv);
 
-        List<NhanVien> SearchStaff(string keyword);
+        dynamic SearchStaff(string keyword);
     }
 }

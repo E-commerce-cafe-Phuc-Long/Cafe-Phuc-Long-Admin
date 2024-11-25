@@ -10,5 +10,9 @@ namespace DAL.Repositories.GoodsReceiptDetails
     public interface IGoodsReceiptDetailsRepository
     {
         List<ChiTietPhieuNhap> GetGoodsReceiptDetailsList();
+
+        dynamic GetDetailsByGoodsReceiptId(string maPhieuNhap);
+
+
     }
 }

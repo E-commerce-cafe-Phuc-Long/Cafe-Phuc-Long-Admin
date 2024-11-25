@@ -49,24 +49,8 @@ namespace GUI.Forms.Manager.Staff
 
         private void LoadStaffToDataGridView()
         {
-            var staffList = _staffService.GetStaffList();
-            var roles = _roleService.GetRoleList();
 
-            var staffWithRoleNames = staffList.Select(staff => new
-            {
-                staff.maNV,
-                staff.username,
-                staff.matKhau,
-                staff.tenNV,
-                ngaySinh = staff.ngaySinh?.ToString("dd/MM/yyyy"),
-                staff.soDT,
-                staff.diaChi,
-                staff.email,
-               // staff.maVaiTro,
-                tenVaiTro = roles.FirstOrDefault(role => role.maVaiTro == staff.maVaiTro)?.tenVaiTro
-            }).ToList();
-
-            dgvNhanVien.DataSource = staffWithRoleNames;
+            dgvNhanVien.DataSource = _staffService.GetStaffWithRoleNames();
             dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dgvNhanVien.Columns["maNV"].HeaderText = "Mã Nhân Viên";
@@ -77,8 +61,10 @@ namespace GUI.Forms.Manager.Staff
             dgvNhanVien.Columns["soDT"].HeaderText = "Số Điện Thoại";
             dgvNhanVien.Columns["diaChi"].HeaderText = "Địa Chỉ";
             dgvNhanVien.Columns["email"].HeaderText = "Email";
+            dgvNhanVien.Columns["maVaiTro"].Visible = false;
             dgvNhanVien.Columns["tenVaiTro"].HeaderText = "Vai Trò";
 
+           
         }
 
         private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -232,42 +218,8 @@ namespace GUI.Forms.Manager.Staff
             try
             {
                 string keyword = txt_Search.Text.Trim();
-
-                if (string.IsNullOrEmpty(keyword))
-                {
-                    // Nếu không nhập gì thì tải toàn bộ danh sách nhân viên
-                    LoadStaffToDataGridView();
-                    return;
-                }
-
-                // Gọi phương thức tìm kiếm trong Service
                 var searchResult = _staffService.SearchStaff(keyword);
-
-                if (searchResult != null && searchResult.Any())
-                {
-                    var roles = _roleService.GetRoleList();
-
-                    var staffWithRoleNames = searchResult.Select(staff => new
-                    {
-                        staff.maNV,
-                        staff.username,
-                        staff.matKhau,
-                        staff.tenNV,
-                        ngaySinh = staff.ngaySinh?.ToString("dd/MM/yyyy"),
-                        staff.soDT,
-                        staff.diaChi,
-                        staff.email,
-                        staff.maVaiTro,
-                        tenVaiTro = roles.FirstOrDefault(role => role.maVaiTro == staff.maVaiTro)?.tenVaiTro
-                    }).ToList();
-
-                    dgvNhanVien.DataSource = staffWithRoleNames;
-                }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy nhân viên nào khớp với từ khóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgvNhanVien.DataSource = null;
-                }
+                dgvNhanVien.DataSource = searchResult;
             }
             catch (Exception ex)
             {
@@ -275,6 +227,30 @@ namespace GUI.Forms.Manager.Staff
             }
         }
 
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmStaffManagement_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

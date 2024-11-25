@@ -1,6 +1,8 @@
 ﻿using BLL.Services;
 using GUI.Forms.Manager.GoodsReceipt;
+using GUI.Forms.Manager.Supplier;
 using GUI.Forms.Manager.Staff;
+using GUI.Forms.Manager.Customer;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -77,7 +79,18 @@ namespace GUI.Forms.Manager
 
         private void viewCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            FrmCustomerManagement FrmCustomerManagement = _serviceProvider.GetRequiredService<FrmCustomerManagement>();
+            FrmCustomerManagement.ShowDialog();
+            this.Show();
+        }
 
+        private void viewSupplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmSupplierManagement frmSupplierManagement= _serviceProvider.GetRequiredService<frmSupplierManagement>();
+            frmSupplierManagement.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\GUI",
+    "\\GUI\\Forms",
+    "\\GUI\\Forms\\Manager",
+    "\\GUI\\Forms\\Manager\\GoodsReceiptDetails"
+  ],
+  "SelectedNode": "\\GUI\\Forms\\Manager\\GoodsReceiptDetails\\frmGoodsReceiptDetailsManagement.cs",
+  "PreviewInSolutionExplorer": false
+}

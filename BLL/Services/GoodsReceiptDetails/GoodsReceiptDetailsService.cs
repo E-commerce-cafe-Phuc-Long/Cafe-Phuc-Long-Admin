@@ -11,7 +11,7 @@ using static BLL.Services.GoodsReceiptDetails.GoodsReceiptDetailsService;
 
 namespace BLL.Services.GoodsReceiptDetails
 {
-    public class GoodsReceiptDetailsService:IGoodsReceiptDetailsService
+    public class GoodsReceiptDetailsService : IGoodsReceiptDetailsService
     {
             public readonly IGoodsReceiptDetailsRepository _repository;
             public GoodsReceiptDetailsService(IGoodsReceiptDetailsRepository repository)
@@ -22,7 +22,11 @@ namespace BLL.Services.GoodsReceiptDetails
             {
                 return _repository.GetGoodsReceiptDetailsList();
             }
+        public dynamic GetDetailsByGoodsReceiptId(string maPhieuNhap)
+        { return _repository.GetDetailsByGoodsReceiptId(maPhieuNhap); }    
 
-        
+
+
+
     }
 }

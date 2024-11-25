@@ -239,6 +239,7 @@
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.Size = new System.Drawing.Size(380, 22);
             this.txt_Search.TabIndex = 24;
+            this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
             // 
             // btn_search
             // 
@@ -276,6 +277,7 @@
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Điền các thông tin";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
             // 
@@ -286,6 +288,7 @@
             this.label1.Size = new System.Drawing.Size(268, 34);
             this.label1.TabIndex = 28;
             this.label1.Text = "Quản lý nhân viên";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox2
             // 
@@ -298,6 +301,7 @@
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // btn_Delete
             // 
@@ -343,6 +347,7 @@
             this.Controls.Add(this.dgvNhanVien);
             this.Name = "frmStaffManagement";
             this.Text = "frmStaffManagement";
+            this.Load += new System.EventHandler(this.frmStaffManagement_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

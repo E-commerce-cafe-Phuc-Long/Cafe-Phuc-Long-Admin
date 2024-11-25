@@ -10,6 +10,12 @@ namespace BLL.Services.GoodsReceipt
     public interface IGoodsReceiptService
     {
         List<PhieuNhap> GetGoodsReceiptList();
-        bool InsertGoodsReceipt(PhieuNhap p, List<ChiTietPhieuNhap> chiTietPhieuNhaps);
+        dynamic GetData();
+
+        bool Insert(PhieuNhap p);
+        bool Delete(string maPhieuNhap);
+        bool Update(PhieuNhap updated);
+
+
     }
 }

@@ -16,14 +16,22 @@ namespace BLL.Services.GoodsReceipt
         {
             this._repository = repository;
         }
+
         public List<PhieuNhap> GetGoodsReceiptList()
         {
             return _repository.GetGoodsReceiptList();
         }
+        public dynamic GetData() { return _repository.GetData(); }
 
-        public bool InsertGoodsReceipt(PhieuNhap p, List<ChiTietPhieuNhap> chiTietPhieuNhaps)
+        public bool Insert(PhieuNhap p)
         {
-            return _repository.InsertGoodsReceipt(p, chiTietPhieuNhaps);
+            return _repository.Insert(p);
         }
+        public bool Delete(string maPhieuNhap)
+        { return _repository.Delete(maPhieuNhap); }
+        public bool Update(PhieuNhap updated)
+        {  return _repository.Update(updated); }
+
+
     }
 }

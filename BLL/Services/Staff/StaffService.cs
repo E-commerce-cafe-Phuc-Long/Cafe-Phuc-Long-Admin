@@ -21,6 +21,11 @@ namespace BLL.Services.Staff
             return _repository.GetStaffList();
         }
 
+        public dynamic GetStaffWithRoleNames()
+        {
+            return _repository.GetStaffWithRoleNames();
+        }
+
         public bool InsertStaff(NhanVien staff)
         {
             return _repository.InsertStaff(staff);
@@ -36,10 +41,11 @@ namespace BLL.Services.Staff
             return _repository.UpdateStaff(staff);
         }
 
-        public List<NhanVien> SearchStaff(string keyword)
+        public dynamic SearchStaff(string keyword)
         {
             return _repository.SearchStaff(keyword);
         }
+
 
     }
 }

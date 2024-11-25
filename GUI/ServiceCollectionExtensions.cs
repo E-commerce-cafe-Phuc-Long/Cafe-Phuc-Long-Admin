@@ -23,15 +23,16 @@ using DAL.Repositories.OrderDetail;
 using DAL.Repositories.Product;
 using DAL.Repositories.ProductDetail;
 using DAL.Repositories.Recipe;
+using DAL.Repositories.Size;
 using DAL.Repositories.Recipe_material;
 using DAL.Repositories.Role;
-using DAL.Repositories.Size;
 using DAL.Repositories.Staff;
 using DAL.Repositories.Supplier;
 using GUI.Forms;
 using GUI.Forms.Manager;
 using GUI.Forms.Manager.GoodsReceipt;
 using GUI.Forms.Manager.Staff;
+using GUI.Forms.Manager.Customer;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -40,6 +41,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms.Design;
+using GUI.Forms.Manager.Supplier;
 
 namespace GUI
 {
@@ -97,12 +99,12 @@ namespace GUI
             services.AddTransient<frmMainManagement>();
             services.AddTransient<frmProductManagement>();
             services.AddTransient<frmMaterialManagement>();
-           // services.AddTransient<frmCustomerManagement>();
+            services.AddTransient<FrmCustomerManagement>();
             services.AddTransient<frmMainSale>();
             services.AddTransient<frmCreateOrderSaff>();
             services.AddTransient<frmOrderManagement>();
             services.AddTransient<frmStaffManagement>();
-
+            services.AddTransient<frmSupplierManagement>();
             services.AddTransient<frmGoodsReceiptManagement>();
 
 

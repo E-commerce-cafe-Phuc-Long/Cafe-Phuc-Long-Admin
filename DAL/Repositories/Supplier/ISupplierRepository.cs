@@ -11,5 +11,10 @@ namespace DAL.Repositories.Supplier
     public interface ISupplierRepository
     {
         List<NhaCungCap> GetSupplierList();
+        bool Insert(NhaCungCap p);
+        bool Update(NhaCungCap updated);
+        bool Delete(string maNCC);
+        dynamic Search(string keyword);
+
     }
 }

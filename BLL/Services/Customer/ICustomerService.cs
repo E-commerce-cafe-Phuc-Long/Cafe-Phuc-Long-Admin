@@ -14,7 +14,7 @@ namespace BLL.Services.Customer
         bool InsertCustomer(KhachHang nv);
         bool DeleteCustomer(string maKH);
         bool UpdateCustomer(KhachHang update);
-        List<KhachHang> SearchCustomer(string keyword);
+        dynamic SearchCustomer(string keyword);
 
     }
 }

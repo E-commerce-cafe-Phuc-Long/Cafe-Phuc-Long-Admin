@@ -16,7 +16,7 @@ namespace BLL.Services.Customer
         {
             this._repository = repository;
         }
-        public List<KhachHang> GetCustomerList()
+        public List<KhachHang> GetCustomersList()
         {
             return _repository.GetCustomersList();
         }
@@ -36,12 +36,9 @@ namespace BLL.Services.Customer
             return _repository.UpdateCustomer(update);
         }
 
-        public List<KhachHang> SearchCustomer(string keyword)
+        public dynamic SearchCustomer(string keyword)
         { return _repository.SearchCustomer(keyword);}
 
-        public List<KhachHang> GetCustomersList()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

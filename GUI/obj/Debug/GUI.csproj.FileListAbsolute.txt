@@ -203,7 +203,6 @@ D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.Manager.frmMainManagement
 D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.Manager.GoodsReceipt.frmGoodsReceiptManagement.resources
 D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.Manager.frmMaterialManagement.resources
 D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.Manager.frmProductManagement.resources
-D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.Manager.Staff.frmStaffManagement.resources
 D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.frmCreateOrderSaff.resources
 D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.frmOrderManagement.resources
 D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.Staff.UC_Product.resources
@@ -300,3 +299,7 @@ D:\GitHub\Cafe-Phuc-Long-Admin\GUI\bin\Debug\System.Text.Json.xml
 D:\GitHub\Cafe-Phuc-Long-Admin\GUI\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\GitHub\Cafe-Phuc-Long-Admin\GUI\bin\Debug\System.ValueTuple.xml
 D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.csproj.Up2Date
+D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.Manager.Customer.FrmCustomerManagement.resources
+D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.Manager.Staff.frmStaffManagement.resources
+D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.Manager.GoodsReceiptDetails.frmGoodsReceiptDetailsManagement.resources
+D:\GitHub\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.Manager.Supplier.frmSupplierManagement.resources
