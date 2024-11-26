@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|solutionrelative:gui\\forms\\staff\\checkout\\frmcheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\gui\\forms\\staff\\checkout\\frmcheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\gui\\forms\\staff\\checkout\\frmcheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|solutionrelative:gui\\forms\\staff\\checkout\\frmcheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,11 +15,11 @@
       "RelativeMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|solutionrelative:gui\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\gui\\forms\\frmmainsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\gui\\forms\\frmmainsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|solutionrelative:gui\\forms\\frmmainsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\gui\\forms\\staff\\order\\frmcreateordersaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\gui\\forms\\staff\\order\\frmcreateordersaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|solutionrelative:gui\\forms\\staff\\order\\frmcreateordersaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -31,27 +31,27 @@
       "RelativeMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|solutionrelative:gui\\forms\\staff\\order\\frmselectdrink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\gui\\forms\\frmmainsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\gui\\forms\\frmmainsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|solutionrelative:gui\\forms\\frmmainsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8521529-32B5-4E95-869E-8452B567BE91}|BLL\\BLL.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\bll\\services\\method\\imethodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F8521529-32B5-4E95-869E-8452B567BE91}|BLL\\BLL.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\bll\\services\\method\\imethodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F8521529-32B5-4E95-869E-8452B567BE91}|BLL\\BLL.csproj|solutionrelative:bll\\services\\method\\imethodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8521529-32B5-4E95-869E-8452B567BE91}|BLL\\BLL.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\bll\\services\\method\\methodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F8521529-32B5-4E95-869E-8452B567BE91}|BLL\\BLL.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\bll\\services\\method\\methodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F8521529-32B5-4E95-869E-8452B567BE91}|BLL\\BLL.csproj|solutionrelative:bll\\services\\method\\methodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\dal\\repositories\\method\\imethodrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\dal\\repositories\\method\\imethodrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\method\\imethodrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\dal\\repositories\\method\\methodrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\dal\\repositories\\method\\methodrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\method\\methodrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\dal\\repositories\\material\\materialrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\dal\\repositories\\material\\materialrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\material\\materialrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -59,7 +59,7 @@
       "RelativeMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|solutionrelative:gui\\forms\\staff\\order\\uc_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\dal\\repositories\\product\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\dal\\repositories\\product\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\product\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -67,15 +67,15 @@
       "RelativeMoniker": "D:0:0:{F8521529-32B5-4E95-869E-8452B567BE91}|BLL\\BLL.csproj|solutionrelative:bll\\services\\product\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8521529-32B5-4E95-869E-8452B567BE91}|BLL\\BLL.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\bll\\services\\product\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F8521529-32B5-4E95-869E-8452B567BE91}|BLL\\BLL.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\bll\\services\\product\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F8521529-32B5-4E95-869E-8452B567BE91}|BLL\\BLL.csproj|solutionrelative:bll\\services\\product\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\dal\\repositories\\product\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\dal\\repositories\\product\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEA3060F-1D88-4D43-8102-A4BCE41FD88A}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\product\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|e:\\t\u00F4i\\learn\\huit\\n\u0103m 4\\thongminh\\cafe-phuc-long-admin\\gui\\forms\\manager\\frmmainmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\gui\\forms\\manager\\frmmainmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{771CC618-FD6D-44FC-A733-8094F67B94D8}|GUI\\GUI.csproj|solutionrelative:gui\\forms\\manager\\frmmainmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -211,8 +211,7 @@
               "ViewState": "AgIAABMAAAAAAAAAAAAQwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T11:50:30.534Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -224,8 +223,7 @@
               "RelativeToolTip": "GUI\\Forms\\Staff\\Order\\UC_Product.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T11:50:28.714Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -249,8 +247,7 @@
               "RelativeToolTip": "GUI\\Forms\\frmMainSale.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwB8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T16:27:57.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T16:27:57.441Z"
             },
             {
               "$type": "Document",
@@ -261,8 +258,7 @@
               "ToolTip": "E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\GUI\\Forms\\frmMainSale.cs [Design]",
               "RelativeToolTip": "GUI\\Forms\\frmMainSale.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T16:27:56.395Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-26T16:27:56.395Z"
             },
             {
               "$type": "Document",
@@ -274,8 +270,7 @@
               "RelativeToolTip": "DAL\\Repositories\\Material\\MaterialRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T16:25:24.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T16:25:24.963Z"
             },
             {
               "$type": "Document",
@@ -287,8 +282,7 @@
               "RelativeToolTip": "BLL\\Services\\Method\\IMethodService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T16:19:17.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T16:19:17.081Z"
             },
             {
               "$type": "Document",
@@ -300,8 +294,7 @@
               "RelativeToolTip": "BLL\\Services\\Method\\MethodService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T16:18:56.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T16:18:56.354Z"
             },
             {
               "$type": "Document",
@@ -313,8 +306,7 @@
               "RelativeToolTip": "DAL\\Repositories\\Method\\IMethodRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T16:17:25.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T16:17:25.875Z"
             },
             {
               "$type": "Document",
@@ -326,8 +318,7 @@
               "RelativeToolTip": "DAL\\Repositories\\Method\\MethodRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T16:16:41.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T16:16:41.81Z"
             },
             {
               "$type": "Document",
@@ -338,8 +329,7 @@
               "ToolTip": "E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\GUI\\Forms\\Manager\\frmMainManagement.cs [Design]",
               "RelativeToolTip": "GUI\\Forms\\Manager\\frmMainManagement.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T15:40:48.075Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-26T15:40:48.075Z"
             },
             {
               "$type": "Document",
@@ -349,7 +339,7 @@
               "RelativeDocumentMoniker": "GUI\\Forms\\Staff\\Checkout\\frmCheckout.cs",
               "ToolTip": "E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\GUI\\Forms\\Staff\\Checkout\\frmCheckout.cs",
               "RelativeToolTip": "GUI\\Forms\\Staff\\Checkout\\frmCheckout.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T15:16:56.585Z",
               "EditorCaption": ""
@@ -363,8 +353,7 @@
               "ToolTip": "E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\GUI\\Forms\\Staff\\Checkout\\frmCheckout.cs [Design]",
               "RelativeToolTip": "GUI\\Forms\\Staff\\Checkout\\frmCheckout.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T15:16:53.779Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-26T15:16:53.779Z"
             },
             {
               "$type": "Document",
@@ -376,8 +365,7 @@
               "RelativeToolTip": "BLL\\Services\\Product\\IProductService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:29:37.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T14:29:37.374Z"
             },
             {
               "$type": "Document",
@@ -389,8 +377,7 @@
               "RelativeToolTip": "DAL\\Repositories\\Product\\IProductRepository.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAwAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:29:09.488Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T14:29:09.488Z"
             },
             {
               "$type": "Document",
@@ -402,8 +389,7 @@
               "RelativeToolTip": "DAL\\Repositories\\Product\\ProductRepository.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAAACEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:27:21.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T14:27:21.818Z"
             },
             {
               "$type": "Document",
@@ -499,8 +485,7 @@
               "RelativeToolTip": "BLL\\Services\\Product\\ProductService.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAkwCEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:56:02.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T13:56:02.718Z"
             },
             {
               "$type": "Document",
@@ -584,8 +569,7 @@
               "RelativeToolTip": "GUI\\Forms\\Staff\\Order\\frmCreateOrderSaff.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T12:52:35.426Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T12:52:35.426Z"
             },
             {
               "$type": "Document",
@@ -657,8 +641,7 @@
               "RelativeToolTip": "GUI\\ServiceCollectionExtensions.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAAwDgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T12:40:56.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T12:40:56.232Z"
             },
             {
               "$type": "Document",
@@ -681,8 +664,7 @@
               "RelativeToolTip": "GUI\\Forms\\Staff\\Order\\frmSelectDrink.cs",
               "ViewState": "AgIAAGAAAAAAAAAAAAAAwHYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T12:34:21.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T12:34:21.372Z"
             },
             {
               "$type": "Document",
@@ -741,8 +723,7 @@
               "ToolTip": "E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\GUI\\Forms\\Staff\\Order\\frmSelectDrink.cs [Design]",
               "RelativeToolTip": "GUI\\Forms\\Staff\\Order\\frmSelectDrink.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T12:27:22Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-26T12:27:22Z"
             },
             {
               "$type": "Document",
@@ -777,8 +758,7 @@
               "RelativeToolTip": "GUI\\Forms\\Staff\\Order\\frmCreateOrderSaff.cs",
               "ViewState": "AgIAACgBAAAAAAAAAAAAAC0BAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T11:20:39.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T11:20:39.728Z"
             },
             {
               "$type": "Document",
@@ -789,8 +769,7 @@
               "ToolTip": "E:\\T\u00F4i\\Learn\\HUIT\\N\u0103m 4\\ThongMinh\\Cafe-Phuc-Long-Admin\\GUI\\Forms\\Staff\\Order\\frmCreateOrderSaff.cs [Design]",
               "RelativeToolTip": "GUI\\Forms\\Staff\\Order\\frmCreateOrderSaff.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T11:20:34.171Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-26T11:20:34.171Z"
             }
           ]
         },
