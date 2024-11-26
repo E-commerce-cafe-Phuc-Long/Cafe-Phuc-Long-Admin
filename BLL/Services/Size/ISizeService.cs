@@ -10,5 +10,6 @@ namespace BLL.Services.Size
     public interface ISizeService
     {
         List<DTO.Size> GetSizeList();
+        List<DTO.Size> GetSizesByProductId(string productId);
     }
 }

@@ -197,3 +197,4 @@ E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms
 E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.Staff.UC_Product.resources
 E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.frmCreateOrderSaff.resources
 E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.frmOrderManagement.resources
+E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\GUI\obj\Debug\GUI.Forms.frmSelectDrink.resources

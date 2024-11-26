@@ -11,6 +11,7 @@ namespace DAL.Repositories.ProductDetail
     {
         List<ChiTietSanPham> GetProductDetailList();
         List<ChiTietSanPham> GetProductDetailsByProductId(string productId);
+        ChiTietSanPham GetProductDetailByIdAndSizeId(string productId, string sizeId);
 
     }
 }

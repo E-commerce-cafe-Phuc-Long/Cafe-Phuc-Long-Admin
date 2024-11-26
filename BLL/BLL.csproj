@@ -46,6 +46,8 @@
     <Compile Include="Services\Category\ICategoryService.cs" />
     <Compile Include="Services\Customer\CustomerService.cs" />
     <Compile Include="Services\Customer\ICustomerService.cs" />
+    <Compile Include="Services\Dosage\DosageService.cs" />
+    <Compile Include="Services\Dosage\IDosageService.cs" />
     <Compile Include="Services\Material\MaterialService.cs" />
     <Compile Include="Services\Material\IMaterialService.cs" />
     <Compile Include="Services\OrderDetail\IOrderDetailService.cs" />
