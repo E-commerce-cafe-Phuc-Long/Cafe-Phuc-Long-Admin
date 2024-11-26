@@ -23,5 +23,9 @@ namespace BLL.Services.ProductDetail
         {
             return _repository.GetProductDetailsByProductId(productId);
         }
+        public ChiTietSanPham GetProductDetailByIdAndSizeId(string productId, string sizeId)
+        {
+            return _repository.GetProductDetailByIdAndSizeId(productId, sizeId);
+        }
     }
 }

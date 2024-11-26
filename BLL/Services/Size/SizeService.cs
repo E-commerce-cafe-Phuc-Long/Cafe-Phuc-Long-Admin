@@ -19,5 +19,9 @@ namespace BLL.Services.Size
         {
             return _repository.GetSizeList();
         }
+        public List<DTO.Size> GetSizesByProductId(string productId)
+        {
+            return _repository.GetSizesByProductId(productId);
+        }
     }
 }

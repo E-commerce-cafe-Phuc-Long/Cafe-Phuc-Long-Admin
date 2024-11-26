@@ -18,5 +18,10 @@ namespace DAL.Repositories.OrderDetail
         {
             return _context.ChiTietDonHangs.ToList();
         }
+        public ChiTietSanPham GetProductDetailByIdAndSizeId(string productId, string sizeId)
+        {
+            return _context.ChiTietSanPhams
+                .FirstOrDefault(prod => prod.maSP == productId && prod.Size.maSize == sizeId);
+        }
     }
 }

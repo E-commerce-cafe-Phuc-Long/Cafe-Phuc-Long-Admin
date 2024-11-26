@@ -280,6 +280,12 @@
     <Compile Include="Forms\Staff\Order\frmOrderManagement.Designer.cs">
       <DependentUpon>frmOrderManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Staff\Order\frmSelectDrink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Staff\Order\frmSelectDrink.Designer.cs">
+      <DependentUpon>frmSelectDrink.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Staff\Order\UC_Product.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -327,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Staff\Order\frmOrderManagement.resx">
       <DependentUpon>frmOrderManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Staff\Order\frmSelectDrink.resx">
+      <DependentUpon>frmSelectDrink.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Staff\Order\UC_Product.resx">
       <DependentUpon>UC_Product.cs</DependentUpon>
