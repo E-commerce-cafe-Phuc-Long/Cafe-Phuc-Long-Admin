@@ -99,7 +99,6 @@
             this.btn_checkout.TabIndex = 6;
             this.btn_checkout.Text = "Trang thanh toán";
             this.btn_checkout.UseVisualStyleBackColor = false;
-            this.btn_checkout.Click += new System.EventHandler(this.Btn_checkout_Click);
             // 
             // label2
             // 
