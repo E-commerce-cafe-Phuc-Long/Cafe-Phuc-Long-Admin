@@ -66,6 +66,13 @@ namespace BLL.Services
             {
                 return "Đã xảy ra lỗi khi upload ảnh";
             }
+        public SanPham GetProductByName(string productName)
+        {
+            return _repository.GetProductByName(productName);
+        }
+        public List<SanPham> GetProductListByName(string productName)
+        {
+            return _repository.GetProductListByName(productName);
         }
     }
 }

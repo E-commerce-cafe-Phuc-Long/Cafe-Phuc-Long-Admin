@@ -25,5 +25,18 @@ namespace DAL.Repositories.Product
                 .Where(prod => prod.maDM == categoryId)
                 .ToList();
         }
+        public SanPham GetProductByName(string productName)
+        {
+            return _context.SanPhams
+                .FirstOrDefault(prod => prod.tenSP.ToLower().Contains(productName.ToLower()));
+
+        }
+        public List<SanPham> GetProductListByName(string productName)
+        {
+            return _context.SanPhams
+                .Where(prod => prod.tenSP.ToLower().Contains(productName.ToLower()))
+                .ToList();
+
+        }
     }
 }

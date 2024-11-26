@@ -1,10 +1,12 @@
 ﻿using BLL.Services;
 using BLL.Services.Category;
 using BLL.Services.Dosage;
+using BLL.Services.Method;
 using BLL.Services.ProductDetail;
 using BLL.Services.Size;
 using DTO;
 using GUI.Forms.Staff;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,21 +30,27 @@ namespace GUI.Forms
 
         public string size { get; set; }
 
-
         private readonly ICategoryService _categoryService;
         private readonly IProductService _productService;
         private readonly IProductDetailService _productDetailService;
 
         private readonly IDosageService _dosageService;
         private readonly ISizeService _sizeService;
-
-        public frmCreateOrderSaff(ICategoryService categoryService, IProductService productService, IDosageService dosageService, ISizeService sizeService, IProductDetailService productDetailService)
+        private readonly IServiceProvider _serviceProvider;
+        private readonly IMethodService _methodService;
+        public frmCreateOrderSaff(ICategoryService categoryService, IProductService productService,
+            IDosageService dosageService, ISizeService sizeService, 
+            IProductDetailService productDetailService, IServiceProvider serviceProvider,
+            IMethodService methodService
+            )
         {
             this._categoryService = categoryService;
             this._productService = productService;
             this._dosageService = dosageService;
             this._sizeService = sizeService;
             this._productDetailService = productDetailService;
+            this._serviceProvider = serviceProvider;
+            this._methodService = methodService;
             InitializeComponent();
             this.Load += FrmOrderSaff_Load;
             _sizeService = sizeService;
@@ -52,9 +60,13 @@ namespace GUI.Forms
         {
             loadButtonCategoriesList();
             listView_ProductList_Config();
-
+            btn_checkout.Click += Btn_checkout_Click;
+            List<SanPham> products = _productService.GetProductList();
+            loadProductList(products);
         }
-       
+
+        
+
         private void loadButtonCategoriesList()
         {
             // Lấy danh sách các loại sản phẩm
@@ -192,6 +204,7 @@ namespace GUI.Forms
                 selectDrinkForm.Owner = this;
                 selectDrinkForm.StartPosition = FormStartPosition.CenterParent;
                 selectDrinkForm.ShowDialog();
+                
             }
             else
             {
@@ -200,39 +213,108 @@ namespace GUI.Forms
             }
             if(confirm == true)
             {
-                
-                    // Kiểm tra nếu sản phẩm đã có trong danh sách
-                    bool isProductExist = false;
-                    foreach (ListViewItem item in listView_cart.Items)
+                  
+                bool isProductExist = false;
+                ChiTietSanPham product_detail = _productDetailService.GetProductDetailByIdAndSizeId(product.maSP, size);
+                decimal gia = product_detail.donGia ?? 0;
+                foreach (ListViewItem item in listView_cart.Items)
+                {
+                    if (item.Text == product.tenSP && item.SubItems[2].Text == size && item.SubItems[3].Text == da && item.SubItems[4].Text == duong && item.SubItems[5].Text == tra)
                     {
-                        if (item.Text == product.tenSP && item.SubItems[2].Text == size && item.SubItems[3].Text == da && item.SubItems[4].Text == duong && item.SubItems[5].Text == tra)
-                        {
-                            // Tăng số lượng sản phẩm thêm 1
-                            int quantity = int.Parse(item.SubItems[1].Text);
-                            item.SubItems[1].Text = (quantity + int.Parse(sl)).ToString();
-                            isProductExist = true;
-                            break;
-                        }
+                        // Tăng số lượng sản phẩm thêm 1
+                        int quantity = int.Parse(item.SubItems[1].Text);
+                        item.SubItems[1].Text = (quantity + int.Parse(sl)).ToString();
+                        gia = gia * (quantity + int.Parse(sl));
+                        item.SubItems[6].Text = gia.ToString();
+                        isProductExist = true;
+                        break;
                     }
+                }
 
-                    if (!isProductExist)
-                    {
-                        ListViewItem item = new ListViewItem(product.tenSP);
-                        item.SubItems.Add(sl);
-                        item.SubItems.Add(size);
-                        item.SubItems.Add(da);
-                        item.SubItems.Add(duong);
-                        item.SubItems.Add(tra);
-                        string gia = _productDetailService.GetProductDetailByIdAndSizeId(product.maSP, size).ToString();
-                        item.SubItems.Add(gia);
-                        item.SubItems.Add(tra);
 
-                        listView_cart.Items.Add(item);
-                    }
+                if (!isProductExist)
+                {
+                    ListViewItem item = new ListViewItem(product.tenSP);
+                    item.SubItems.Add(sl);
+                    item.SubItems.Add(size);
+                    item.SubItems.Add(da);
+                    item.SubItems.Add(duong);
+                    item.SubItems.Add(tra);
+                    item.SubItems.Add(gia.ToString());
+                    listView_cart.Items.Add(item);
+                }
+                updateTongTien();
             }
             
         }
 
+        private void listView_cart_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView_cart.SelectedItems.Count > 0)
+            {
+                ListViewItem item = listView_cart.SelectedItems[0];
+                string productName = item.Text;
+                string quantity = item.SubItems[1].Text;
+                string size = item.SubItems[2].Text;
+                string da = item.SubItems[3].Text;
+                string duong = item.SubItems[4].Text;
+                string tra = item.SubItems[5].Text;
+                SanPham product = _productService.GetProductByName(productName);
+                string maSP = product.maSP;
+                frmSelectDrink selectDrinkForm = new frmSelectDrink(_dosageService, _sizeService, maSP, size, da, duong, tra);
+                selectDrinkForm.Owner = this;
+                selectDrinkForm.StartPosition = FormStartPosition.CenterParent;
+                selectDrinkForm.ShowDialog();
+                if (confirm == true)
+                {
+                    ChiTietSanPham product_detail = _productDetailService.GetProductDetailByIdAndSizeId(product.maSP, size);
+                    decimal gia = product_detail.donGia ?? 0;
+                    item.SubItems[1].Text = sl.ToString() ;
+                    item.SubItems[2].Text = size.ToString();
+                    item.SubItems[3].Text = da.ToString();
+                    item.SubItems[4].Text = duong.ToString();
+                    item.SubItems[5].Text = tra.ToString();
+                    item.SubItems[6].Text= gia.ToString();
+                    
+                }
+                updateTongTien();
+            }
+            
+        }
+        private void updateTongTien()
+        {
+            decimal tongTien = 0;
+            foreach (ListViewItem item in listView_cart.Items)
+            {
+                tongTien += decimal.Parse(item.SubItems[6].Text);
+            }
+            label_tongTien.Text = tongTien.ToString("#,###"); 
+        }
+
+        
+        private void Btn_checkout_Click(object sender, EventArgs e)
+        {
+            if(listView_cart.Items.Count == 0)
+            {
+                MessageBox.Show("Vui lòng thêm ít nhất một sản phẩm để thanh toán");
+                return;
+            }
+            frmCheckout checkoutForm = new frmCheckout(_methodService);
+            checkoutForm.SetListViewData(listView_cart.Items);
+            checkoutForm.ShowDialog();
+        }
+
+        private void btn_deleteCart_Click(object sender, EventArgs e)
+        {
+            listView_cart.Items.Clear();
+            updateTongTien();
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            List<SanPham> products = _productService.GetProductListByName(txt_search.Text);
+            loadProductList(products);
+        }
     }
 
 }

@@ -119,6 +119,8 @@
     <Compile Include="Services\GoodsReceipt\IGoodsReceiptService.cs" />
     <Compile Include="Services\Material\MaterialService.cs" />
     <Compile Include="Services\Material\IMaterialService.cs" />
+    <Compile Include="Services\Method\IMethodService.cs" />
+    <Compile Include="Services\Method\MethodService.cs" />
     <Compile Include="Services\OrderDetail\IOrderDetailService.cs" />
     <Compile Include="Services\OrderDetail\OrderDetailService.cs" />
     <Compile Include="Services\Order\OrderService.cs" />
