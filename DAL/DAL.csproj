@@ -47,6 +47,8 @@
     <Compile Include="Repositories\Category\ICategoryRepository.cs" />
     <Compile Include="Repositories\Customer\CustomerRepository.cs" />
     <Compile Include="Repositories\Customer\ICustomerRepository.cs" />
+    <Compile Include="Repositories\Dosage\DosageRepository.cs" />
+    <Compile Include="Repositories\Dosage\IDosageRepository.cs" />
     <Compile Include="Repositories\GoodsReceiptDetails\GoodsReceiptDetailsRepository.cs" />
     <Compile Include="Repositories\GoodsReceiptDetails\IGoodsReceiptDetailsRepository.cs" />
     <Compile Include="Repositories\GoodsReceipt\GoodsReceiptRepository.cs" />
