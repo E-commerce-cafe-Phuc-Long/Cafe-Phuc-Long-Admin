@@ -34,3 +34,16 @@ D:\GitHub\Cafe-Phuc-Long-Admin\BLL\bin\Debug\DAL.pdb
 D:\GitHub\Cafe-Phuc-Long-Admin\BLL\bin\Debug\DTO.pdb
 D:\GitHub\Cafe-Phuc-Long-Admin\BLL\bin\Debug\DTO.dll.config
 D:\GitHub\Cafe-Phuc-Long-Admin\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\CloudinaryDotNet.dll
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\dotenv.net.dll
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\Newtonsoft.Json.dll
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\System.Buffers.dll
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\System.Memory.dll
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\System.Numerics.Vectors.dll
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\CloudinaryDotNet.xml
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\Newtonsoft.Json.xml
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\System.Buffers.xml
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\System.Memory.xml
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\System.Numerics.Vectors.xml
+D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\BLL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

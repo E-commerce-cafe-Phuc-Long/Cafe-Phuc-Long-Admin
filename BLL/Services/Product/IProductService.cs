@@ -10,6 +10,7 @@ namespace BLL.Services
     public interface IProductService
     {
         List<SanPham> GetProductList();
+        string UploadImage(string imageUrl);
         List<SanPham> GetProductByCategoryId(string categoryId);
     }
 }
