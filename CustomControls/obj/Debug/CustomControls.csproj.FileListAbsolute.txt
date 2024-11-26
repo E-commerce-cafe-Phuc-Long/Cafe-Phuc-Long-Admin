@@ -4,3 +4,9 @@ D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\Cus
 D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\CustomControls\obj\Debug\CustomControls.csproj.CoreCompileInputs.cache
 D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\CustomControls\obj\Debug\CustomControls.dll
 D:\HUIT\HK7\PhatTrienUngDungThongMinh\FinalProject\E-Commerce_Coffee_And_Tea\CustomControls\obj\Debug\CustomControls.pdb
+D:\GitHub\Cafe-Phuc-Long-Admin\CustomControls\bin\Debug\CustomControls.dll
+D:\GitHub\Cafe-Phuc-Long-Admin\CustomControls\bin\Debug\CustomControls.pdb
+D:\GitHub\Cafe-Phuc-Long-Admin\CustomControls\obj\Debug\CustomControls.csproj.AssemblyReference.cache
+D:\GitHub\Cafe-Phuc-Long-Admin\CustomControls\obj\Debug\CustomControls.csproj.CoreCompileInputs.cache
+D:\GitHub\Cafe-Phuc-Long-Admin\CustomControls\obj\Debug\CustomControls.dll
+D:\GitHub\Cafe-Phuc-Long-Admin\CustomControls\obj\Debug\CustomControls.pdb

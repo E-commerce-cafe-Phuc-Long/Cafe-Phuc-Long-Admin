@@ -12,3 +12,10 @@ E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\DTO\obj\Debug\DTO.cspro
 E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\DTO\obj\Debug\DTO.dll
 E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\DTO\obj\Debug\DTO.pdb
+D:\GitHub\Cafe-Phuc-Long-Admin\DTO\bin\Debug\DTO.dll.config
+D:\GitHub\Cafe-Phuc-Long-Admin\DTO\bin\Debug\DTO.dll
+D:\GitHub\Cafe-Phuc-Long-Admin\DTO\bin\Debug\DTO.pdb
+D:\GitHub\Cafe-Phuc-Long-Admin\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\GitHub\Cafe-Phuc-Long-Admin\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\GitHub\Cafe-Phuc-Long-Admin\DTO\obj\Debug\DTO.dll
+D:\GitHub\Cafe-Phuc-Long-Admin\DTO\obj\Debug\DTO.pdb

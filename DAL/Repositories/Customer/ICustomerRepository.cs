@@ -10,5 +10,13 @@ namespace DAL.Repositories.Customer
     public interface ICustomerRepository
     {
         List<KhachHang> GetCustomersList();
+
+        bool InsertCustomer(KhachHang Customer);
+
+        bool DeleteCustomer(string maKH);
+
+        bool UpdateCustomer(KhachHang updated);
+
+        dynamic SearchCustomer(string keyword);
     }
 }

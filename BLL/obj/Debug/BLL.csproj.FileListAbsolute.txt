@@ -22,3 +22,15 @@ E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\BLL\obj\Debug\BLL.cspro
 E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\BLL\obj\Debug\BLL.csproj.Up2Date
 E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\BLL\obj\Debug\BLL.dll
 E:\Tôi\Learn\HUIT\Năm 4\ThongMinh\Cafe-Phuc-Long-Admin\BLL\obj\Debug\BLL.pdb
+D:\GitHub\Cafe-Phuc-Long-Admin\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\GitHub\Cafe-Phuc-Long-Admin\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\GitHub\Cafe-Phuc-Long-Admin\BLL\obj\Debug\BLL.dll
+D:\GitHub\Cafe-Phuc-Long-Admin\BLL\obj\Debug\BLL.pdb
+D:\GitHub\Cafe-Phuc-Long-Admin\BLL\bin\Debug\BLL.dll
+D:\GitHub\Cafe-Phuc-Long-Admin\BLL\bin\Debug\BLL.pdb
+D:\GitHub\Cafe-Phuc-Long-Admin\BLL\bin\Debug\DAL.dll
+D:\GitHub\Cafe-Phuc-Long-Admin\BLL\bin\Debug\DTO.dll
+D:\GitHub\Cafe-Phuc-Long-Admin\BLL\bin\Debug\DAL.pdb
+D:\GitHub\Cafe-Phuc-Long-Admin\BLL\bin\Debug\DTO.pdb
+D:\GitHub\Cafe-Phuc-Long-Admin\BLL\bin\Debug\DTO.dll.config
+D:\GitHub\Cafe-Phuc-Long-Admin\BLL\obj\Debug\BLL.csproj.Up2Date

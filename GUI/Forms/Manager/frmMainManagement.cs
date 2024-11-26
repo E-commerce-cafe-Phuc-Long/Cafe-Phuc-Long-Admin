@@ -1,4 +1,8 @@
 ﻿using BLL.Services;
+using GUI.Forms.Manager.GoodsReceipt;
+using GUI.Forms.Manager.Supplier;
+using GUI.Forms.Manager.Staff;
+using GUI.Forms.Manager.Customer;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -46,9 +50,46 @@ namespace GUI.Forms.Manager
 
         private void manageCustomersToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //this.Hide();
+            //frmCustomerManagement frmCustomerManagement = _serviceProvider.GetRequiredService<frmCustomerManagement>();
+            //frmCustomerManagement.ShowDialog();
+            //this.Show();
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             this.Hide();
-            frmCustomerManagement frmCustomerManagement = _serviceProvider.GetRequiredService<frmCustomerManagement>();
-            frmCustomerManagement.ShowDialog();
+            frmStaffManagement frmStaffManagement = _serviceProvider.GetRequiredService<frmStaffManagement>();
+            frmStaffManagement.ShowDialog();
+            this.Show();
+        }
+
+        private void viewGoodsReceiptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmGoodsReceiptManagement frmGoodsReceiptManagement = _serviceProvider.GetRequiredService<frmGoodsReceiptManagement>();
+            frmGoodsReceiptManagement.ShowDialog();
+            this.Show();
+        }
+
+        private void viewCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmCustomerManagement FrmCustomerManagement = _serviceProvider.GetRequiredService<FrmCustomerManagement>();
+            FrmCustomerManagement.ShowDialog();
+            this.Show();
+        }
+
+        private void viewSupplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmSupplierManagement frmSupplierManagement= _serviceProvider.GetRequiredService<frmSupplierManagement>();
+            frmSupplierManagement.ShowDialog();
             this.Show();
         }
     }

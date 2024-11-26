@@ -47,6 +47,10 @@
     <Compile Include="Repositories\Category\ICategoryRepository.cs" />
     <Compile Include="Repositories\Customer\CustomerRepository.cs" />
     <Compile Include="Repositories\Customer\ICustomerRepository.cs" />
+    <Compile Include="Repositories\GoodsReceiptDetails\GoodsReceiptDetailsRepository.cs" />
+    <Compile Include="Repositories\GoodsReceiptDetails\IGoodsReceiptDetailsRepository.cs" />
+    <Compile Include="Repositories\GoodsReceipt\GoodsReceiptRepository.cs" />
+    <Compile Include="Repositories\GoodsReceipt\IGoodsReceiptRepository.cs" />
     <Compile Include="Repositories\Material\IMaterialRepository.cs" />
     <Compile Include="Repositories\Material\MaterialRepository.cs" />
     <Compile Include="Repositories\OrderDetail\IOrderDetailRepository.cs" />
@@ -61,8 +65,14 @@
     <Compile Include="Repositories\Recipe\RecipeRepository.cs" />
     <Compile Include="Repositories\Recipe_material\IRecipe_materialRepository.cs" />
     <Compile Include="Repositories\Recipe_material\Recipe_materialRepository.cs" />
+    <Compile Include="Repositories\Role\IRoleRepository.cs" />
+    <Compile Include="Repositories\Role\RoleRepository.cs" />
     <Compile Include="Repositories\Size\ISizeRepository.cs" />
     <Compile Include="Repositories\Size\SizeRepository.cs" />
+    <Compile Include="Repositories\Staff\IStaffRepository.cs" />
+    <Compile Include="Repositories\Staff\StaffRepository.cs" />
+    <Compile Include="Repositories\Supplier\ISupplierRepository.cs" />
+    <Compile Include="Repositories\Supplier\SupplierRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
