@@ -197,6 +197,12 @@
     <Compile Include="Forms\Manager\Product\frmProductManagement.Designer.cs">
       <DependentUpon>frmProductManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Staff\Checkout\frmCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Staff\Checkout\frmCheckout.Designer.cs">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Staff\Order\frmCreateOrderSaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manager\Product\frmProductManagement.resx">
       <DependentUpon>frmProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Staff\Checkout\frmCheckout.resx">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Staff\Order\frmCreateOrderSaff.resx">
       <DependentUpon>frmCreateOrderSaff.cs</DependentUpon>

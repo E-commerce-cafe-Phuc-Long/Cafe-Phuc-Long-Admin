@@ -3,6 +3,7 @@ using BLL.Services.Category;
 using BLL.Services.Customer;
 using BLL.Services.Dosage;
 using BLL.Services.Material;
+using BLL.Services.Method;
 using BLL.Services.Order;
 using BLL.Services.OrderDetail;
 using BLL.Services.ProductDetail;
@@ -13,6 +14,7 @@ using DAL.Repositories.Category;
 using DAL.Repositories.Customer;
 using DAL.Repositories.Dosage;
 using DAL.Repositories.Material;
+using DAL.Repositories.Method;
 using DAL.Repositories.Order;
 using DAL.Repositories.OrderDetail;
 using DAL.Repositories.Product;
@@ -47,8 +49,8 @@ namespace GUI
             services.AddTransient<ICustomerRepository, CustomerRepository>();
             services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddTransient<IOrderDetailRepository, OrderDetailRepository>();
-            services.AddTransient<IDosageRepository, DosageRepository>();
-
+            services.AddTransient<IDosageRepository, DosageRepository>(); 
+            services.AddTransient<IMethodRepository, MethodRepository>();
 
         }
         public static void AddServices(this IServiceCollection services)
@@ -64,9 +66,7 @@ namespace GUI
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<IOrderDetailService, OrderDetailService>();
             services.AddTransient<IDosageService, DosageService>();
-
-
-
+            services.AddTransient<IMethodService, MethodService>();
 
         }
         public static void AddForms(this IServiceCollection services)
@@ -82,6 +82,7 @@ namespace GUI
             services.AddTransient<frmCreateOrderSaff>();
             services.AddTransient<frmOrderManagement>();
             services.AddTransient<frmSelectDrink>();
+            services.AddTransient<frmCheckout>();
 
 
         }

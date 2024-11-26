@@ -23,5 +23,13 @@ namespace BLL.Services
         {
             return _repository.GetProductByCategoryId(categoryId);
         }
+        public SanPham GetProductByName(string productName)
+        {
+            return _repository.GetProductByName(productName);
+        }
+        public List<SanPham> GetProductListByName(string productName)
+        {
+            return _repository.GetProductListByName(productName);
+        }
     }
 }

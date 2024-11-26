@@ -51,6 +51,8 @@
     <Compile Include="Repositories\Dosage\IDosageRepository.cs" />
     <Compile Include="Repositories\Material\IMaterialRepository.cs" />
     <Compile Include="Repositories\Material\MaterialRepository.cs" />
+    <Compile Include="Repositories\Method\IMethodRepository.cs" />
+    <Compile Include="Repositories\Method\MethodRepository.cs" />
     <Compile Include="Repositories\OrderDetail\IOrderDetailRepository.cs" />
     <Compile Include="Repositories\OrderDetail\OrderDetailRepository.cs" />
     <Compile Include="Repositories\Order\OrderRepository.cs" />

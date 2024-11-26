@@ -11,5 +11,7 @@ namespace BLL.Services
     {
         List<SanPham> GetProductList();
         List<SanPham> GetProductByCategoryId(string categoryId);
+        SanPham GetProductByName(string productName);
+        List<SanPham> GetProductListByName(string productName);
     }
 }
