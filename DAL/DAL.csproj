@@ -47,12 +47,16 @@
     <Compile Include="Repositories\Category\ICategoryRepository.cs" />
     <Compile Include="Repositories\Customer\CustomerRepository.cs" />
     <Compile Include="Repositories\Customer\ICustomerRepository.cs" />
+    <Compile Include="Repositories\Dosage\DosageRepository.cs" />
+    <Compile Include="Repositories\Dosage\IDosageRepository.cs" />
     <Compile Include="Repositories\GoodsReceiptDetails\GoodsReceiptDetailsRepository.cs" />
     <Compile Include="Repositories\GoodsReceiptDetails\IGoodsReceiptDetailsRepository.cs" />
     <Compile Include="Repositories\GoodsReceipt\GoodsReceiptRepository.cs" />
     <Compile Include="Repositories\GoodsReceipt\IGoodsReceiptRepository.cs" />
     <Compile Include="Repositories\Material\IMaterialRepository.cs" />
     <Compile Include="Repositories\Material\MaterialRepository.cs" />
+    <Compile Include="Repositories\Method\IMethodRepository.cs" />
+    <Compile Include="Repositories\Method\MethodRepository.cs" />
     <Compile Include="Repositories\OrderDetail\IOrderDetailRepository.cs" />
     <Compile Include="Repositories\OrderDetail\OrderDetailRepository.cs" />
     <Compile Include="Repositories\Order\OrderRepository.cs" />

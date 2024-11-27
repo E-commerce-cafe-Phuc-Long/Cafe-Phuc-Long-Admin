@@ -28,99 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel_category = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox_product = new System.Windows.Forms.GroupBox();
             this.listView_cart = new System.Windows.Forms.ListView();
-            this.button6 = new System.Windows.Forms.Button();
+            this.groupBox_product = new System.Windows.Forms.GroupBox();
+            this.btn_checkout = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_tongTien = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.btn_deleteCart = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel_category
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(0, 130);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(339, 589);
-            this.panel1.TabIndex = 0;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Tomato;
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(12, 396);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(274, 68);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Sản Phẩm Đóng Gói";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Tomato;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(12, 310);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(274, 68);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Bánh Lạnh";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Tomato;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(12, 220);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(274, 68);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Trà Sữa";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Tomato;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(12, 127);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(274, 68);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Đá Xay";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(12, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(274, 68);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Tất cả";
-            this.button1.UseVisualStyleBackColor = false;
+            this.panel_category.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel_category.Location = new System.Drawing.Point(0, 130);
+            this.panel_category.Name = "panel_category";
+            this.panel_category.Size = new System.Drawing.Size(359, 589);
+            this.panel_category.TabIndex = 0;
             // 
             // label1
             // 
@@ -140,14 +70,6 @@
             this.panel3.Size = new System.Drawing.Size(471, 589);
             this.panel3.TabIndex = 4;
             // 
-            // groupBox_product
-            // 
-            this.groupBox_product.Location = new System.Drawing.Point(345, 130);
-            this.groupBox_product.Name = "groupBox_product";
-            this.groupBox_product.Size = new System.Drawing.Size(960, 582);
-            this.groupBox_product.TabIndex = 5;
-            this.groupBox_product.TabStop = false;
-            // 
             // listView_cart
             // 
             this.listView_cart.HideSelection = false;
@@ -156,45 +78,54 @@
             this.listView_cart.Size = new System.Drawing.Size(462, 528);
             this.listView_cart.TabIndex = 0;
             this.listView_cart.UseCompatibleStateImageBehavior = false;
+            this.listView_cart.SelectedIndexChanged += new System.EventHandler(this.listView_cart_SelectedIndexChanged);
             // 
-            // button6
+            // groupBox_product
             // 
-            this.button6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(1315, 7);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(236, 63);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Thanh toán";
-            this.button6.UseVisualStyleBackColor = false;
+            this.groupBox_product.Location = new System.Drawing.Point(365, 133);
+            this.groupBox_product.Name = "groupBox_product";
+            this.groupBox_product.Size = new System.Drawing.Size(940, 579);
+            this.groupBox_product.TabIndex = 5;
+            this.groupBox_product.TabStop = false;
+            // 
+            // btn_checkout
+            // 
+            this.btn_checkout.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_checkout.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_checkout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_checkout.Location = new System.Drawing.Point(1315, 7);
+            this.btn_checkout.Name = "btn_checkout";
+            this.btn_checkout.Size = new System.Drawing.Size(236, 63);
+            this.btn_checkout.TabIndex = 6;
+            this.btn_checkout.Text = "Trang thanh toán";
+            this.btn_checkout.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(1572, 27);
+            this.label2.Location = new System.Drawing.Point(1557, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 23);
             this.label2.TabIndex = 7;
             this.label2.Text = "Tổng tiền:";
             // 
-            // label3
+            // label_tongTien
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(1736, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 23);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "0";
+            this.label_tongTien.AutoSize = true;
+            this.label_tongTien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label_tongTien.ForeColor = System.Drawing.Color.Red;
+            this.label_tongTien.Location = new System.Drawing.Point(1660, 27);
+            this.label_tongTien.Name = "label_tongTien";
+            this.label_tongTien.Size = new System.Drawing.Size(20, 23);
+            this.label_tongTien.TabIndex = 8;
+            this.label_tongTien.Text = "0";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.btn_checkout);
+            this.panel2.Controls.Add(this.label_tongTien);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 718);
@@ -202,39 +133,50 @@
             this.panel2.Size = new System.Drawing.Size(1784, 100);
             this.panel2.TabIndex = 9;
             // 
-            // textBox1
+            // txt_search
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(345, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 27);
-            this.textBox1.TabIndex = 10;
+            this.txt_search.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.Location = new System.Drawing.Point(345, 92);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(264, 27);
+            this.txt_search.TabIndex = 10;
             // 
-            // button7
+            // btn_search
             // 
-            this.button7.Location = new System.Drawing.Point(615, 89);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(130, 35);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Tìm kiếm";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_search.Location = new System.Drawing.Point(615, 89);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(130, 35);
+            this.btn_search.TabIndex = 11;
+            this.btn_search.Text = "Tìm kiếm";
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
-            // frmOrderSaff
+            // btn_deleteCart
+            // 
+            this.btn_deleteCart.Location = new System.Drawing.Point(1647, 88);
+            this.btn_deleteCart.Name = "btn_deleteCart";
+            this.btn_deleteCart.Size = new System.Drawing.Size(130, 35);
+            this.btn_deleteCart.TabIndex = 12;
+            this.btn_deleteCart.Text = "Làm mới";
+            this.btn_deleteCart.UseVisualStyleBackColor = true;
+            this.btn_deleteCart.Click += new System.EventHandler(this.btn_deleteCart_Click);
+            // 
+            // frmCreateOrderSaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1784, 818);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_deleteCart);
+            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.txt_search);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox_product);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
-            this.Name = "frmOrderSaff";
+            this.Controls.Add(this.panel_category);
+            this.Name = "frmCreateOrderSaff";
             this.Text = "frmOrderSaff";
-            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -245,21 +187,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel_category;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox_product;
         private System.Windows.Forms.ListView listView_cart;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_checkout;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_tongTien;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.Button btn_deleteCart;
     }
 }

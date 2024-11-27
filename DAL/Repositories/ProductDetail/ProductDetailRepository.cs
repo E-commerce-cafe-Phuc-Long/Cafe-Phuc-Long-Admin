@@ -24,5 +24,10 @@ namespace DAL.Repositories.ProductDetail
                 .Where(prod => prod.maSP == productId)
                 .ToList();
         }
+        public ChiTietSanPham GetProductDetailByIdAndSizeId(string productId, string sizeId)
+        {
+            return _context.ChiTietSanPhams
+                .FirstOrDefault(prod => prod.maSP == productId && prod.Size.maSize == sizeId);
+        }
     }
 }

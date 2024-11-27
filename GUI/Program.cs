@@ -39,7 +39,7 @@ namespace GUI
                     // Đăng ký DbContext với Connection String
                     services.AddTransient(provider =>
                     {
-                        string connectionString = "Data Source=MSI;Initial Catalog=E-Commerce_Coffee_And_Tea;Integrated Security=True;Encrypt=False";
+                        string connectionString = "Data Source=LAPTOP-FU5UG1UP;Initial Catalog=E-Commerce_Coffee_And_Tea;User ID=sa;Password=123456;Encrypt=False";
                         return new E_Commerce_Coffee_And_TeaDataContext(connectionString);
                     });
 
@@ -50,5 +50,6 @@ namespace GUI
         }
 
         #endregion
+
     }
 }

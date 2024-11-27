@@ -3,7 +3,9 @@ using BLL.Services.Category;
 using BLL.Services.Customer;
 using BLL.Services.GoodsReceipt;
 using BLL.Services.GoodsReceiptDetails;
+using BLL.Services.Dosage;
 using BLL.Services.Material;
+using BLL.Services.Method;
 using BLL.Services.Order;
 using BLL.Services.OrderDetail;
 using BLL.Services.ProductDetail;
@@ -17,7 +19,9 @@ using DAL.Repositories.Category;
 using DAL.Repositories.Category.GoodsReceipt;
 using DAL.Repositories.Customer;
 using DAL.Repositories.GoodsReceiptDetails;
+using DAL.Repositories.Dosage;
 using DAL.Repositories.Material;
+using DAL.Repositories.Method;
 using DAL.Repositories.Order;
 using DAL.Repositories.OrderDetail;
 using DAL.Repositories.Product;
@@ -65,7 +69,9 @@ namespace GUI
             services.AddTransient<ISupplierRepository, SupplierRepository>();
             services.AddTransient<IGoodsReceiptRepository, GoodsReceiptRepository>();
             services.AddTransient<IGoodsReceiptDetailsRepository, GoodsReceiptDetailsRepository>();
-            
+
+            services.AddTransient<IDosageRepository, DosageRepository>(); 
+            services.AddTransient<IMethodRepository, MethodRepository>();
 
         }
         public static void AddServices(this IServiceCollection services)
@@ -87,8 +93,8 @@ namespace GUI
             services.AddTransient<IGoodsReceiptService, GoodsReceiptService>();
             services.AddTransient<IGoodsReceiptDetailsService, GoodsReceiptDetailsService>();
             
-
-
+            services.AddTransient<IDosageService, DosageService>();
+            services.AddTransient<IMethodService, MethodService>();
 
         }
         public static void AddForms(this IServiceCollection services)
@@ -106,6 +112,8 @@ namespace GUI
             services.AddTransient<frmStaffManagement>();
             services.AddTransient<frmSupplierManagement>();
             services.AddTransient<frmGoodsReceiptManagement>();
+            services.AddTransient<frmSelectDrink>();
+            services.AddTransient<frmCheckout>();
 
 
         }

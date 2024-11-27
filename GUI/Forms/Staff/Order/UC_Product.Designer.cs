@@ -29,10 +29,21 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.PictureBox pictureBox1;
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_productName = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label_productName
+            // 
+            this.label_productName.AutoSize = true;
+            this.label_productName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_productName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label_productName.Location = new System.Drawing.Point(12, 181);
+            this.label_productName.Name = "label_productName";
+            this.label_productName.Size = new System.Drawing.Size(122, 22);
+            this.label_productName.TabIndex = 1;
+            this.label_productName.Text = "Hồng Trà Đào";
             // 
             // pictureBox1
             // 
@@ -40,33 +51,22 @@
             pictureBox1.ErrorImage = null;
             pictureBox1.Image = global::GUI.Properties.Resources.hong_tra_dao;
             pictureBox1.InitialImage = null;
-            pictureBox1.Location = new System.Drawing.Point(3, 3);
+            pictureBox1.Location = new System.Drawing.Point(16, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(143, 164);
+            pictureBox1.Size = new System.Drawing.Size(131, 164);
             pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(14, 170);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 22);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hồng Trà Đào";
             // 
             // UC_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SaddleBrown;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_productName);
             this.Controls.Add(pictureBox1);
             this.Name = "UC_Product";
-            this.Size = new System.Drawing.Size(149, 203);
+            this.Size = new System.Drawing.Size(158, 216);
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -74,6 +74,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_productName;
     }
 }

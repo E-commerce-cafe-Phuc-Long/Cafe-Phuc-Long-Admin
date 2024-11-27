@@ -18,6 +18,13 @@ namespace DAL.Repositories.Size
         {
             return _context.Sizes.ToList();
         }
-        
+        public List<DTO.Size> GetSizesByProductId(string productId)
+        {
+            return _context.ChiTietSanPhams
+                .Where(ctsp => ctsp.maSP == productId)
+                .Select(ctsp => ctsp.Size)
+                .Distinct()
+                .ToList();
+        }
     }
 }

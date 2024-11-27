@@ -10,6 +10,7 @@ namespace DAL.Repositories.Size
     public interface ISizeRepository
     {
         List<DTO.Size> GetSizeList();
+        List<DTO.Size> GetSizesByProductId(string productId);
 
     }
 }
