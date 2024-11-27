@@ -1,4 +1,6 @@
-﻿using BLL.Services.Method;
+﻿using BLL.Services.Customer;
+using BLL.Services.Method;
+using BLL.Services.Staff;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -16,12 +18,37 @@ namespace GUI.Forms
     public partial class frmCheckout : Form
     {
         private readonly IMethodService _methodService;
-        public frmCheckout(IMethodService methodService)
+        private readonly ICustomerService _customerService;
+
+        public frmCheckout(IMethodService methodService, ICustomerService customerService
+)
         {
             this._methodService = methodService;
+            this._customerService = customerService;
             InitializeComponent();
             this.Load += FrmCheckout_Load;
+            btn_search.Click += Btn_search_Click;
         }
+
+        private void Btn_search_Click(object sender, EventArgs e)
+        {
+            string sdt = txt_customer.Text;
+            if (sdt == "")
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại khách hàng");
+                return;
+            }
+            KhachHang kh = _customerService.GetCustomerByPhone(sdt);
+            if (kh == null)
+            {
+                MessageBox.Show("Không tìm thấy khách hàng");
+                return;
+            }
+            lb_cus.Text = kh.tenKH;
+            lb_cus.Show();
+            lb_customer.Show();
+        }
+
         public void SetListViewData(System.Windows.Forms.ListView.ListViewItemCollection items)
         {
             foreach (ListViewItem item in items)
@@ -57,5 +84,6 @@ namespace GUI.Forms
             comboBox_method.DisplayMember = "TenPT";
             comboBox_method.ValueMember = "MaPT";
         }
+        
     }
 }

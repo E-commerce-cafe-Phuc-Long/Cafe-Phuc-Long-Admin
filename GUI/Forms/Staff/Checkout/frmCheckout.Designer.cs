@@ -29,16 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt_customer = new System.Windows.Forms.TextBox();
+            this.btn_search = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.listView_cart = new System.Windows.Forms.ListView();
             this.comboBox_method = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.lb_customer = new System.Windows.Forms.Label();
             this.lb_cus = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -53,32 +51,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "THANH TOÁN";
             // 
-            // textBox1
+            // txt_customer
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(584, 134);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 30);
-            this.textBox1.TabIndex = 1;
+            this.txt_customer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_customer.Location = new System.Drawing.Point(584, 134);
+            this.txt_customer.Name = "txt_customer";
+            this.txt_customer.Size = new System.Drawing.Size(224, 30);
+            this.txt_customer.TabIndex = 1;
             // 
-            // button1
+            // btn_search
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(825, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 36);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(725, 263);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(190, 31);
-            this.comboBox1.TabIndex = 3;
+            this.btn_search.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.Location = new System.Drawing.Point(825, 130);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(90, 36);
+            this.btn_search.TabIndex = 2;
+            this.btn_search.Text = "Tìm";
+            this.btn_search.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -139,16 +128,6 @@
             this.button2.Text = "Thanh toán";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(580, 271);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Nhân viên:";
-            // 
             // lb_customer
             // 
             this.lb_customer.AutoSize = true;
@@ -176,13 +155,11 @@
             this.ClientSize = new System.Drawing.Size(977, 450);
             this.Controls.Add(this.lb_cus);
             this.Controls.Add(this.lb_customer);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.listView_cart);
             this.Controls.Add(this.comboBox_method);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.txt_customer);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -197,16 +174,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txt_customer;
+        private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView listView_cart;
         private System.Windows.Forms.ComboBox comboBox_method;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lb_customer;
         private System.Windows.Forms.Label lb_cus;
     }

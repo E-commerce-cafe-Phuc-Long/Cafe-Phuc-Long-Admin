@@ -38,5 +38,104 @@ namespace DAL.Repositories.Product
                 .ToList();
 
         }
+        public bool InsertProduct(SanPham p)
+        {
+            try
+            {
+                _context.SanPhams.InsertOnSubmit(p);
+
+                _context.SubmitChanges();
+
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool DeleteProduct(string masp)
+        {
+            try
+            {
+                var sp = _context.SanPhams.SingleOrDefault(p => p.maSP == masp);
+
+                if (sp != null)
+                {
+                    sp.maTT = "TT002";
+                    _context.SubmitChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool UpdateProduct(SanPham updated)
+        {
+            try
+            {
+                var nv = _context.SanPhams.SingleOrDefault(p => p.maSP == updated.maSP);
+
+                if (nv != null)
+                {
+                    nv.tenSP = updated.tenSP;
+                    nv.hinhAnh = updated.hinhAnh;
+                    nv.donViTinh = updated.donViTinh;
+                    nv.moTa = updated.moTa;
+                    nv.spNoiBat = updated.spNoiBat;
+                    nv.spMoi = updated.spMoi;
+                    nv.maCT = updated.maCT;
+                    nv.maDM = updated.maDM;
+
+                    _context.SubmitChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+        public List<SanPham> SearchProduct(string keyword)
+        {
+            try
+            {
+                
+                if (string.IsNullOrEmpty(keyword))
+                {
+                    return GetProductList();
+                }
+
+                var result = _context.SanPhams
+                   .Where(nv => nv.maSP.Contains(keyword) ||
+                             nv.tenSP.Contains(keyword))
+                  
+                                   .ToList();
+               
+
+                return result;
+            }
+
+            catch
+            {
+                return new List<SanPham>();
+            }
+        }
+        public List<TrangThai_SP> trangThai_SPs()
+        {
+            return _context.TrangThai_SPs.ToList();
+        }
+        public string GetLastProductCode()
+        {
+            return _context.SanPhams
+                .OrderByDescending(kh => kh.maSP)
+                .Select(kh => kh.maSP)
+                .FirstOrDefault();
+        }
     }
 }

@@ -12,6 +12,10 @@ namespace BLL.Services.ProductDetail
         List<ChiTietSanPham> GetProductDetailList();
         List<ChiTietSanPham> GetProductDetailsByProductId(string productId);
         ChiTietSanPham GetProductDetailByIdAndSizeId(string productId, string sizeId);
-       
+        bool InsertProductDetail(ChiTietSanPham p);
+        bool DeleteProductDetail(string maCTSP);
+        bool UpdateProductDetail(ChiTietSanPham update);
+        string GenerateProductDetailCode();
+
     }
 }

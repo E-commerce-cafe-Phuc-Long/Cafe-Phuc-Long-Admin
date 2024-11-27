@@ -5,7 +5,7 @@ using BLL.Services.Method;
 using BLL.Services.ProductDetail;
 using BLL.Services.Size;
 using DTO;
-using GUI.Forms.Staff;
+using GUI.Forms;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -294,14 +294,7 @@ namespace GUI.Forms
         
         private void Btn_checkout_Click(object sender, EventArgs e)
         {
-            if(listView_cart.Items.Count == 0)
-            {
-                MessageBox.Show("Vui lòng thêm ít nhất một sản phẩm để thanh toán");
-                return;
-            }
-            frmCheckout checkoutForm = new frmCheckout(_methodService);
-            checkoutForm.SetListViewData(listView_cart.Items);
-            checkoutForm.ShowDialog();
+
         }
 
         private void btn_deleteCart_Click(object sender, EventArgs e)
