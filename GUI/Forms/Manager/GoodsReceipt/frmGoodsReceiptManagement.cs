@@ -109,15 +109,7 @@ namespace GUI.Forms.Manager.GoodsReceipt
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    string keyword = txt_Search.Text.Trim();
-            //    dgvGoodsReceipt.DataSource = _goodsreceiptService.Search(keyword);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            
         }
 
 
