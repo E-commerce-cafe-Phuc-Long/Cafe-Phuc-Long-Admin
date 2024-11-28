@@ -414,6 +414,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Forms\Manager\Order\" />
+    <Folder Include="Forms\Manager\Role\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
