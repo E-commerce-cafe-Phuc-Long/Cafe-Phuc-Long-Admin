@@ -65,7 +65,7 @@ namespace DAL.Repositories.Customer
 
                 if (nv != null)
                 {
-                    nv.tenKH = updated.maKH;
+                    nv.tenKH = updated.tenKH;
                     //nv.username = updated.username;
                     //nv.matKhau = updated.matKhau;
                     nv.soDT = updated.soDT;

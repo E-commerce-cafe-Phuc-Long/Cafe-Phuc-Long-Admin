@@ -46,6 +46,9 @@ namespace BLL.Services.Staff
             return _repository.SearchStaff(keyword);
         }
 
-
+        public NhanVien GetStaffByUsername(string username)
+        {
+            return _repository.GetStaffByUsername(username);
+        }
     }
 }
