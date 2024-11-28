@@ -22,8 +22,14 @@ namespace BLL.Services.GoodsReceiptDetails
             {
                 return _repository.GetGoodsReceiptDetailsList();
             }
-        public dynamic GetDetailsByGoodsReceiptId(string maPhieuNhap)
-        { return _repository.GetDetailsByGoodsReceiptId(maPhieuNhap); }    
+
+            public dynamic GetDetailsByGoodsReceiptId(string maPhieuNhap)
+            { return _repository.GetDetailsByGoodsReceiptId(maPhieuNhap); } 
+        
+             public bool Insert(string maPhieuNhap,ChiTietPhieuNhap p)
+             { return _repository.Insert(maPhieuNhap,p); }
+
+
 
 
 

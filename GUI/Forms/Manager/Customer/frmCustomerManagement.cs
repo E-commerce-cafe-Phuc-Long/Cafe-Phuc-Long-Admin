@@ -25,6 +25,7 @@ namespace GUI.Forms.Manager.Customer
 
         private void FrmCustomerManagement_Load(object sender, EventArgs e)
         {
+            txt_maKH.Enabled = false;
             dtpNgaySinh.Format = DateTimePickerFormat.Custom;
             dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
             LoadCustomerToDataGridView();
@@ -66,6 +67,8 @@ namespace GUI.Forms.Manager.Customer
                 txt_diaChi.Text = row.Cells["email"].Value?.ToString() ?? string.Empty;              
             }
         }
+
+       
 
         //private void btn_Insert_Click(object sender, EventArgs e)
         //{
@@ -194,33 +197,33 @@ namespace GUI.Forms.Manager.Customer
 
         private void txt_Search_TextChanged(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    string keyword = txt_Search.Text.Trim();
+            try
+            {
+                string keyword = txt_Search.Text.Trim();
 
-            //    if (string.IsNullOrEmpty(keyword))
-            //    {
-            //        LoadCustomerToDataGridView();
-            //        return;
-            //    }
+                if (string.IsNullOrEmpty(keyword))
+                {
+                    LoadCustomerToDataGridView();
+                    return;
+                }
 
-            //    var searchResult = _customerService.SearchCustomer(keyword);
+                var searchResult = _customerService.SearchCustomer(keyword);
 
-            //    if (searchResult != null && searchResult.Any())
-            //    {
+                if (searchResult != null && searchResult.Any())
+                {
 
-            //        dgvKhachHang.DataSource = searchResult;
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Không tìm thấy khách hàng nào khớp với từ khóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        dgvKhachHang.DataSource = null;
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                    dgvKhachHang.DataSource = searchResult;
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy khách hàng nào khớp với từ khóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvKhachHang.DataSource = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_search_Click(object sender, EventArgs e)

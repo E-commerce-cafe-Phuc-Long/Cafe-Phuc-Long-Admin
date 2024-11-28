@@ -50,5 +50,10 @@ namespace BLL.Services.Material
         {
             return _repository.SearchMaterial(keyword);
         }
+
+        public string GetMaterialNameById(string maNL)
+        { 
+            return _repository.GetMaterialNameById(maNL); 
+        }
     }
 }

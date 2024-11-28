@@ -11,11 +11,9 @@ namespace BLL.Services.GoodsReceipt
     {
         List<PhieuNhap> GetGoodsReceiptList();
         dynamic GetData();
-
-        bool Insert(PhieuNhap p);
-        bool Delete(string maPhieuNhap);
-        bool Update(PhieuNhap updated);
+        string GenerateCode();
+        void SaveGoodsReceipt(string maPhieuNhap, string maNCC, DateTime ngayNhap, List<ChiTietPhieuNhap> details);
 
 
-    }
+        }
 }

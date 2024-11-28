@@ -11,8 +11,10 @@ namespace BLL.Services.Staff
     {
      
         List<NhanVien> GetStaffList();
-
-         dynamic GetStaffWithRoleNames();
+        string GenerateStaffCode();
+        string HashPassword(string password);
+        bool VerifyHashedPassword(string hashedPassword, string providedPassword);
+        dynamic GetStaffWithRoleNames();
         bool InsertStaff(NhanVien newStaff);
         bool DeleteStaff(string maNV);
         bool UpdateStaff(NhanVien nv);

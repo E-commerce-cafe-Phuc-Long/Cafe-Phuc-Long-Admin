@@ -11,6 +11,7 @@ namespace DAL.Repositories.Supplier
     public interface ISupplierRepository
     {
         List<NhaCungCap> GetSupplierList();
+        string GetCode();
         bool Insert(NhaCungCap p);
         bool Update(NhaCungCap updated);
         bool Delete(string maNCC);

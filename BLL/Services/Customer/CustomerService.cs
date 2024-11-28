@@ -16,6 +16,10 @@ namespace BLL.Services.Customer
         {
             this._repository = repository;
         }
+
+
+
+
         public List<KhachHang> GetCustomersList()
         {
             return _repository.GetCustomersList();

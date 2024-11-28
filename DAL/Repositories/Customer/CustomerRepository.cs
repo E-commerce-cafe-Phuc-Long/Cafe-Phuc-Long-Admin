@@ -20,7 +20,8 @@ namespace DAL.Repositories.Customer
             return _context.KhachHangs.ToList();
         }
 
-     
+       
+
 
         public bool InsertCustomer(KhachHang p)
         {
@@ -125,6 +126,10 @@ namespace DAL.Repositories.Customer
         {
             return _context.KhachHangs.FirstOrDefault(x => x.soDT == phone);
         }
+
+
+
+
 
     }
 }

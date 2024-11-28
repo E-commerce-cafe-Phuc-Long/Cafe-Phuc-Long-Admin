@@ -11,10 +11,10 @@ namespace BLL.Services.Material
     {
         List<NguyenLieu> GetMaterialsList();
         string GenerateMaterialCode();
-         bool InsertMaterial(NguyenLieu nguyenlieu);
-         bool DeleteMaterial(string maNL);
-         bool UpdateMaterial(NguyenLieu updated);
-         List<NguyenLieu> SearchMaterial(string keyword);
-        
+        bool InsertMaterial(NguyenLieu nguyenlieu);
+        bool DeleteMaterial(string maNL);
+        bool UpdateMaterial(NguyenLieu updated);
+        List<NguyenLieu> SearchMaterial(string keyword);
+        string GetMaterialNameById(string maNL);
     }
 }

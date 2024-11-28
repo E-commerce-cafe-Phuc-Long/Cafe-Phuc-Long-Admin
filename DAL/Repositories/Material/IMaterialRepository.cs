@@ -16,5 +16,7 @@ namespace DAL.Repositories.Material
 
         bool UpdateMaterial(NguyenLieu updated);
         List<NguyenLieu> SearchMaterial(string keyword);
+        string GetCode();
+        string GetMaterialNameById(string maNL);
     }
 }

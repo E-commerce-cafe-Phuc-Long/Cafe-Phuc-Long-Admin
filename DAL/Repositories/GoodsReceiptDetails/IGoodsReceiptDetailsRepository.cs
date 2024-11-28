@@ -12,6 +12,7 @@ namespace DAL.Repositories.GoodsReceiptDetails
         List<ChiTietPhieuNhap> GetGoodsReceiptDetailsList();
 
         dynamic GetDetailsByGoodsReceiptId(string maPhieuNhap);
+        bool Insert(string maPhieuNhap,ChiTietPhieuNhap p);
 
 
     }
