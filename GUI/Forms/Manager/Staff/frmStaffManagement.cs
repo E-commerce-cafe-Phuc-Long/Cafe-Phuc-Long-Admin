@@ -90,9 +90,11 @@ namespace GUI.Forms.Manager.Staff
                 }
             }
         }
-
+        
         private void btn_Insert_Click(object sender, EventArgs e)
         {
+            // Băm mật khẩu trước khi lưu
+            string hashedPassword = _staffService.HashPassword(txt_password.Text);
             try
             {
                
@@ -102,7 +104,7 @@ namespace GUI.Forms.Manager.Staff
                 {
                     maNV = maNV1,
                     username = txt_username.Text,
-                    matKhau = txt_password.Text,
+                    matKhau = hashedPassword,  // Lưu mật khẩu đã băm
                     tenNV = txt_tenNV.Text,
                     ngaySinh = dtpNgaySinh.Value,
                     soDT = txt_soDT.Text,
@@ -164,12 +166,14 @@ namespace GUI.Forms.Manager.Staff
                 MessageBox.Show("Vui lòng nhập mã nhân viên cần sửa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            // Băm mật khẩu trước khi lưu
+            string hashedPassword = _staffService.HashPassword(txt_password.Text);
 
             NhanVien nv = new NhanVien
             {
                 maNV = txt_maNV.Text,
                 username = txt_username.Text,
-                matKhau = txt_password.Text,
+                matKhau = hashedPassword,
                 tenNV = txt_tenNV.Text,
                 ngaySinh = dtpNgaySinh.Value,
                 soDT = txt_soDT.Text,
