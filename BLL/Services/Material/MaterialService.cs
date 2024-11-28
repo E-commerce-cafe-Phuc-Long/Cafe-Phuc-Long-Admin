@@ -19,5 +19,36 @@ namespace BLL.Services.Material
         {
             return _repository.GetMaterialsList();
         }
+        public string GenerateMaterialCode()
+        {
+            var lastMaterialCode = _repository.GetLastMaterialCode();
+
+            if (string.IsNullOrEmpty(lastMaterialCode))
+            {
+                return "NL001";
+            }
+
+            var number = int.Parse(lastMaterialCode.Substring(2));
+
+            return $"NL{(number + 1):D3}";
+        }
+        public bool InsertMaterial(NguyenLieu nguyenlieu)
+        {
+            return _repository.InsertMaterial(nguyenlieu);
+
+        }
+        public bool DeleteMaterial(string maNL)
+        {
+            return _repository.DeleteMaterial(maNL);
+        }
+
+        public bool UpdateMaterial(NguyenLieu updated)
+        {
+            return _repository.UpdateMaterial(updated);
+        }
+        public List<NguyenLieu> SearchMaterial(string keyword)
+        {
+            return _repository.SearchMaterial(keyword);
+        }
     }
 }

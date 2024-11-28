@@ -19,5 +19,13 @@ namespace BLL.Services.OrderDetail
         {
             return _repository.GetOrderDetailsList();
         }
+        public bool InsertOrderDetail(ChiTietDonHang p)
+        {
+            return _repository.InsertOrderDetail(p);
+        }
+        public List<ChiTietDonHang> GetOrderDetailsListByOrderCode(string orderCode)
+        {
+            return _repository.GetOrderDetailsListByOrderCode(orderCode);
+        }
     }
 }

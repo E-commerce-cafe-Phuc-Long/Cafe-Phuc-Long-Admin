@@ -34,17 +34,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_ngayLapHD = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_total = new System.Windows.Forms.TextBox();
+            this.txt_note = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox_customer = new System.Windows.Forms.ComboBox();
+            this.comboBox_staff = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox_method = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -65,6 +65,7 @@
             this.listBox_order.Name = "listBox_order";
             this.listBox_order.Size = new System.Drawing.Size(243, 484);
             this.listBox_order.TabIndex = 4;
+            this.listBox_order.SelectedIndexChanged += new System.EventHandler(this.listBox_order_SelectedIndexChanged);
             // 
             // listView_orderDetailsList
             // 
@@ -102,12 +103,12 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Ngày lập";
             // 
-            // dateTimePicker1
+            // dtp_ngayLapHD
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(762, 342);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dtp_ngayLapHD.Location = new System.Drawing.Point(762, 342);
+            this.dtp_ngayLapHD.Name = "dtp_ngayLapHD";
+            this.dtp_ngayLapHD.Size = new System.Drawing.Size(200, 22);
+            this.dtp_ngayLapHD.TabIndex = 8;
             // 
             // label5
             // 
@@ -118,45 +119,45 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Tổng tiền";
             // 
-            // textBox3
+            // txt_total
             // 
-            this.textBox3.Location = new System.Drawing.Point(762, 400);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(201, 22);
-            this.textBox3.TabIndex = 9;
+            this.txt_total.Location = new System.Drawing.Point(762, 400);
+            this.txt_total.Name = "txt_total";
+            this.txt_total.Size = new System.Drawing.Size(201, 22);
+            this.txt_total.TabIndex = 9;
             // 
-            // textBox4
+            // txt_note
             // 
-            this.textBox4.Location = new System.Drawing.Point(762, 453);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(201, 70);
-            this.textBox4.TabIndex = 9;
+            this.txt_note.Location = new System.Drawing.Point(762, 453);
+            this.txt_note.Multiline = true;
+            this.txt_note.Name = "txt_note";
+            this.txt_note.Size = new System.Drawing.Size(201, 70);
+            this.txt_note.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(651, 459);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 16);
+            this.label6.Size = new System.Drawing.Size(51, 16);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Ghi";
+            this.label6.Text = "Ghi chú";
             // 
-            // comboBox1
+            // comboBox_customer
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(430, 344);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 24);
-            this.comboBox1.TabIndex = 11;
+            this.comboBox_customer.FormattingEnabled = true;
+            this.comboBox_customer.Location = new System.Drawing.Point(430, 344);
+            this.comboBox_customer.Name = "comboBox_customer";
+            this.comboBox_customer.Size = new System.Drawing.Size(200, 24);
+            this.comboBox_customer.TabIndex = 11;
             // 
-            // comboBox2
+            // comboBox_staff
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(430, 400);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 24);
-            this.comboBox2.TabIndex = 12;
+            this.comboBox_staff.FormattingEnabled = true;
+            this.comboBox_staff.Location = new System.Drawing.Point(430, 400);
+            this.comboBox_staff.Name = "comboBox_staff";
+            this.comboBox_staff.Size = new System.Drawing.Size(200, 24);
+            this.comboBox_staff.TabIndex = 12;
             // 
             // label7
             // 
@@ -184,29 +185,29 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Thanh toán";
             // 
-            // comboBox4
+            // comboBox_method
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(430, 451);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(200, 24);
-            this.comboBox4.TabIndex = 12;
+            this.comboBox_method.FormattingEnabled = true;
+            this.comboBox_method.Location = new System.Drawing.Point(430, 451);
+            this.comboBox_method.Name = "comboBox_method";
+            this.comboBox_method.Size = new System.Drawing.Size(200, 24);
+            this.comboBox_method.TabIndex = 12;
             // 
             // frmOrderManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 592);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox_method);
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_staff);
+            this.Controls.Add(this.comboBox_customer);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txt_note);
+            this.Controls.Add(this.txt_total);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_ngayLapHD);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -229,16 +230,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_ngayLapHD;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_total;
+        private System.Windows.Forms.TextBox txt_note;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox_customer;
+        private System.Windows.Forms.ComboBox comboBox_staff;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox_method;
     }
 }

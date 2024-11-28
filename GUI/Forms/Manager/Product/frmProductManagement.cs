@@ -11,6 +11,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -24,7 +25,7 @@ namespace GUI.Forms.Manager
         private readonly IProductDetailService _productDetailService;
         private readonly ISizeService _sizeService;
         private readonly IRecipeService _recipeService;
-
+        private string _url;
         public frmProductManagement(
             IProductService productService,
             ICategoryService categoryService,
@@ -55,6 +56,7 @@ namespace GUI.Forms.Manager
             LoadDataToComboBoxUnit();
             LoadCategoriesToComboBox();
             LoadRecipesToComboBox();
+            LoadSizesToComboBox();
         }
 
 
@@ -181,6 +183,7 @@ namespace GUI.Forms.Manager
             {
                 ListViewItem item = new ListViewItem(productDetail.maSize);
                 item.SubItems.Add(productDetail.donGia.ToString());
+                item.Tag = productDetail;
                 listView_productDetailList.Items.Add(item);
             }
         }
@@ -192,7 +195,9 @@ namespace GUI.Forms.Manager
             foreach (var productDetail in productDetails)
             {
                 ListViewItem item = new ListViewItem(productDetail.maSize);
+
                 item.SubItems.Add(productDetail.donGia.ToString());
+                item.Tag = productDetail;
                 listView_productDetailList.Items.Add(item);
             }
         }
@@ -220,12 +225,12 @@ namespace GUI.Forms.Manager
                     txt_descriptionProduct.Text = productDescription;
                     checkBox_newProduct.Checked = product.spMoi == true;
                     checkBox_bestSeller.Checked = product.spNoiBat == true;
-                    SelectInComboBox(product.maDM, product.maCT);
+                    SelectInComboBox(product.maDM, product.maCT, productUnit);
                     LoadProductDetailsByProductId(productId);
                 }
             }
         }
-        private void SelectInComboBox(string maDM,string maCT)
+        private void SelectInComboBox(string maDM,string maCT,string dvt)
         {
             foreach (var item in comboBox_Categories.Items)
             {
@@ -242,6 +247,15 @@ namespace GUI.Forms.Manager
                 if (recipe != null && recipe.maCT == maCT)
                 {
                     comboBox_recipe.SelectedItem = item;
+                    break;
+                }
+            }
+            foreach (var item in comboBox_unit.Items)
+            {
+                string unit = item.ToString();
+                if (unit != null && unit == dvt)
+                {
+                    comboBox_unit.SelectedItem = item;
                     break;
                 }
             }
@@ -309,6 +323,15 @@ namespace GUI.Forms.Manager
             comboBox_Categories.DisplayMember = "tenDM";
             comboBox_Categories.ValueMember = "maDM";
         }
+        private void LoadSizesToComboBox()
+        {
+            var sizes = _sizeService.GetSizeList();
+
+            comboBox_size.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_size.DataSource = sizes;
+            comboBox_size.DisplayMember = "tenSize";
+            comboBox_size.ValueMember = "maSize";
+        }
         private void LoadRecipesToComboBox()
         {
             var recipes = _recipeService.GetRecipeList();
@@ -318,6 +341,467 @@ namespace GUI.Forms.Manager
             comboBox_recipe.DataSource = recipes;
             comboBox_recipe.DisplayMember = "tenCT";
             comboBox_recipe.ValueMember = "maCT";
+        }
+
+        private void btn_addCategory_Click(object sender, EventArgs e)
+        {
+            string categoryName = txt_nameCategory.Text;
+            string categoryDescription = txt_descriptionCategory.Text;
+            if (categoryName == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên danh mục");
+                return;
+            }
+            string maDM = _categoryService.GenerateCategoryCode();
+            DanhMuc category = new DanhMuc
+            {
+                maDM = maDM,
+                tenDM = categoryName,
+                moTa = categoryDescription
+            };
+            if(_categoryService.InsertCategory(category))
+            {
+                LoadCategoriesToListView();
+            }
+            else
+            {
+                MessageBox.Show("Thêm danh mục thất bại");
+            }
+        }
+
+        private void btn_EditCategory_Click(object sender, EventArgs e)
+        {
+            if (listView_CategoryList.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm cần sửa");
+                return;
+            }
+            string maDM = listView_CategoryList.SelectedItems[0].Text;
+            string categoryName = txt_nameCategory.Text;
+            string categoryDescription = txt_descriptionCategory.Text;
+            if (maDM == "")
+            {
+                MessageBox.Show("Vui lòng chọn danh mục cần sửa");
+                return;
+            }
+            if (categoryName == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên danh mục");
+                return;
+            }
+            DanhMuc category = new DanhMuc
+            {
+                maDM = maDM,
+                tenDM = categoryName,
+                moTa = categoryDescription
+            };
+            if (_categoryService.UpdateCategory(category))
+            {
+                LoadCategoriesToListView();
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật danh mục thất bại");
+            }
+        }
+
+        private void btn_searchCategory_Click(object sender, EventArgs e)
+        {
+            string keyword = txt_searchCategory.Text;
+            listView_CategoryList.Items.Clear();
+            List<DanhMuc> categories = _categoryService.SearchCategory(keyword);
+
+            foreach (DanhMuc category in categories)
+            {
+                ListViewItem item = new ListViewItem(category.maDM);
+                item.SubItems.Add(category.tenDM);
+                item.SubItems.Add(category.moTa);
+                listView_CategoryList.Items.Add(item);
+            }
+           
+        }
+
+        private void btn_showAllCategories_Click(object sender, EventArgs e)
+        {
+            LoadCategoriesToListView();
+        }
+
+        private void btn_Upload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png";
+            openFileDialog.Title = "Select an Image";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = openFileDialog.FileName;
+                string imageUrl = _productService.UploadImage(imagePath);
+                this._url = imageUrl;
+                string[] pathSegments = imageUrl.Split('/');
+                string lastSegment = pathSegments[pathSegments.Length - 1];
+                txt_imageProduct.Text = "upload thành công";
+
+            }
+        }
+
+        private void btn_addProduct_Click(object sender, EventArgs e)
+        {
+            string productName = txt_nameProduct.Text;
+            string productImage = this._url;
+            
+            string productUnit = comboBox_unit.Text;
+            string productDescription = txt_descriptionProduct.Text;
+            string categoryId = comboBox_Categories.SelectedValue.ToString();
+            string recipeId = comboBox_recipe.SelectedValue.ToString();
+            bool newProduct = checkBox_newProduct.Checked;
+            bool bestSeller = checkBox_bestSeller.Checked;
+
+            if (productName == "" || productImage =="" || productUnit =="" || productDescription=="")
+            {
+                MessageBox.Show("Vui lòng nhập các thông tin cần thiết");
+                return;
+            }
+            SanPham product = new SanPham
+            {
+                maSP = _productService.GenerateProductCode(),
+                tenSP = productName,
+                hinhAnh = productImage,
+                donViTinh = productUnit,
+                moTa = productDescription,
+                maDM = categoryId,
+                maCT = recipeId,
+                maTT = "TT001",
+                spMoi = newProduct,
+                spNoiBat = bestSeller
+            };
+            if (_productService.InsertProduct(product))
+            {
+                LoadProductsToListView();
+            }
+            else
+            {
+                MessageBox.Show("Thêm sản phẩm thất bại");
+            }
+        }
+
+        private void btn_editProduct_Click(object sender, EventArgs e)
+        {
+            if(listView_ProductList.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm cần sửa");
+                return;
+            }
+            string productId = listView_ProductList.SelectedItems[0].Text;
+            string productName = txt_nameProduct.Text;
+            string productImage = txt_imageProduct.Text;
+            string productUnit = comboBox_unit.Text;
+            string productDescription = txt_descriptionProduct.Text;
+            string categoryId = comboBox_Categories.SelectedValue.ToString();
+            string recipeId = comboBox_recipe.SelectedValue.ToString();
+            bool newProduct = checkBox_newProduct.Checked;
+            bool bestSeller = checkBox_bestSeller.Checked;
+
+            if (productName == "" || productImage == "" || productUnit == "" || productDescription == "")
+            {
+                MessageBox.Show("Vui lòng nhập các thông tin cần thiết");
+                return;
+            }
+
+            SanPham product = new SanPham
+            {
+                maSP = productId,
+                tenSP = productName,
+                hinhAnh = productImage,
+                donViTinh = productUnit,
+                moTa = productDescription,
+                maDM = categoryId,
+                maCT = recipeId,
+                spMoi = newProduct,
+                spNoiBat = bestSeller
+            };
+            if (_productService.UpdateProduct(product))
+            {
+                LoadProductsToListView();
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật sản phẩm thất bại");
+            }
+        }
+
+        private void btn_deteleProduct_Click(object sender, EventArgs e)
+        {
+            if (listView_ProductList.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm cần xoá");
+                return;
+            }
+            string productId = listView_ProductList.SelectedItems[0].Text;
+            if (_productService.DeleteProduct(productId))
+            {
+                LoadProductsToListView();
+            }
+            else
+            {
+                MessageBox.Show("Xoá sản phẩm thất bại");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            LoadProductsToListView();
+        }
+
+        private void btn_searchProduct_Click(object sender, EventArgs e)
+        {
+           
+            string keyword = txt_searchProduct.Text;
+            listView_ProductList.Items.Clear();
+            List<SanPham> products = _productService.SearchProduct(keyword);
+            foreach (var product in products)
+            {
+                ListViewItem item = new ListViewItem(product.maSP);
+                item.SubItems.Add(product.tenSP);
+                item.SubItems.Add(product.hinhAnh);
+                item.SubItems.Add(product.donViTinh);
+                item.SubItems.Add(product.moTa);
+                item.Tag = product;
+
+                listView_ProductList.Items.Add(item);
+            }
+        }
+
+        private void btn_addSize_Click(object sender, EventArgs e)
+        {
+            string sizeName = txt_nameSize.Text;
+            string sizeNote = txt_noteSize.Text;
+            if (sizeName == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên size");
+                return;
+            }
+            string maSize = _sizeService.GenerateSizeCode();
+            DTO.Size size = new DTO.Size
+            {
+                maSize = maSize,
+                tenSize = sizeName,
+                ghiChu = sizeNote
+            };
+            if (_sizeService.InsertSize(size))
+            {
+                LoadSizeToListView();
+            }
+            else
+            {
+                MessageBox.Show("Thêm size thất bại");
+            }
+
+        }
+
+        private void btn_editSize_Click(object sender, EventArgs e)
+        {
+            if (listView_sizeList.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn size cần sửa");
+                return;
+            }
+            string sizeId = listView_sizeList.SelectedItems[0].Text;
+            string sizeName = txt_nameSize.Text;
+            string sizeNote = txt_noteSize.Text;
+            if (sizeName == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên size");
+                return;
+            }
+            DTO.Size size = new DTO.Size
+            {
+                maSize = sizeId,
+                tenSize = sizeName,
+                ghiChu = sizeNote
+            };
+            if (_sizeService.UpdateSize(size))
+            {
+                LoadSizeToListView();
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật size thất bại");
+            }
+
+        }
+
+        private void btn_deleteSize_Click(object sender, EventArgs e)
+        {
+            if (listView_sizeList.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn size cần xoá");
+                return;
+            }
+            string sizeId = listView_sizeList.SelectedItems[0].Text;
+            if (_sizeService.DeleteSize(sizeId))
+            {
+                LoadSizeToListView();
+            }
+            else
+            {
+                MessageBox.Show("Xoá size thất bại");
+            }
+
+        }
+
+        private void btn_searchSize_Click(object sender, EventArgs e)
+        {
+
+            string keyword = txt_searchSize.Text;
+            listView_sizeList.Items.Clear();
+            List<DTO.Size> sizes = _sizeService.SearchSize(keyword);
+            foreach (var size in sizes)
+            {
+                ListViewItem item = new ListViewItem(size.maSize);
+                item.SubItems.Add(size.tenSize);
+                item.SubItems.Add(size.ghiChu);
+                listView_sizeList.Items.Add(item);
+            }
+        }
+
+        private void btn_showAllSize_Click(object sender, EventArgs e)
+        {
+            LoadSizeToListView();
+        }
+
+        private void listView_productDetailList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView_productDetailList.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = listView_productDetailList.SelectedItems[0];
+                var chitiet = (ChiTietSanPham)selectedItem.Tag;
+                
+
+                string maChiTiet = selectedItem.Text;
+
+                if (maChiTiet != "")
+                {
+                    string price = chitiet.donGia.ToString();
+                    textBox_price.Text = price;
+                    foreach (var item in comboBox_size.Items)
+                    {
+                        var size = item as DTO.Size;
+                        if (size != null && size.maSize == chitiet.maSize)
+                        {
+                            comboBox_size.SelectedItem = item;
+                            break;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        private void btn_addProductDetail_Click(object sender, EventArgs e)
+        {
+            if (listView_ProductList.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm cần thêm chi tiết");
+                return;
+            }
+            string productId = listView_ProductList.SelectedItems[0].Text;
+            string sizeId = comboBox_size.SelectedValue.ToString();
+            string price = textBox_price.Text;
+            if (productId == "" || sizeId == "" || price == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                return;
+            }
+            ChiTietSanPham chitietsanpham = _productDetailService.GetProductDetailByIdAndSizeId(productId, sizeId);
+            if(chitietsanpham != null)
+            {
+                MessageBox.Show("Sản phẩm đã có chi tiết với size này");
+                return;
+            }
+         
+            ChiTietSanPham productDetail = new ChiTietSanPham
+            {
+                maCTSP = _productDetailService.GenerateProductDetailCode(),
+                maSP = productId,
+                maSize = sizeId,
+                donGia = int.Parse(price)
+            };
+            if (_productDetailService.InsertProductDetail(productDetail))
+            {
+                LoadProductDetailsByProductId(productId);
+            }
+            else
+            {
+                MessageBox.Show("Thêm chi tiết sản phẩm thất bại");
+            }
+
+        }
+
+        private void btn_editProductDetail_Click(object sender, EventArgs e)
+        {
+
+            if (listView_productDetailList.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn chi tiết sản phẩm cần sửa");
+                return;
+            }
+            string sizeId = comboBox_size.SelectedValue.ToString();
+            string price = textBox_price.Text;
+           
+            if (  sizeId == "" || price == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                return;
+            }
+
+            if (listView_productDetailList.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = listView_productDetailList.SelectedItems[0];
+                var chitiet = (ChiTietSanPham)selectedItem.Tag;
+                ChiTietSanPham chitietsanpham = _productDetailService.GetProductDetailByIdAndSizeId(chitiet.maSP, sizeId);
+                if (chitietsanpham != null)
+                {
+                    MessageBox.Show("Sản phẩm đã có chi tiết với size này");
+                    return;
+                }
+                ChiTietSanPham productDetail = new ChiTietSanPham
+                {
+                    maSP = chitiet.maSP,
+                    maSize = sizeId,
+                    donGia = int.Parse(price)
+                };
+                if (_productDetailService.UpdateProductDetail(productDetail))
+                {
+                    LoadProductDetailsByProductId(chitiet.maSP);
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật chi tiết sản phẩm thất bại");
+                }
+            }
+        }
+
+        private void btn_deleteProductDetail_Click(object sender, EventArgs e)
+        {
+
+            if (listView_productDetailList.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn chi tiết sản phẩm cần xoá");
+                return;
+            }
+            if (listView_productDetailList.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = listView_productDetailList.SelectedItems[0];
+                var chitiet = (ChiTietSanPham)selectedItem.Tag;
+                if (_productDetailService.DeleteProductDetail(chitiet.maCTSP))
+                {
+                    LoadProductDetailsByProductId(chitiet.maSP);
+                }
+                else
+                {
+                    MessageBox.Show("Xoá chi tiết sản phẩm thất bại");
+                }
+            }
         }
     }
 }

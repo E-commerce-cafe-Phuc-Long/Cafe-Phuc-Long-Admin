@@ -30,48 +30,54 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btn_deleteRecipe = new System.Windows.Forms.Button();
+            this.btn_editRecipe = new System.Windows.Forms.Button();
+            this.btn_addRecipe = new System.Windows.Forms.Button();
+            this.txt_descRecipe = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_recipeName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.listView_recipeList = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.nud_soLuongMaterial = new System.Windows.Forms.NumericUpDown();
+            this.btn_editMaterial = new System.Windows.Forms.Button();
+            this.btn_deleteMaterial = new System.Windows.Forms.Button();
+            this.btn_addMaterial = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_materialName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.listView_materialsList = new System.Windows.Forms.ListView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.nud_soLuongR_M = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_material = new System.Windows.Forms.ComboBox();
+            this.comboBox_recipe = new System.Windows.Forms.ComboBox();
+            this.btn_editM_R = new System.Windows.Forms.Button();
+            this.btn_deleteM_R = new System.Windows.Forms.Button();
+            this.btn_addM_R = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.listView_recipe_materialsList = new System.Windows.Forms.ListView();
+            this.comboBox_DVT = new System.Windows.Forms.ComboBox();
+            this.txt_searchCT = new System.Windows.Forms.TextBox();
+            this.btn_searchCT = new System.Windows.Forms.Button();
+            this.btn_showAllCT = new System.Windows.Forms.Button();
+            this.txt_searchNL = new System.Windows.Forms.TextBox();
+            this.btn_searchNL = new System.Windows.Forms.Button();
+            this.btn_showAllNL = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_soLuongMaterial)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_soLuongR_M)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(299, 25);
+            this.label1.Location = new System.Drawing.Point(482, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(503, 45);
             this.label1.TabIndex = 0;
@@ -79,58 +85,64 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.btn_showAllCT);
+            this.groupBox1.Controls.Add(this.btn_searchCT);
+            this.groupBox1.Controls.Add(this.txt_searchCT);
+            this.groupBox1.Controls.Add(this.btn_deleteRecipe);
+            this.groupBox1.Controls.Add(this.btn_editRecipe);
+            this.groupBox1.Controls.Add(this.btn_addRecipe);
+            this.groupBox1.Controls.Add(this.txt_descRecipe);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_recipeName);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.listView_recipeList);
             this.groupBox1.Location = new System.Drawing.Point(57, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(621, 755);
+            this.groupBox1.Size = new System.Drawing.Size(751, 755);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Công thức";
             // 
-            // button3
+            // btn_deleteRecipe
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(327, 694);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 40);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Sửa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_deleteRecipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteRecipe.Location = new System.Drawing.Point(327, 694);
+            this.btn_deleteRecipe.Name = "btn_deleteRecipe";
+            this.btn_deleteRecipe.Size = new System.Drawing.Size(107, 40);
+            this.btn_deleteRecipe.TabIndex = 3;
+            this.btn_deleteRecipe.Text = "Xoá";
+            this.btn_deleteRecipe.UseVisualStyleBackColor = true;
+            this.btn_deleteRecipe.Click += new System.EventHandler(this.btn_deleteRecipe_Click);
             // 
-            // button2
+            // btn_editRecipe
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(217, 694);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 40);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Xoá";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_editRecipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editRecipe.Location = new System.Drawing.Point(217, 694);
+            this.btn_editRecipe.Name = "btn_editRecipe";
+            this.btn_editRecipe.Size = new System.Drawing.Size(106, 40);
+            this.btn_editRecipe.TabIndex = 3;
+            this.btn_editRecipe.Text = "Sửa";
+            this.btn_editRecipe.UseVisualStyleBackColor = true;
+            this.btn_editRecipe.Click += new System.EventHandler(this.btn_editRecipe_Click);
             // 
-            // button1
+            // btn_addRecipe
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(115, 694);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_addRecipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addRecipe.Location = new System.Drawing.Point(115, 694);
+            this.btn_addRecipe.Name = "btn_addRecipe";
+            this.btn_addRecipe.Size = new System.Drawing.Size(97, 40);
+            this.btn_addRecipe.TabIndex = 3;
+            this.btn_addRecipe.Text = "Thêm";
+            this.btn_addRecipe.UseVisualStyleBackColor = true;
+            this.btn_addRecipe.Click += new System.EventHandler(this.btn_addRecipe_Click);
             // 
-            // textBox2
+            // txt_descRecipe
             // 
-            this.textBox2.Location = new System.Drawing.Point(115, 618);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(319, 70);
-            this.textBox2.TabIndex = 2;
+            this.txt_descRecipe.Location = new System.Drawing.Point(115, 618);
+            this.txt_descRecipe.Multiline = true;
+            this.txt_descRecipe.Name = "txt_descRecipe";
+            this.txt_descRecipe.Size = new System.Drawing.Size(319, 70);
+            this.txt_descRecipe.TabIndex = 2;
             // 
             // label3
             // 
@@ -141,12 +153,12 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Mô tả";
             // 
-            // textBox1
+            // txt_recipeName
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 585);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(319, 22);
-            this.textBox1.TabIndex = 2;
+            this.txt_recipeName.Location = new System.Drawing.Point(115, 585);
+            this.txt_recipeName.Name = "txt_recipeName";
+            this.txt_recipeName.Size = new System.Drawing.Size(319, 22);
+            this.txt_recipeName.TabIndex = 2;
             // 
             // label2
             // 
@@ -160,80 +172,85 @@
             // listView_recipeList
             // 
             this.listView_recipeList.HideSelection = false;
-            this.listView_recipeList.Location = new System.Drawing.Point(12, 21);
+            this.listView_recipeList.Location = new System.Drawing.Point(12, 62);
             this.listView_recipeList.Name = "listView_recipeList";
-            this.listView_recipeList.Size = new System.Drawing.Size(603, 547);
+            this.listView_recipeList.Size = new System.Drawing.Size(722, 506);
             this.listView_recipeList.TabIndex = 0;
             this.listView_recipeList.UseCompatibleStateImageBehavior = false;
+            this.listView_recipeList.SelectedIndexChanged += new System.EventHandler(this.listView_recipeList_SelectedIndexChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.AutoSize = true;
-            this.groupBox2.Controls.Add(this.numericUpDown1);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.btn_showAllNL);
+            this.groupBox2.Controls.Add(this.btn_searchNL);
+            this.groupBox2.Controls.Add(this.comboBox_DVT);
+            this.groupBox2.Controls.Add(this.txt_searchNL);
+            this.groupBox2.Controls.Add(this.nud_soLuongMaterial);
+            this.groupBox2.Controls.Add(this.btn_editMaterial);
+            this.groupBox2.Controls.Add(this.btn_deleteMaterial);
+            this.groupBox2.Controls.Add(this.btn_addMaterial);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txt_materialName);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.listView_materialsList);
-            this.groupBox2.Location = new System.Drawing.Point(695, 376);
+            this.groupBox2.Location = new System.Drawing.Point(823, 361);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(619, 466);
+            this.groupBox2.Size = new System.Drawing.Size(655, 481);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nguyên liệu";
             // 
-            // numericUpDown1
+            // nud_soLuongMaterial
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(115, 341);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 4;
+            this.nud_soLuongMaterial.Location = new System.Drawing.Point(114, 356);
+            this.nud_soLuongMaterial.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nud_soLuongMaterial.Name = "nud_soLuongMaterial";
+            this.nud_soLuongMaterial.Size = new System.Drawing.Size(120, 22);
+            this.nud_soLuongMaterial.TabIndex = 4;
             // 
-            // button4
+            // btn_editMaterial
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(337, 405);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 40);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Sửa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_editMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editMaterial.Location = new System.Drawing.Point(174, 420);
+            this.btn_editMaterial.Name = "btn_editMaterial";
+            this.btn_editMaterial.Size = new System.Drawing.Size(107, 40);
+            this.btn_editMaterial.TabIndex = 3;
+            this.btn_editMaterial.Text = "Sửa";
+            this.btn_editMaterial.UseVisualStyleBackColor = true;
+            this.btn_editMaterial.Click += new System.EventHandler(this.btn_editMaterial_Click);
             // 
-            // button5
+            // btn_deleteMaterial
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(196, 405);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 40);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Xoá";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_deleteMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteMaterial.Location = new System.Drawing.Point(299, 420);
+            this.btn_deleteMaterial.Name = "btn_deleteMaterial";
+            this.btn_deleteMaterial.Size = new System.Drawing.Size(106, 40);
+            this.btn_deleteMaterial.TabIndex = 3;
+            this.btn_deleteMaterial.Text = "Xoá";
+            this.btn_deleteMaterial.UseVisualStyleBackColor = true;
+            this.btn_deleteMaterial.Click += new System.EventHandler(this.btn_deleteMaterial_Click);
             // 
-            // button6
+            // btn_addMaterial
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(49, 405);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(97, 40);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Thêm";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(115, 377);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(248, 22);
-            this.textBox5.TabIndex = 2;
+            this.btn_addMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addMaterial.Location = new System.Drawing.Point(48, 420);
+            this.btn_addMaterial.Name = "btn_addMaterial";
+            this.btn_addMaterial.Size = new System.Drawing.Size(97, 40);
+            this.btn_addMaterial.TabIndex = 3;
+            this.btn_addMaterial.Text = "Thêm";
+            this.btn_addMaterial.UseVisualStyleBackColor = true;
+            this.btn_addMaterial.Click += new System.EventHandler(this.btn_addMaterial_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 380);
+            this.label6.Location = new System.Drawing.Point(8, 395);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 16);
             this.label6.TabIndex = 1;
@@ -242,23 +259,23 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 341);
+            this.label4.Location = new System.Drawing.Point(8, 356);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Số lượng";
             // 
-            // textBox4
+            // txt_materialName
             // 
-            this.textBox4.Location = new System.Drawing.Point(115, 302);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(248, 22);
-            this.textBox4.TabIndex = 2;
+            this.txt_materialName.Location = new System.Drawing.Point(114, 317);
+            this.txt_materialName.Name = "txt_materialName";
+            this.txt_materialName.Size = new System.Drawing.Size(248, 22);
+            this.txt_materialName.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 302);
+            this.label5.Location = new System.Drawing.Point(8, 317);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 16);
             this.label5.TabIndex = 1;
@@ -267,87 +284,91 @@
             // listView_materialsList
             // 
             this.listView_materialsList.HideSelection = false;
-            this.listView_materialsList.Location = new System.Drawing.Point(12, 21);
+            this.listView_materialsList.Location = new System.Drawing.Point(12, 65);
             this.listView_materialsList.Name = "listView_materialsList";
-            this.listView_materialsList.Size = new System.Drawing.Size(587, 258);
+            this.listView_materialsList.Size = new System.Drawing.Size(636, 214);
             this.listView_materialsList.TabIndex = 0;
             this.listView_materialsList.UseCompatibleStateImageBehavior = false;
+            this.listView_materialsList.SelectedIndexChanged += new System.EventHandler(this.listView_materialsList_SelectedIndexChanged);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.numericUpDown2);
-            this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.button9);
+            this.groupBox3.Controls.Add(this.nud_soLuongR_M);
+            this.groupBox3.Controls.Add(this.comboBox_material);
+            this.groupBox3.Controls.Add(this.comboBox_recipe);
+            this.groupBox3.Controls.Add(this.btn_editM_R);
+            this.groupBox3.Controls.Add(this.btn_deleteM_R);
+            this.groupBox3.Controls.Add(this.btn_addM_R);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.listView_recipe_materialsList);
-            this.groupBox3.Location = new System.Drawing.Point(695, 87);
+            this.groupBox3.Location = new System.Drawing.Point(823, 87);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(619, 268);
+            this.groupBox3.Size = new System.Drawing.Size(655, 268);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             // 
-            // numericUpDown2
+            // nud_soLuongR_M
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(115, 237);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(185, 22);
-            this.numericUpDown2.TabIndex = 6;
+            this.nud_soLuongR_M.Location = new System.Drawing.Point(429, 189);
+            this.nud_soLuongR_M.Name = "nud_soLuongR_M";
+            this.nud_soLuongR_M.Size = new System.Drawing.Size(124, 22);
+            this.nud_soLuongR_M.TabIndex = 6;
             // 
-            // comboBox2
+            // comboBox_material
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(116, 192);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(186, 24);
-            this.comboBox2.TabIndex = 5;
+            this.comboBox_material.FormattingEnabled = true;
+            this.comboBox_material.Location = new System.Drawing.Point(115, 230);
+            this.comboBox_material.Name = "comboBox_material";
+            this.comboBox_material.Size = new System.Drawing.Size(186, 24);
+            this.comboBox_material.TabIndex = 5;
             // 
-            // comboBox1
+            // comboBox_recipe
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(115, 153);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(186, 24);
-            this.comboBox1.TabIndex = 4;
+            this.comboBox_recipe.FormattingEnabled = true;
+            this.comboBox_recipe.Location = new System.Drawing.Point(114, 191);
+            this.comboBox_recipe.Name = "comboBox_recipe";
+            this.comboBox_recipe.Size = new System.Drawing.Size(186, 24);
+            this.comboBox_recipe.TabIndex = 4;
             // 
-            // button7
+            // btn_editM_R
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(492, 67);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(107, 40);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Sửa";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_editM_R.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editM_R.Location = new System.Drawing.Point(492, 67);
+            this.btn_editM_R.Name = "btn_editM_R";
+            this.btn_editM_R.Size = new System.Drawing.Size(107, 40);
+            this.btn_editM_R.TabIndex = 3;
+            this.btn_editM_R.Text = "Sửa";
+            this.btn_editM_R.UseVisualStyleBackColor = true;
+            this.btn_editM_R.Click += new System.EventHandler(this.btn_editM_R_Click);
             // 
-            // button8
+            // btn_deleteM_R
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(492, 117);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(107, 40);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "Xoá";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_deleteM_R.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteM_R.Location = new System.Drawing.Point(492, 117);
+            this.btn_deleteM_R.Name = "btn_deleteM_R";
+            this.btn_deleteM_R.Size = new System.Drawing.Size(107, 40);
+            this.btn_deleteM_R.TabIndex = 3;
+            this.btn_deleteM_R.Text = "Xoá";
+            this.btn_deleteM_R.UseVisualStyleBackColor = true;
+            this.btn_deleteM_R.Click += new System.EventHandler(this.btn_deleteM_R_Click);
             // 
-            // button9
+            // btn_addM_R
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(492, 21);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(107, 40);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Thêm";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_addM_R.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addM_R.Location = new System.Drawing.Point(492, 21);
+            this.btn_addM_R.Name = "btn_addM_R";
+            this.btn_addM_R.Size = new System.Drawing.Size(107, 40);
+            this.btn_addM_R.TabIndex = 3;
+            this.btn_addM_R.Text = "Thêm";
+            this.btn_addM_R.UseVisualStyleBackColor = true;
+            this.btn_addM_R.Click += new System.EventHandler(this.btn_addM_R_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 239);
+            this.label9.Location = new System.Drawing.Point(332, 191);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 16);
             this.label9.TabIndex = 1;
@@ -356,7 +377,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 195);
+            this.label7.Location = new System.Drawing.Point(9, 233);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 16);
             this.label7.TabIndex = 1;
@@ -365,7 +386,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 156);
+            this.label8.Location = new System.Drawing.Point(9, 194);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 16);
             this.label8.TabIndex = 1;
@@ -376,30 +397,98 @@
             this.listView_recipe_materialsList.HideSelection = false;
             this.listView_recipe_materialsList.Location = new System.Drawing.Point(12, 21);
             this.listView_recipe_materialsList.Name = "listView_recipe_materialsList";
-            this.listView_recipe_materialsList.Size = new System.Drawing.Size(418, 126);
+            this.listView_recipe_materialsList.Size = new System.Drawing.Size(449, 126);
             this.listView_recipe_materialsList.TabIndex = 0;
             this.listView_recipe_materialsList.UseCompatibleStateImageBehavior = false;
+            this.listView_recipe_materialsList.SelectedIndexChanged += new System.EventHandler(this.listView_recipe_materialsList_SelectedIndexChanged);
+            // 
+            // comboBox_DVT
+            // 
+            this.comboBox_DVT.FormattingEnabled = true;
+            this.comboBox_DVT.Items.AddRange(new object[] {
+            "gram",
+            "hôp",
+            "quả",
+            "lít"});
+            this.comboBox_DVT.Location = new System.Drawing.Point(114, 384);
+            this.comboBox_DVT.Name = "comboBox_DVT";
+            this.comboBox_DVT.Size = new System.Drawing.Size(248, 24);
+            this.comboBox_DVT.TabIndex = 6;
+            // 
+            // txt_searchCT
+            // 
+            this.txt_searchCT.Location = new System.Drawing.Point(12, 34);
+            this.txt_searchCT.Name = "txt_searchCT";
+            this.txt_searchCT.Size = new System.Drawing.Size(150, 22);
+            this.txt_searchCT.TabIndex = 4;
+            // 
+            // btn_searchCT
+            // 
+            this.btn_searchCT.Location = new System.Drawing.Point(179, 33);
+            this.btn_searchCT.Name = "btn_searchCT";
+            this.btn_searchCT.Size = new System.Drawing.Size(101, 23);
+            this.btn_searchCT.TabIndex = 5;
+            this.btn_searchCT.Text = "Tìm";
+            this.btn_searchCT.UseVisualStyleBackColor = true;
+            this.btn_searchCT.Click += new System.EventHandler(this.btn_searchCT_Click);
+            // 
+            // btn_showAllCT
+            // 
+            this.btn_showAllCT.Location = new System.Drawing.Point(633, 34);
+            this.btn_showAllCT.Name = "btn_showAllCT";
+            this.btn_showAllCT.Size = new System.Drawing.Size(101, 23);
+            this.btn_showAllCT.TabIndex = 6;
+            this.btn_showAllCT.Text = "Tất cả";
+            this.btn_showAllCT.UseVisualStyleBackColor = true;
+            this.btn_showAllCT.Click += new System.EventHandler(this.btn_showAllCT_Click);
+            // 
+            // txt_searchNL
+            // 
+            this.txt_searchNL.Location = new System.Drawing.Point(12, 37);
+            this.txt_searchNL.Name = "txt_searchNL";
+            this.txt_searchNL.Size = new System.Drawing.Size(150, 22);
+            this.txt_searchNL.TabIndex = 4;
+            // 
+            // btn_searchNL
+            // 
+            this.btn_searchNL.Location = new System.Drawing.Point(168, 36);
+            this.btn_searchNL.Name = "btn_searchNL";
+            this.btn_searchNL.Size = new System.Drawing.Size(101, 23);
+            this.btn_searchNL.TabIndex = 5;
+            this.btn_searchNL.Text = "Tìm";
+            this.btn_searchNL.UseVisualStyleBackColor = true;
+            this.btn_searchNL.Click += new System.EventHandler(this.btn_searchNL_Click);
+            // 
+            // btn_showAllNL
+            // 
+            this.btn_showAllNL.Location = new System.Drawing.Point(547, 36);
+            this.btn_showAllNL.Name = "btn_showAllNL";
+            this.btn_showAllNL.Size = new System.Drawing.Size(101, 23);
+            this.btn_showAllNL.TabIndex = 6;
+            this.btn_showAllNL.Text = "Tất cả";
+            this.btn_showAllNL.UseVisualStyleBackColor = true;
+            this.btn_showAllNL.Click += new System.EventHandler(this.btn_showAllNL_Click);
             // 
             // frmMaterialManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1348, 922);
+            this.ClientSize = new System.Drawing.Size(1490, 922);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmMaterialManagement";
-            this.Text = "frmMaterialManagement";
+            this.Text = "Quản lý công thức - nguyên liệu";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_soLuongMaterial)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_soLuongR_M)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,34 +499,40 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListView listView_recipeList;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btn_deleteRecipe;
+        private System.Windows.Forms.Button btn_editRecipe;
+        private System.Windows.Forms.Button btn_addRecipe;
+        private System.Windows.Forms.TextBox txt_descRecipe;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_recipeName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.NumericUpDown nud_soLuongMaterial;
+        private System.Windows.Forms.Button btn_editMaterial;
+        private System.Windows.Forms.Button btn_deleteMaterial;
+        private System.Windows.Forms.Button btn_addMaterial;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_materialName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListView listView_materialsList;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_editM_R;
+        private System.Windows.Forms.Button btn_deleteM_R;
+        private System.Windows.Forms.Button btn_addM_R;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListView listView_recipe_materialsList;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.NumericUpDown nud_soLuongR_M;
+        private System.Windows.Forms.ComboBox comboBox_material;
+        private System.Windows.Forms.ComboBox comboBox_recipe;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox_DVT;
+        private System.Windows.Forms.Button btn_showAllCT;
+        private System.Windows.Forms.Button btn_searchCT;
+        private System.Windows.Forms.TextBox txt_searchCT;
+        private System.Windows.Forms.Button btn_showAllNL;
+        private System.Windows.Forms.Button btn_searchNL;
+        private System.Windows.Forms.TextBox txt_searchNL;
     }
 }

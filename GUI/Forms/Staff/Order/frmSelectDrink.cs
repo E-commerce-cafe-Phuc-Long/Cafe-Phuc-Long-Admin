@@ -25,7 +25,9 @@ namespace GUI.Forms
         private string da;
         private string duong;
         private string tra;
-        public frmSelectDrink(IDosageService dosage, ISizeService _sizeService, string maSP, string size = null, string da = null, string duong = null, string tra = null)
+        private string sl;
+
+        public frmSelectDrink(IDosageService dosage, ISizeService _sizeService, string maSP, string sl = null, string size = null, string da = null, string duong = null, string tra = null)
         {
             this._dosage = dosage;
             this._sizeService = _sizeService;
@@ -34,6 +36,7 @@ namespace GUI.Forms
             this.da = da;
             this.duong = duong;
             this.tra = tra;
+            this.sl = sl;
             InitializeComponent();
             this.Load += FrmSelectDrink_Load;
         }
@@ -46,8 +49,7 @@ namespace GUI.Forms
                 SelectComboBoxItem<LieuLuong>(da, comboBox_da, "maLL");
                 SelectComboBoxItem<LieuLuong>(duong, comboBox_duong, "maLL");
                 SelectComboBoxItem<LieuLuong>(tra, comboBox_tra, "maLL");
-
-
+                soluong.Value = Convert.ToInt32(sl);
             }
         }
         private void SetComboBoxDataSource<T>(ComboBox comboBox, List<T> dataList, string displayMember, string valueMember)

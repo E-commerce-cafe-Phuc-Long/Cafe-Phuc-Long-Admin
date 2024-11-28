@@ -21,7 +21,7 @@ namespace DAL.Repositories.Staff
 
         dynamic SearchStaff(string keyword);
 
-
+        NhanVien GetStaffByUsername(string username);
 
     }
 }

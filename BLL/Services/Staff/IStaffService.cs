@@ -14,10 +14,9 @@ namespace BLL.Services.Staff
 
          dynamic GetStaffWithRoleNames();
         bool InsertStaff(NhanVien newStaff);
-
         bool DeleteStaff(string maNV);
         bool UpdateStaff(NhanVien nv);
-
         dynamic SearchStaff(string keyword);
+        NhanVien GetStaffByUsername(string username);
     }
 }

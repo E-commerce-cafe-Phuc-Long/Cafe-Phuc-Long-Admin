@@ -10,5 +10,7 @@ namespace BLL.Services.Order
     public interface IOrderService
     {
         List<DonHang> GetOrdersList();
+        bool InsertOrder(DonHang p);
+        string GenerateOrderCode();
     }
 }

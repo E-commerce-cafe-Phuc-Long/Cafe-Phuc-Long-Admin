@@ -19,5 +19,31 @@ namespace BLL.Services.Category
         {
             return _repository.GetCategoriesList();
         }
+        public bool InsertCategory(DanhMuc nv)
+        {
+            return _repository.InsertCategory(nv);
+        }
+
+        public bool UpdateCategory(DanhMuc update)
+        {
+            return _repository.UpdateCategory(update);
+        }
+        public List<DanhMuc> SearchCategory(string keyword)
+        {
+            return _repository.SearchCategory(keyword);
+        }
+        public string GenerateCategoryCode()
+        {
+            var lastCustomerCode = _repository.GetLastCategoryCode();
+
+            if (string.IsNullOrEmpty(lastCustomerCode))
+            {
+                return "DM001";
+            }
+
+            var number = int.Parse(lastCustomerCode.Substring(2));
+
+            return $"DM{(number + 1):D3}";
+        }
     }
 }

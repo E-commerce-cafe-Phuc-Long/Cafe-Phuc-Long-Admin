@@ -43,7 +43,7 @@
             this.lb_Title.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Title.Location = new System.Drawing.Point(93, 9);
             this.lb_Title.Name = "lb_Title";
-            this.lb_Title.Size = new System.Drawing.Size(342, 46);
+            this.lb_Title.Size = new System.Drawing.Size(332, 45);
             this.lb_Title.TabIndex = 0;
             this.lb_Title.Text = "Đăng nhập tài khoản";
             // 

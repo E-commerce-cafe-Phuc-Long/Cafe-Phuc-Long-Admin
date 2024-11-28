@@ -10,5 +10,7 @@ namespace BLL.Services.OrderDetail
     public interface IOrderDetailService
     {
         List<ChiTietDonHang> GetOrderDetailsList();
+        bool InsertOrderDetail(ChiTietDonHang p);
+        List<ChiTietDonHang> GetOrderDetailsListByOrderCode(string orderCode);
     }
 }

@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using CloudinaryDotNet.Actions;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,10 @@ namespace BLL.Services.Size
     {
         List<DTO.Size> GetSizeList();
         List<DTO.Size> GetSizesByProductId(string productId);
+        string GenerateSizeCode();
+        bool InsertSize(DTO.Size size);
+        bool UpdateSize(DTO.Size size);
+        bool DeleteSize(string maSize);
+        List<DTO.Size> SearchSize(string keyword);
     }
 }

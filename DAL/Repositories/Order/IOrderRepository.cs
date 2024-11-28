@@ -10,5 +10,7 @@ namespace DAL.Repositories.Order
     public interface IOrderRepository
     {
         List<DonHang> GetOrdersList();
+        bool InsertOrder(DonHang p);
+        string GetLastOrderCode();
     }
 }

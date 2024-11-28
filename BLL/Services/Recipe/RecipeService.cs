@@ -19,5 +19,37 @@ namespace BLL.Services.Recipe
         {
             return _repository.GetRecipeList();
         }
+        public string GenerateRecipeCode()
+        {
+            var lastRecipeCode = _repository.GetLastRecipeCode();
+
+            if (string.IsNullOrEmpty(lastRecipeCode))
+            {
+                return "CT001";
+            }
+
+            var number = int.Parse(lastRecipeCode.Substring(2));
+
+            return $"CT{(number + 1):D3}";
+        }
+        public bool InsertRecipe(CongThuc congThuc)
+        {
+            return _repository.InsertRecipe(congThuc);
+
+        }
+        public bool DeleteRecipe(string maCT)
+        {
+            return _repository.DeleteRecipe(maCT);
+        }
+
+        public bool UpdateRecipe(CongThuc updated)
+        {
+            return _repository.UpdateRecipe(updated);
+        }
+        public List<CongThuc> SearchRecipe(string keyword)
+        {
+            return _repository.SearchRecipe(keyword);
+        }
+
     }
 }

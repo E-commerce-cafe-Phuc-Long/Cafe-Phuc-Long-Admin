@@ -65,7 +65,7 @@ namespace DAL.Repositories.Customer
 
                 if (nv != null)
                 {
-                    nv.tenKH = updated.maKH;
+                    nv.tenKH = updated.tenKH;
                     //nv.username = updated.username;
                     //nv.matKhau = updated.matKhau;
                     nv.soDT = updated.soDT;
@@ -121,6 +121,10 @@ namespace DAL.Repositories.Customer
             }
         }
 
+        public KhachHang GetCustomerByPhone(string phone)
+        {
+            return _context.KhachHangs.FirstOrDefault(x => x.soDT == phone);
+        }
 
     }
 }
