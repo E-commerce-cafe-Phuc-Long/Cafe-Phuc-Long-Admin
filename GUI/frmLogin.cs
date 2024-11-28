@@ -34,11 +34,11 @@ namespace GUI
         {
             //Cần xử lý kiểm tra thông tin đăng nhập manager/staff để điều hướng form
             this.Hide();
-            frmMainSale frmMainSale = _serviceProvider.GetRequiredService<frmMainSale>();
-            frmMainSale.ShowDialog();
+            //frmMainSale frmMainSale = _serviceProvider.GetRequiredService<frmMainSale>();
+            //frmMainSale.ShowDialog();
 
-            //frmMainManagement frmMainManagement = _serviceProvider.GetRequiredService<frmMainManagement>();
-            //frmMainManagement.ShowDialog();
+            frmMainManagement frmMainManagement = _serviceProvider.GetRequiredService<frmMainManagement>();
+            frmMainManagement.ShowDialog();
             //Cần xử lý ngoại lệ, thông báo lỗi đăng nhập
         }
     }

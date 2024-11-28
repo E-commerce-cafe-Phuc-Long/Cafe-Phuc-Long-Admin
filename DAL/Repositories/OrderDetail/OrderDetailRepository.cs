@@ -18,10 +18,26 @@ namespace DAL.Repositories.OrderDetail
         {
             return _context.ChiTietDonHangs.ToList();
         }
-        public ChiTietSanPham GetProductDetailByIdAndSizeId(string productId, string sizeId)
+
+        public List<ChiTietDonHang> GetOrderDetailsListByOrderCode(string orderCode)
         {
-            return _context.ChiTietSanPhams
-                .FirstOrDefault(prod => prod.maSP == productId && prod.Size.maSize == sizeId);
+            return _context.ChiTietDonHangs.Where(p => p.maDH == orderCode).ToList();
+        }
+        public bool InsertOrderDetail(ChiTietDonHang p)
+        {
+            try
+            {
+                _context.ChiTietDonHangs.InsertOnSubmit(p);
+
+                _context.SubmitChanges();
+
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

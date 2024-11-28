@@ -18,5 +18,28 @@ namespace DAL.Repositories.Order
         {
             return _context.DonHangs.ToList();
         }
+        public string GetLastOrderCode()
+        {
+            return _context.DonHangs
+                .OrderByDescending(kh => kh.maDH)
+                .Select(kh => kh.maDH)
+                .FirstOrDefault();
+        }
+        public bool InsertOrder(DonHang p)
+        {
+            try
+            {
+                _context.DonHangs.InsertOnSubmit(p);
+
+                _context.SubmitChanges();
+
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

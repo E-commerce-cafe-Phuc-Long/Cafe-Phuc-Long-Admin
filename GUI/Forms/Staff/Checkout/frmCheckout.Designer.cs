@@ -35,8 +35,8 @@
             this.listView_cart = new System.Windows.Forms.ListView();
             this.comboBox_method = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lb_totalPrice = new System.Windows.Forms.Label();
+            this.btn_checkout = new System.Windows.Forms.Button();
             this.lb_customer = new System.Windows.Forms.Label();
             this.lb_cus = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -107,26 +107,27 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Phương thức";
             // 
-            // label4
+            // lb_totalPrice
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(833, 315);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "100,000";
+            this.lb_totalPrice.AutoSize = true;
+            this.lb_totalPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_totalPrice.ForeColor = System.Drawing.Color.Red;
+            this.lb_totalPrice.Location = new System.Drawing.Point(833, 315);
+            this.lb_totalPrice.Name = "lb_totalPrice";
+            this.lb_totalPrice.Size = new System.Drawing.Size(82, 23);
+            this.lb_totalPrice.TabIndex = 0;
+            this.lb_totalPrice.Text = "100,000";
             // 
-            // button2
+            // btn_checkout
             // 
-            this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(584, 356);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(342, 51);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Thanh toán";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_checkout.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_checkout.Location = new System.Drawing.Point(584, 356);
+            this.btn_checkout.Name = "btn_checkout";
+            this.btn_checkout.Size = new System.Drawing.Size(342, 51);
+            this.btn_checkout.TabIndex = 5;
+            this.btn_checkout.Text = "Thanh toán";
+            this.btn_checkout.UseVisualStyleBackColor = true;
+            this.btn_checkout.Click += new System.EventHandler(this.btn_checkout_Click);
             // 
             // lb_customer
             // 
@@ -155,13 +156,13 @@
             this.ClientSize = new System.Drawing.Size(977, 450);
             this.Controls.Add(this.lb_cus);
             this.Controls.Add(this.lb_customer);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_checkout);
             this.Controls.Add(this.listView_cart);
             this.Controls.Add(this.comboBox_method);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_customer);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lb_totalPrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmCheckout";
@@ -180,8 +181,8 @@
         private System.Windows.Forms.ListView listView_cart;
         private System.Windows.Forms.ComboBox comboBox_method;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lb_totalPrice;
+        private System.Windows.Forms.Button btn_checkout;
         private System.Windows.Forms.Label lb_customer;
         private System.Windows.Forms.Label lb_cus;
     }

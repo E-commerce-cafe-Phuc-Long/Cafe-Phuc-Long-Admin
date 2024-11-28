@@ -19,5 +19,22 @@ namespace BLL.Services.Order
         {
             return _repository.GetOrdersList();
         }
+        public bool InsertOrder(DonHang p)
+        {
+            return _repository.InsertOrder(p);
+        }
+        public string GenerateOrderCode()
+        {
+            var lastOrderCode = _repository.GetLastOrderCode();
+
+            if (string.IsNullOrEmpty(lastOrderCode))
+            {
+                return "DH001";
+            }
+
+            var number = int.Parse(lastOrderCode.Substring(2));
+
+            return $"DH{(number + 1):D3}";
+        }
     }
 }

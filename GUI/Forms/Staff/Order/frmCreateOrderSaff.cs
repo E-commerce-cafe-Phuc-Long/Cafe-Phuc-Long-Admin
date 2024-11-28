@@ -261,7 +261,7 @@ namespace GUI.Forms
                 string tra = item.SubItems[5].Text;
                 SanPham product = _productService.GetProductByName(productName);
                 string maSP = product.maSP;
-                frmSelectDrink selectDrinkForm = new frmSelectDrink(_dosageService, _sizeService, maSP, size, da, duong, tra);
+                frmSelectDrink selectDrinkForm = new frmSelectDrink(_dosageService, _sizeService,  maSP, quantity, size, da, duong, tra);
                 selectDrinkForm.Owner = this;
                 selectDrinkForm.StartPosition = FormStartPosition.CenterParent;
                 selectDrinkForm.ShowDialog();
@@ -274,10 +274,13 @@ namespace GUI.Forms
                     item.SubItems[3].Text = da.ToString();
                     item.SubItems[4].Text = duong.ToString();
                     item.SubItems[5].Text = tra.ToString();
+                    gia = gia * (int.Parse(sl));
                     item.SubItems[6].Text= gia.ToString();
-                    
+
+                    updateTongTien();
+
                 }
-                updateTongTien();
+                
             }
             
         }
@@ -294,7 +297,19 @@ namespace GUI.Forms
         
         private void Btn_checkout_Click(object sender, EventArgs e)
         {
-
+            if (listView_cart.Items.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm");
+                return;
+            }
+            frmCheckout checkoutForm = _serviceProvider.GetRequiredService<frmCheckout>();
+            checkoutForm.SetListViewData(listView_cart.Items);
+            checkoutForm.ShowDialog();
+            if (confirm == true)
+            {
+                listView_cart.Items.Clear();
+                updateTongTien();
+            }
         }
 
         private void btn_deleteCart_Click(object sender, EventArgs e)

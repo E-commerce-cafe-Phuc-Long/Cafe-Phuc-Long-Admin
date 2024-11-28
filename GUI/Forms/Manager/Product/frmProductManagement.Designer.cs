@@ -31,6 +31,8 @@
             this.lb_Title = new System.Windows.Forms.Label();
             this.listView_CategoryList = new System.Windows.Forms.ListView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_descriptionCategory = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txt_nameCategory = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_showAllCategories = new System.Windows.Forms.Button();
@@ -86,8 +88,6 @@
             this.btn_editSize = new System.Windows.Forms.Button();
             this.btn_addSize = new System.Windows.Forms.Button();
             this.listView_sizeList = new System.Windows.Forms.ListView();
-            this.txt_descriptionCategory = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -100,7 +100,7 @@
             // 
             this.lb_Title.AutoSize = true;
             this.lb_Title.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Title.Location = new System.Drawing.Point(613, 28);
+            this.lb_Title.Location = new System.Drawing.Point(742, 22);
             this.lb_Title.Name = "lb_Title";
             this.lb_Title.Size = new System.Drawing.Size(288, 45);
             this.lb_Title.TabIndex = 0;
@@ -134,6 +134,23 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh mục";
+            // 
+            // txt_descriptionCategory
+            // 
+            this.txt_descriptionCategory.Location = new System.Drawing.Point(137, 527);
+            this.txt_descriptionCategory.Multiline = true;
+            this.txt_descriptionCategory.Name = "txt_descriptionCategory";
+            this.txt_descriptionCategory.Size = new System.Drawing.Size(227, 80);
+            this.txt_descriptionCategory.TabIndex = 26;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 527);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 16);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Mô tả";
             // 
             // txt_nameCategory
             // 
@@ -689,23 +706,6 @@
             this.listView_sizeList.TabIndex = 3;
             this.listView_sizeList.UseCompatibleStateImageBehavior = false;
             this.listView_sizeList.SelectedIndexChanged += new System.EventHandler(this.listView_sizeList_SelectedIndexChanged);
-            // 
-            // txt_descriptionCategory
-            // 
-            this.txt_descriptionCategory.Location = new System.Drawing.Point(137, 527);
-            this.txt_descriptionCategory.Multiline = true;
-            this.txt_descriptionCategory.Name = "txt_descriptionCategory";
-            this.txt_descriptionCategory.Size = new System.Drawing.Size(227, 80);
-            this.txt_descriptionCategory.TabIndex = 26;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 527);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 16);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Mô tả";
             // 
             // frmProductManagement
             // 
