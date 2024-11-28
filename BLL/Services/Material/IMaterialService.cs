@@ -10,5 +10,6 @@ namespace BLL.Services.Material
     public interface IMaterialService
     {
         List<NguyenLieu> GetMaterialsList();
+        string GetMaterialNameById(string maNL);
     }
 }

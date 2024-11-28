@@ -23,14 +23,26 @@ namespace BLL.Services.GoodsReceipt
         }
         public dynamic GetData() { return _repository.GetData(); }
 
-        public bool Insert(PhieuNhap p)
+        public string GenerateCode()
         {
-            return _repository.Insert(p);
+            var lastCode = _repository.GetCode();
+
+            // Nếu chưa có thì khởi tạo mã NV: NV001
+            if (string.IsNullOrEmpty(lastCode))
+            {
+                return "PN001";
+            }
+
+            var number = int.Parse(lastCode.Substring(2));
+
+            return $"PN{(number + 1):D3}";
         }
-        public bool Delete(string maPhieuNhap)
-        { return _repository.Delete(maPhieuNhap); }
-        public bool Update(PhieuNhap updated)
-        {  return _repository.Update(updated); }
+
+        //tạo
+        public void SaveGoodsReceipt(string maPhieuNhap, string maNCC, DateTime ngayNhap, List<ChiTietPhieuNhap> details)
+        {
+            _repository.SaveGoodsReceipt(maPhieuNhap,maNCC,ngayNhap,details);
+        }
 
 
     }

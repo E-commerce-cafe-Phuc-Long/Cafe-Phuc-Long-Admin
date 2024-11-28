@@ -10,7 +10,9 @@ namespace BLL.Services.GoodsReceiptDetails
     public interface IGoodsReceiptDetailsService
     {
         List<ChiTietPhieuNhap> GetGoodsReceiptDetailsList();
+
         dynamic GetDetailsByGoodsReceiptId(string maPhieuNhap);
+        bool Insert(string maPhieuNhap, ChiTietPhieuNhap p);
 
     }
 }

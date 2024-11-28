@@ -31,7 +31,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
-            this.btn_Insert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblStaffID = new System.Windows.Forms.Label();
@@ -59,7 +58,6 @@
             // 
             this.groupBox2.Controls.Add(this.btn_Delete);
             this.groupBox2.Controls.Add(this.btn_Update);
-            this.groupBox2.Controls.Add(this.btn_Insert);
             this.groupBox2.Location = new System.Drawing.Point(989, 85);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 227);
@@ -86,15 +84,6 @@
             this.btn_Update.Text = "Sửa";
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
-            // 
-            // btn_Insert
-            // 
-            this.btn_Insert.Location = new System.Drawing.Point(66, 31);
-            this.btn_Insert.Name = "btn_Insert";
-            this.btn_Insert.Size = new System.Drawing.Size(75, 23);
-            this.btn_Insert.TabIndex = 0;
-            this.btn_Insert.Text = "Thêm";
-            this.btn_Insert.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -296,7 +285,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Update;
-        private System.Windows.Forms.Button btn_Insert;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblStaffID;

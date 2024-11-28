@@ -11,8 +11,9 @@ namespace BLL.Services.Staff
     {
      
         List<NhanVien> GetStaffList();
+        string GenerateStaffCode();
 
-         dynamic GetStaffWithRoleNames();
+        dynamic GetStaffWithRoleNames();
         bool InsertStaff(NhanVien newStaff);
 
         bool DeleteStaff(string maNV);

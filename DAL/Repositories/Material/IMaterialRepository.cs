@@ -10,5 +10,7 @@ namespace DAL.Repositories.Material
     public interface IMaterialRepository
     {
         List<NguyenLieu> GetMaterialsList();
+        string GetCode();
+        string GetMaterialNameById(string maNL);
     }
 }

@@ -16,6 +16,14 @@ namespace DAL.Repositories.Staff
             this._context = context;
 
         }
+        public string GetLastStaffCode()
+        {
+            return _context.NhanViens
+                .OrderByDescending(nv => nv.maNV)
+                .Select(nv => nv.maNV)
+                .FirstOrDefault();
+        }
+
         public List<NhanVien> GetStaffList()
         {
             return _context.NhanViens.ToList();
@@ -50,6 +58,7 @@ namespace DAL.Repositories.Staff
         {
             try
             {
+
                 _context.NhanViens.InsertOnSubmit(p);
 
                 _context.SubmitChanges();
@@ -89,7 +98,7 @@ namespace DAL.Repositories.Staff
 
                 if (nv != null)
                 {
-                    nv.tenNV = updated.maNV;
+                    nv.tenNV = updated.tenNV;
                     nv.username = updated.username;
                     nv.matKhau = updated.matKhau;
                     nv.soDT = updated.soDT;

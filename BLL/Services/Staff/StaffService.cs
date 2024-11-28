@@ -16,6 +16,22 @@ namespace BLL.Services.Staff
         {
             this._repository = repository;
         }
+
+        public string GenerateStaffCode()
+        {
+            var lastCustomerCode = _repository.GetLastStaffCode();
+
+            // Nếu chưa có nhân viên thì khởi tạo mã NV: NV001
+            if (string.IsNullOrEmpty(lastCustomerCode))
+            {
+                return "NV001";
+            }
+
+            var number = int.Parse(lastCustomerCode.Substring(2));
+
+            return $"NV{(number + 1):D3}";
+        }
+
         public List<NhanVien> GetStaffList()
         {
             return _repository.GetStaffList();

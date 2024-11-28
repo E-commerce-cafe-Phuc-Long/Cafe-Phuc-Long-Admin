@@ -31,6 +31,7 @@ namespace GUI.Forms.Manager.Staff
 
         private void FrmStaffManagement_Load(object sender, EventArgs e)
         {
+            txt_maNV.Enabled = false;
             dtpNgaySinh.Format = DateTimePickerFormat.Custom;
             dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
             LoadRoleToComboBox();
@@ -94,15 +95,12 @@ namespace GUI.Forms.Manager.Staff
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txt_maNV.Text))
-                {
-                    MessageBox.Show("Mã nhân viên không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+               
+                string maNV1 = _staffService.GenerateStaffCode();
 
                 NhanVien nv = new NhanVien
                 {
-                    maNV = txt_maNV.Text,
+                    maNV = maNV1,
                     username = txt_username.Text,
                     matKhau = txt_password.Text,
                     tenNV = txt_tenNV.Text,
@@ -227,30 +225,7 @@ namespace GUI.Forms.Manager.Staff
             }
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_Search_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmStaffManagement_Load_1(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 
 
