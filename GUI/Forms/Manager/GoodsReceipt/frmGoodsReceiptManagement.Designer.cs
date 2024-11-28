@@ -68,7 +68,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(12, 67);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(409, 81);
+            this.groupBox2.Size = new System.Drawing.Size(446, 109);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin phiếu nhập";
@@ -76,8 +76,9 @@
             // txt_maPhieuNhap
             // 
             this.txt_maPhieuNhap.Location = new System.Drawing.Point(131, 41);
+            this.txt_maPhieuNhap.Multiline = true;
             this.txt_maPhieuNhap.Name = "txt_maPhieuNhap";
-            this.txt_maPhieuNhap.Size = new System.Drawing.Size(265, 22);
+            this.txt_maPhieuNhap.Size = new System.Drawing.Size(265, 40);
             this.txt_maPhieuNhap.TabIndex = 4;
             // 
             // label2
@@ -93,9 +94,9 @@
             // 
             this.groupBox1.Controls.Add(this.btn_Insert);
             this.groupBox1.Controls.Add(this.btn_Detail);
-            this.groupBox1.Location = new System.Drawing.Point(427, 67);
+            this.groupBox1.Location = new System.Drawing.Point(517, 67);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(739, 81);
+            this.groupBox1.Size = new System.Drawing.Size(649, 81);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
