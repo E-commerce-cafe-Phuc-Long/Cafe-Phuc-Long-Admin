@@ -22,15 +22,18 @@ namespace GUI
         private readonly IServiceProvider _serviceProvider;
         private readonly IAuthService _authService;
         private readonly IStaffService _staffService;
+        private readonly SessionManager _sessionManager;
         public frmLogin(
             IServiceProvider serviceProvider,
             IAuthService authService,
-            IStaffService staffService
+            IStaffService staffService,
+            SessionManager sessionManager
             )
         {
             this._serviceProvider = serviceProvider;
-            _authService = authService;
-            _staffService = staffService;
+            this._authService = authService;
+            this._staffService = staffService;
+            this._sessionManager = sessionManager;
             InitializeComponent();
             this.Load += FrmLogin_Load;
         }
@@ -44,10 +47,14 @@ namespace GUI
         private void Btn_LoginSubmit_Click(object sender, EventArgs e)
         {
             //Cần xử lý kiểm tra thông tin đăng nhập manager/staff để điều hướng form
-            string username = txtBox_Login.Text;
+            string username = txtBox_Login.Text.Trim();
             string password = txtBox_Password.Text;
             NhanVien user = _staffService.GetStaffByUsername(username);
             string role = _authService.getRoleByUsernamePassword(username);
+
+            // Lưu thông tin vào SessionManager
+            _sessionManager.Staff = user;
+
             if (role == "Manager")
             { 
                 this.Hide();

@@ -29,10 +29,12 @@ namespace GUI.Forms
         private readonly IProductDetailService _productDetailService;
         private readonly IProductService _productService;
 
-
+        private readonly SessionManager _sessionManager;
+        private NhanVien user;
         public frmCheckout(IMethodService methodService, ICustomerService customerService, 
             IOrderService orderService, IProductDetailService productDetailService,
-            IProductService productService, IOrderDetailService orderDetailService
+            IProductService productService, IOrderDetailService orderDetailService,
+            SessionManager sessionManager
 )
         {
             this._methodService = methodService;
@@ -41,6 +43,8 @@ namespace GUI.Forms
             this._productDetailService = productDetailService;
             this._productService = productService;
             this._orderDetailService = orderDetailService;
+            this._sessionManager = sessionManager;
+            this.user = sessionManager.Staff;
             InitializeComponent();
             this.Load += FrmCheckout_Load;
             btn_search.Click += Btn_search_Click;
@@ -126,7 +130,7 @@ namespace GUI.Forms
                 maKH = kh.maKH;
             }
             string maPT = comboBox_method.SelectedValue.ToString();
-            string maNV = "NV001";
+            string maNV = user.maNV;
             double tongTien = totalPrice();
             string ghichu = "mua tại cửa hàng";
             string ngay = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");

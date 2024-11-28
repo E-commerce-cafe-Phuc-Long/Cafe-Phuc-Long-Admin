@@ -8,15 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace GUI.Forms
 {
     public partial class frmMainSale : Form
     {
         private readonly IServiceProvider _serviceProvider;
-        public frmMainSale(IServiceProvider serviceProvider)
+        private readonly SessionManager _sessionManager;
+        private readonly NhanVien user;
+        public frmMainSale(
+            IServiceProvider serviceProvider,
+            SessionManager sessionManager
+            )
         {
             _serviceProvider = serviceProvider;
+            _sessionManager = sessionManager;
+            user = sessionManager.Staff;
             InitializeComponent();
             this.Load += FrmMainSale_Load; ;
         }
