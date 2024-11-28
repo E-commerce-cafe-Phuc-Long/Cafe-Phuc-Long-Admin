@@ -150,7 +150,7 @@ namespace DAL.Repositories.Staff
         }
         public NhanVien GetStaffByUsername(string username)
         {
-            return _context.NhanViens.FirstOrDefault(nv => nv.username.ToLower().Contains(username.ToLower()));
+            return _context.NhanViens.FirstOrDefault(nv => nv.username.ToLower() == username.ToLower());
         }
 
     }

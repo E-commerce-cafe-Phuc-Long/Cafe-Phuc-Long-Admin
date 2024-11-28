@@ -58,7 +58,11 @@ namespace GUI
             }
             
             NhanVien user = _staffService.GetStaffByUsername(username);
-
+            if (user == null)
+            {
+                MessageBox.Show("Username không hợp lệ!");
+                return;
+            }
             string hashPassword = user.matKhau;
             bool result = _staffService.VerifyHashedPassword(hashPassword, password);
             if( result == false )

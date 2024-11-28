@@ -63,6 +63,7 @@ namespace GUI.Forms.Manager.Staff
             dgvNhanVien.Columns["diaChi"].HeaderText = "Địa Chỉ";
             dgvNhanVien.Columns["email"].HeaderText = "Email";
             dgvNhanVien.Columns["maVaiTro"].Visible = false;
+            //dgvNhanVien.Columns["maVaiTro"].HeaderText = "Mã Vai Trò";
             dgvNhanVien.Columns["tenVaiTro"].HeaderText = "Vai Trò";
 
            
