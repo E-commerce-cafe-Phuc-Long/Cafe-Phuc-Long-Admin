@@ -121,6 +121,10 @@ namespace DAL.Repositories.Customer
             }
         }
 
+        public KhachHang GetCustomerByPhone(string phone)
+        {
+            return _context.KhachHangs.FirstOrDefault(x => x.soDT == phone);
+        }
 
     }
 }

@@ -31,12 +31,13 @@
             this.lb_Title = new System.Windows.Forms.Label();
             this.listView_CategoryList = new System.Windows.Forms.ListView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_descriptionCategory = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txt_nameCategory = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_showAllCategories = new System.Windows.Forms.Button();
             this.btn_searchCategory = new System.Windows.Forms.Button();
             this.txt_searchCategory = new System.Windows.Forms.TextBox();
-            this.btn_deleteCategory = new System.Windows.Forms.Button();
             this.btn_EditCategory = new System.Windows.Forms.Button();
             this.btn_addCategory = new System.Windows.Forms.Button();
             this.listView_ProductList = new System.Windows.Forms.ListView();
@@ -45,9 +46,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.textBox_price = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.btn_searchProductDetail = new System.Windows.Forms.Button();
-            this.txt_searchProductDetail = new System.Windows.Forms.TextBox();
             this.btn_deleteProductDetail = new System.Windows.Forms.Button();
             this.btn_editProductDetail = new System.Windows.Forms.Button();
             this.btn_addProductDetail = new System.Windows.Forms.Button();
@@ -55,8 +53,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBox_Categories = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox_status = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.comboBox_recipe = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -75,11 +71,11 @@
             this.txt_nameProduct = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_deteleProduct = new System.Windows.Forms.Button();
+            this.btn_editProduct = new System.Windows.Forms.Button();
+            this.btn_addProduct = new System.Windows.Forms.Button();
+            this.btn_searchProduct = new System.Windows.Forms.Button();
+            this.txt_searchProduct = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txt_nameSize = new System.Windows.Forms.TextBox();
             this.txt_noteSize = new System.Windows.Forms.TextBox();
@@ -104,7 +100,7 @@
             // 
             this.lb_Title.AutoSize = true;
             this.lb_Title.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Title.Location = new System.Drawing.Point(613, 28);
+            this.lb_Title.Location = new System.Drawing.Point(742, 22);
             this.lb_Title.Name = "lb_Title";
             this.lb_Title.Size = new System.Drawing.Size(288, 45);
             this.lb_Title.TabIndex = 0;
@@ -115,19 +111,20 @@
             this.listView_CategoryList.HideSelection = false;
             this.listView_CategoryList.Location = new System.Drawing.Point(6, 80);
             this.listView_CategoryList.Name = "listView_CategoryList";
-            this.listView_CategoryList.Size = new System.Drawing.Size(387, 495);
+            this.listView_CategoryList.Size = new System.Drawing.Size(387, 375);
             this.listView_CategoryList.TabIndex = 3;
             this.listView_CategoryList.UseCompatibleStateImageBehavior = false;
             this.listView_CategoryList.SelectedIndexChanged += new System.EventHandler(this.listView_CategoryList_SelectedIndexChanged);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_descriptionCategory);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txt_nameCategory);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btn_showAllCategories);
             this.groupBox1.Controls.Add(this.btn_searchCategory);
             this.groupBox1.Controls.Add(this.txt_searchCategory);
-            this.groupBox1.Controls.Add(this.btn_deleteCategory);
             this.groupBox1.Controls.Add(this.btn_EditCategory);
             this.groupBox1.Controls.Add(this.btn_addCategory);
             this.groupBox1.Controls.Add(this.listView_CategoryList);
@@ -138,9 +135,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh mục";
             // 
+            // txt_descriptionCategory
+            // 
+            this.txt_descriptionCategory.Location = new System.Drawing.Point(137, 527);
+            this.txt_descriptionCategory.Multiline = true;
+            this.txt_descriptionCategory.Name = "txt_descriptionCategory";
+            this.txt_descriptionCategory.Size = new System.Drawing.Size(227, 80);
+            this.txt_descriptionCategory.TabIndex = 26;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 527);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 16);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Mô tả";
+            // 
             // txt_nameCategory
             // 
-            this.txt_nameCategory.Location = new System.Drawing.Point(126, 592);
+            this.txt_nameCategory.Location = new System.Drawing.Point(137, 483);
             this.txt_nameCategory.Name = "txt_nameCategory";
             this.txt_nameCategory.Size = new System.Drawing.Size(229, 22);
             this.txt_nameCategory.TabIndex = 13;
@@ -148,7 +162,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 598);
+            this.label2.Location = new System.Drawing.Point(19, 480);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 11;
@@ -163,6 +177,7 @@
             this.btn_showAllCategories.TabIndex = 9;
             this.btn_showAllCategories.Text = "Tất cả";
             this.btn_showAllCategories.UseVisualStyleBackColor = true;
+            this.btn_showAllCategories.Click += new System.EventHandler(this.btn_showAllCategories_Click);
             // 
             // btn_searchCategory
             // 
@@ -173,6 +188,7 @@
             this.btn_searchCategory.TabIndex = 8;
             this.btn_searchCategory.Text = "Tìm kiếm";
             this.btn_searchCategory.UseVisualStyleBackColor = true;
+            this.btn_searchCategory.Click += new System.EventHandler(this.btn_searchCategory_Click);
             // 
             // txt_searchCategory
             // 
@@ -181,35 +197,27 @@
             this.txt_searchCategory.Size = new System.Drawing.Size(134, 22);
             this.txt_searchCategory.TabIndex = 7;
             // 
-            // btn_deleteCategory
-            // 
-            this.btn_deleteCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_deleteCategory.Location = new System.Drawing.Point(284, 653);
-            this.btn_deleteCategory.Name = "btn_deleteCategory";
-            this.btn_deleteCategory.Size = new System.Drawing.Size(109, 31);
-            this.btn_deleteCategory.TabIndex = 6;
-            this.btn_deleteCategory.Text = "Xoá";
-            this.btn_deleteCategory.UseVisualStyleBackColor = true;
-            // 
             // btn_EditCategory
             // 
             this.btn_EditCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EditCategory.Location = new System.Drawing.Point(137, 655);
+            this.btn_EditCategory.Location = new System.Drawing.Point(245, 655);
             this.btn_EditCategory.Name = "btn_EditCategory";
             this.btn_EditCategory.Size = new System.Drawing.Size(119, 31);
             this.btn_EditCategory.TabIndex = 5;
             this.btn_EditCategory.Text = "Sửa ";
             this.btn_EditCategory.UseVisualStyleBackColor = true;
+            this.btn_EditCategory.Click += new System.EventHandler(this.btn_EditCategory_Click);
             // 
             // btn_addCategory
             // 
             this.btn_addCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_addCategory.Location = new System.Drawing.Point(9, 655);
+            this.btn_addCategory.Location = new System.Drawing.Point(136, 655);
             this.btn_addCategory.Name = "btn_addCategory";
             this.btn_addCategory.Size = new System.Drawing.Size(103, 31);
             this.btn_addCategory.TabIndex = 4;
             this.btn_addCategory.Text = "Thêm";
             this.btn_addCategory.UseVisualStyleBackColor = true;
+            this.btn_addCategory.Click += new System.EventHandler(this.btn_addCategory_Click);
             // 
             // listView_ProductList
             // 
@@ -228,9 +236,6 @@
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.textBox_price);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.btn_searchProductDetail);
-            this.groupBox2.Controls.Add(this.txt_searchProductDetail);
             this.groupBox2.Controls.Add(this.btn_deleteProductDetail);
             this.groupBox2.Controls.Add(this.btn_editProductDetail);
             this.groupBox2.Controls.Add(this.btn_addProductDetail);
@@ -275,33 +280,6 @@
             this.label11.TabIndex = 18;
             this.label11.Text = "Đơn giá";
             // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(299, 32);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(77, 27);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Tất cả";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // btn_searchProductDetail
-            // 
-            this.btn_searchProductDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_searchProductDetail.Location = new System.Drawing.Point(121, 28);
-            this.btn_searchProductDetail.Name = "btn_searchProductDetail";
-            this.btn_searchProductDetail.Size = new System.Drawing.Size(93, 31);
-            this.btn_searchProductDetail.TabIndex = 8;
-            this.btn_searchProductDetail.Text = "Tìm kiếm";
-            this.btn_searchProductDetail.UseVisualStyleBackColor = true;
-            // 
-            // txt_searchProductDetail
-            // 
-            this.txt_searchProductDetail.Location = new System.Drawing.Point(6, 33);
-            this.txt_searchProductDetail.Name = "txt_searchProductDetail";
-            this.txt_searchProductDetail.Size = new System.Drawing.Size(97, 22);
-            this.txt_searchProductDetail.TabIndex = 7;
-            // 
             // btn_deleteProductDetail
             // 
             this.btn_deleteProductDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -311,6 +289,7 @@
             this.btn_deleteProductDetail.TabIndex = 6;
             this.btn_deleteProductDetail.Text = "Xoá";
             this.btn_deleteProductDetail.UseVisualStyleBackColor = true;
+            this.btn_deleteProductDetail.Click += new System.EventHandler(this.btn_deleteProductDetail_Click);
             // 
             // btn_editProductDetail
             // 
@@ -321,6 +300,7 @@
             this.btn_editProductDetail.TabIndex = 5;
             this.btn_editProductDetail.Text = "Sửa ";
             this.btn_editProductDetail.UseVisualStyleBackColor = true;
+            this.btn_editProductDetail.Click += new System.EventHandler(this.btn_editProductDetail_Click);
             // 
             // btn_addProductDetail
             // 
@@ -331,22 +311,22 @@
             this.btn_addProductDetail.TabIndex = 4;
             this.btn_addProductDetail.Text = "Thêm";
             this.btn_addProductDetail.UseVisualStyleBackColor = true;
+            this.btn_addProductDetail.Click += new System.EventHandler(this.btn_addProductDetail_Click);
             // 
             // listView_productDetailList
             // 
             this.listView_productDetailList.HideSelection = false;
-            this.listView_productDetailList.Location = new System.Drawing.Point(6, 61);
+            this.listView_productDetailList.Location = new System.Drawing.Point(6, 38);
             this.listView_productDetailList.Name = "listView_productDetailList";
-            this.listView_productDetailList.Size = new System.Drawing.Size(370, 126);
+            this.listView_productDetailList.Size = new System.Drawing.Size(370, 149);
             this.listView_productDetailList.TabIndex = 3;
             this.listView_productDetailList.UseCompatibleStateImageBehavior = false;
+            this.listView_productDetailList.SelectedIndexChanged += new System.EventHandler(this.listView_productDetailList_SelectedIndexChanged);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.comboBox_Categories);
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.comboBox_status);
-            this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.comboBox_recipe);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.panel2);
@@ -361,11 +341,11 @@
             this.groupBox3.Controls.Add(this.txt_nameProduct);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.btn_deteleProduct);
+            this.groupBox3.Controls.Add(this.btn_editProduct);
+            this.groupBox3.Controls.Add(this.btn_addProduct);
+            this.groupBox3.Controls.Add(this.btn_searchProduct);
+            this.groupBox3.Controls.Add(this.txt_searchProduct);
             this.groupBox3.Controls.Add(this.listView_ProductList);
             this.groupBox3.Location = new System.Drawing.Point(453, 93);
             this.groupBox3.Name = "groupBox3";
@@ -391,23 +371,6 @@
             this.label13.TabIndex = 33;
             this.label13.Text = "Danh mục";
             // 
-            // comboBox_status
-            // 
-            this.comboBox_status.FormattingEnabled = true;
-            this.comboBox_status.Location = new System.Drawing.Point(557, 480);
-            this.comboBox_status.Name = "comboBox_status";
-            this.comboBox_status.Size = new System.Drawing.Size(218, 24);
-            this.comboBox_status.TabIndex = 32;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(473, 483);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 16);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "Trạng thái";
-            // 
             // comboBox_recipe
             // 
             this.comboBox_recipe.FormattingEnabled = true;
@@ -429,7 +392,7 @@
             // 
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.checkBox_newProduct);
-            this.panel2.Location = new System.Drawing.Point(460, 569);
+            this.panel2.Location = new System.Drawing.Point(563, 532);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(212, 35);
             this.panel2.TabIndex = 28;
@@ -456,7 +419,7 @@
             // 
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.checkBox_bestSeller);
-            this.panel1.Location = new System.Drawing.Point(460, 517);
+            this.panel1.Location = new System.Drawing.Point(563, 480);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(212, 35);
             this.panel1.TabIndex = 28;
@@ -518,9 +481,8 @@
             this.txt_imageProduct.AutoSize = true;
             this.txt_imageProduct.Location = new System.Drawing.Point(276, 432);
             this.txt_imageProduct.Name = "txt_imageProduct";
-            this.txt_imageProduct.Size = new System.Drawing.Size(71, 16);
+            this.txt_imageProduct.Size = new System.Drawing.Size(0, 16);
             this.txt_imageProduct.TabIndex = 20;
-            this.txt_imageProduct.Text = "đường dẫn";
             // 
             // btn_Upload
             // 
@@ -531,6 +493,7 @@
             this.btn_Upload.TabIndex = 19;
             this.btn_Upload.Text = "Upload";
             this.btn_Upload.UseVisualStyleBackColor = true;
+            this.btn_Upload.Click += new System.EventHandler(this.btn_Upload_Click);
             // 
             // label3
             // 
@@ -566,53 +529,58 @@
             this.button5.TabIndex = 14;
             this.button5.Text = "Tất cả";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button2
+            // btn_deteleProduct
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(315, 653);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 31);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Xoá";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_deteleProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deteleProduct.Location = new System.Drawing.Point(315, 653);
+            this.btn_deteleProduct.Name = "btn_deteleProduct";
+            this.btn_deteleProduct.Size = new System.Drawing.Size(109, 31);
+            this.btn_deteleProduct.TabIndex = 13;
+            this.btn_deteleProduct.Text = "Xoá";
+            this.btn_deteleProduct.UseVisualStyleBackColor = true;
+            this.btn_deteleProduct.Click += new System.EventHandler(this.btn_deteleProduct_Click);
             // 
-            // button3
+            // btn_editProduct
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(168, 653);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 31);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Sửa ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_editProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editProduct.Location = new System.Drawing.Point(168, 653);
+            this.btn_editProduct.Name = "btn_editProduct";
+            this.btn_editProduct.Size = new System.Drawing.Size(119, 31);
+            this.btn_editProduct.TabIndex = 12;
+            this.btn_editProduct.Text = "Sửa ";
+            this.btn_editProduct.UseVisualStyleBackColor = true;
+            this.btn_editProduct.Click += new System.EventHandler(this.btn_editProduct_Click);
             // 
-            // button4
+            // btn_addProduct
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(30, 653);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(103, 31);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Thêm";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_addProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addProduct.Location = new System.Drawing.Point(30, 653);
+            this.btn_addProduct.Name = "btn_addProduct";
+            this.btn_addProduct.Size = new System.Drawing.Size(103, 31);
+            this.btn_addProduct.TabIndex = 11;
+            this.btn_addProduct.Text = "Thêm";
+            this.btn_addProduct.UseVisualStyleBackColor = true;
+            this.btn_addProduct.Click += new System.EventHandler(this.btn_addProduct_Click);
             // 
-            // button1
+            // btn_searchProduct
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(285, 41);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 31);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_searchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_searchProduct.Location = new System.Drawing.Point(285, 41);
+            this.btn_searchProduct.Name = "btn_searchProduct";
+            this.btn_searchProduct.Size = new System.Drawing.Size(93, 31);
+            this.btn_searchProduct.TabIndex = 10;
+            this.btn_searchProduct.Text = "Tìm kiếm";
+            this.btn_searchProduct.UseVisualStyleBackColor = true;
+            this.btn_searchProduct.Click += new System.EventHandler(this.btn_searchProduct_Click);
             // 
-            // textBox1
+            // txt_searchProduct
             // 
-            this.textBox1.Location = new System.Drawing.Point(14, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 22);
-            this.textBox1.TabIndex = 9;
+            this.txt_searchProduct.Location = new System.Drawing.Point(14, 44);
+            this.txt_searchProduct.Name = "txt_searchProduct";
+            this.txt_searchProduct.Size = new System.Drawing.Size(250, 22);
+            this.txt_searchProduct.TabIndex = 9;
             // 
             // groupBox4
             // 
@@ -676,6 +644,7 @@
             this.btn_showAllSize.TabIndex = 15;
             this.btn_showAllSize.Text = "Tất cả";
             this.btn_showAllSize.UseVisualStyleBackColor = true;
+            this.btn_showAllSize.Click += new System.EventHandler(this.btn_showAllSize_Click);
             // 
             // btn_searchSize
             // 
@@ -686,6 +655,7 @@
             this.btn_searchSize.TabIndex = 8;
             this.btn_searchSize.Text = "Tìm kiếm";
             this.btn_searchSize.UseVisualStyleBackColor = true;
+            this.btn_searchSize.Click += new System.EventHandler(this.btn_searchSize_Click);
             // 
             // txt_searchSize
             // 
@@ -703,6 +673,7 @@
             this.btn_deleteSize.TabIndex = 6;
             this.btn_deleteSize.Text = "Xoá";
             this.btn_deleteSize.UseVisualStyleBackColor = true;
+            this.btn_deleteSize.Click += new System.EventHandler(this.btn_deleteSize_Click);
             // 
             // btn_editSize
             // 
@@ -713,6 +684,7 @@
             this.btn_editSize.TabIndex = 5;
             this.btn_editSize.Text = "Sửa ";
             this.btn_editSize.UseVisualStyleBackColor = true;
+            this.btn_editSize.Click += new System.EventHandler(this.btn_editSize_Click);
             // 
             // btn_addSize
             // 
@@ -723,6 +695,7 @@
             this.btn_addSize.TabIndex = 4;
             this.btn_addSize.Text = "Thêm";
             this.btn_addSize.UseVisualStyleBackColor = true;
+            this.btn_addSize.Click += new System.EventHandler(this.btn_addSize_Click);
             // 
             // listView_sizeList
             // 
@@ -739,6 +712,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1685, 808);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -746,7 +720,7 @@
             this.Controls.Add(this.lb_Title);
             this.Controls.Add(this.groupBox2);
             this.Name = "frmProductManagement";
-            this.Text = "frmProductManagement";
+            this.Text = "Quản lý sản phẩm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -769,27 +743,23 @@
         private System.Windows.Forms.Label lb_Title;
         private System.Windows.Forms.ListView listView_CategoryList;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_deleteCategory;
         private System.Windows.Forms.Button btn_EditCategory;
         private System.Windows.Forms.Button btn_addCategory;
         private System.Windows.Forms.Button btn_searchCategory;
         private System.Windows.Forms.TextBox txt_searchCategory;
         private System.Windows.Forms.ListView listView_ProductList;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btn_searchProductDetail;
-        private System.Windows.Forms.TextBox txt_searchProductDetail;
         private System.Windows.Forms.Button btn_deleteProductDetail;
         private System.Windows.Forms.Button btn_editProductDetail;
         private System.Windows.Forms.Button btn_addProductDetail;
         private System.Windows.Forms.ListView listView_productDetailList;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_deteleProduct;
+        private System.Windows.Forms.Button btn_editProduct;
+        private System.Windows.Forms.Button btn_addProduct;
+        private System.Windows.Forms.Button btn_searchProduct;
+        private System.Windows.Forms.TextBox txt_searchProduct;
         private System.Windows.Forms.Button btn_showAllCategories;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txt_nameCategory;
         private System.Windows.Forms.Label label2;
@@ -810,8 +780,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox_price;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox_status;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox_recipe;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox_size;
@@ -830,5 +798,7 @@
         private System.Windows.Forms.Button btn_addSize;
         private System.Windows.Forms.ListView listView_sizeList;
         private System.Windows.Forms.TextBox txt_nameSize;
+        private System.Windows.Forms.TextBox txt_descriptionCategory;
+        private System.Windows.Forms.Label label4;
     }
 }

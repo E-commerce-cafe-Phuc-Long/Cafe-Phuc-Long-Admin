@@ -27,5 +27,30 @@ namespace BLL.Services.ProductDetail
         {
             return _repository.GetProductDetailByIdAndSizeId(productId, sizeId);
         }
+        public bool InsertProductDetail(ChiTietSanPham p)
+        {
+            return _repository.InsertProductDetail(p);
+        }
+        public bool DeleteProductDetail(string maCTSP)
+        {
+            return _repository.DeleteProductDetail(maCTSP);
+        }
+        public bool UpdateProductDetail(ChiTietSanPham update)
+        {
+            return _repository.UpdateProductDetail(update);
+        }
+        public string GenerateProductDetailCode()
+        {
+            var lastProductDetailCode = _repository.GetLastProductDetailCode();
+
+            if (string.IsNullOrEmpty(lastProductDetailCode))
+            {
+                return "CTSP001";
+            }
+
+            var number = int.Parse(lastProductDetailCode.Substring(4));
+
+            return $"CTSP{(number + 1):D3}";
+        }
     }
 }

@@ -10,5 +10,10 @@ namespace BLL.Services.Category
     public interface ICategoryService
     {
         List<DanhMuc> GetCategoriesList();
+        bool InsertCategory(DanhMuc nv);
+        bool UpdateCategory(DanhMuc update);
+        List<DanhMuc> SearchCategory(string keyword);
+        string GenerateCategoryCode();
     }
+    
 }
