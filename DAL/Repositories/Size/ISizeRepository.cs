@@ -11,6 +11,12 @@ namespace DAL.Repositories.Size
     {
         List<DTO.Size> GetSizeList();
         List<DTO.Size> GetSizesByProductId(string productId);
+        string GetLastSizeCode();
+
+        bool InsertSize(DTO.Size size);
+        bool UpdateSize(DTO.Size size);
+        bool DeleteSize(string maSize);
+        List<DTO.Size> SearchSize(string keyword);
 
     }
 }

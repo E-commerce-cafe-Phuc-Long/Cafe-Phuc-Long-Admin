@@ -32,7 +32,7 @@ namespace BLL.Services
             DotEnv.Load(options: new DotEnvOptions(probeForEnv: true));
 
             // Lấy thông tin Cloudinary từ biến môi trường
-            var cloudinaryUrl = Environment.GetEnvironmentVariable("CLOUDINARY_URL");
+            var cloudinaryUrl = "cloudinary://633155845568885:smAcqf0SCiIiU9yzl6nBXXCZKaU@dgl1kzmgc";
 
             if (string.IsNullOrEmpty(cloudinaryUrl))
             {
@@ -50,7 +50,8 @@ namespace BLL.Services
                 File = new FileDescription(imageUrl),
                 UseFilename = true,
                 UniqueFilename = false,
-                Overwrite = true
+                Overwrite = true,
+                Folder = "E-Commerce_Coffee_And_Tea",
             };
             try
             {
@@ -74,6 +75,40 @@ namespace BLL.Services
         public List<SanPham> GetProductListByName(string productName)
         {
             return _repository.GetProductListByName(productName);
+        }
+        public bool InsertProduct(SanPham nv)
+        {
+            return _repository.InsertProduct(nv);
+        }
+        public bool DeleteProduct(string masp)
+        {
+            return _repository.DeleteProduct(masp);
+
+        }
+        public bool UpdateProduct(SanPham update)
+        {
+            return _repository.UpdateProduct(update);
+        }
+        public List<SanPham> SearchProduct(string keyword)
+        {
+            return _repository.SearchProduct(keyword);
+        }
+        public List<TrangThai_SP> trangThai_SPs()
+        {
+            return _repository.trangThai_SPs();
+        }
+        public string GenerateProductCode()
+        {
+            var lastProductCode = _repository.GetLastProductCode();
+
+            if (string.IsNullOrEmpty(lastProductCode))
+            {
+                return "SP001";
+            }
+
+            var number = int.Parse(lastProductCode.Substring(2));
+
+            return $"SP{(number + 1):D3}";
         }
     }
 }

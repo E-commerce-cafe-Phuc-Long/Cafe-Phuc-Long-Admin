@@ -46,6 +46,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms.Design;
 using GUI.Forms.Manager.Supplier;
+using BLL.Services.Auth;
+using DAL.Repositories.Auth;
+using DTO;
 
 namespace GUI
 {
@@ -69,7 +72,7 @@ namespace GUI
             services.AddTransient<ISupplierRepository, SupplierRepository>();
             services.AddTransient<IGoodsReceiptRepository, GoodsReceiptRepository>();
             services.AddTransient<IGoodsReceiptDetailsRepository, GoodsReceiptDetailsRepository>();
-
+            services.AddTransient<IAuthRepository, AuthRepository>();
             services.AddTransient<IDosageRepository, DosageRepository>(); 
             services.AddTransient<IMethodRepository, MethodRepository>();
 
@@ -92,7 +95,7 @@ namespace GUI
             services.AddTransient<ISupplierService, SupplierService>();
             services.AddTransient<IGoodsReceiptService, GoodsReceiptService>();
             services.AddTransient<IGoodsReceiptDetailsService, GoodsReceiptDetailsService>();
-            
+            services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IDosageService, DosageService>();
             services.AddTransient<IMethodService, MethodService>();
 

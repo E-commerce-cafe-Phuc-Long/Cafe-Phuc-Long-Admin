@@ -10,6 +10,7 @@ namespace DAL.Repositories.OrderDetail
     public interface IOrderDetailRepository
     {
         List<ChiTietDonHang> GetOrderDetailsList();
-        ChiTietSanPham GetProductDetailByIdAndSizeId(string productId, string sizeId);
+        bool InsertOrderDetail(ChiTietDonHang p);
+        List<ChiTietDonHang> GetOrderDetailsListByOrderCode(string orderCode);
     }
 }

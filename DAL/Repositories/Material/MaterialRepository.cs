@@ -18,7 +18,7 @@ namespace DAL.Repositories.Material
         {
             return _context.NguyenLieus.ToList();
         }
-        public string GetCode()
+          public string GetCode()
         {
             return _context.PhieuNhaps
                 .OrderByDescending(ma => ma.maPhieuNhap)
@@ -36,6 +36,93 @@ namespace DAL.Repositories.Material
             catch (Exception ex)
             {
                 throw new Exception("Lỗi khi lấy tên nguyên liệu: " + ex.Message);
+            }
+        }
+ 
+        public string GetLastMaterialCode()
+        {
+            return _context.NguyenLieus
+                .OrderByDescending(kh => kh.maNL)
+                .Select(kh => kh.maNL)
+                .FirstOrDefault();
+        }
+        public bool InsertMaterial(NguyenLieu nguyenLieu)
+        {
+            try
+            {
+                _context.NguyenLieus.InsertOnSubmit(nguyenLieu);
+
+                _context.SubmitChanges();
+
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteMaterial(string maNL)
+        {
+            try
+            {
+                var nguyenlieu = _context.NguyenLieus.SingleOrDefault(p => p.maNL == maNL);
+
+                if (nguyenlieu != null)
+                {
+                    _context.NguyenLieus.DeleteOnSubmit(nguyenlieu);
+                    _context.SubmitChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool UpdateMaterial(NguyenLieu updated)
+        {
+            try
+            {
+                var nv = _context.NguyenLieus.SingleOrDefault(p => p.maNL == updated.maNL);
+
+                if (nv != null)
+                {
+                    nv.tenNL = updated.tenNL;
+                    nv.donViTinh = updated.donViTinh;
+                    nv.soLuong = updated.soLuong;
+                    _context.SubmitChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+        public List<NguyenLieu> SearchMaterial(string keyword)
+        {
+            try
+            {
+
+                if (string.IsNullOrEmpty(keyword))
+                {
+                    return GetMaterialsList();
+                }
+
+                var result = _context.NguyenLieus.Where(nv => nv.maNL.Contains(keyword) ||
+                             nv.tenNL.Contains(keyword))
+                                   .ToList();
+                return result;
+            }
+
+            catch
+            {
+                return new List<NguyenLieu>();
             }
         }
 

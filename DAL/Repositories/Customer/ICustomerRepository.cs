@@ -18,5 +18,7 @@ namespace DAL.Repositories.Customer
         bool UpdateCustomer(KhachHang updated);
 
         dynamic SearchCustomer(string keyword);
+        KhachHang GetCustomerByPhone(string phone);
+
     }
 }

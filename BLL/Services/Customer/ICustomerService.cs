@@ -16,6 +16,7 @@ namespace BLL.Services.Customer
         bool DeleteCustomer(string maKH);
         bool UpdateCustomer(KhachHang update);
         dynamic SearchCustomer(string keyword);
+        KhachHang GetCustomerByPhone(string phone);
 
     }
 }

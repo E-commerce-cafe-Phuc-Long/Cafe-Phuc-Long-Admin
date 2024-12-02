@@ -10,5 +10,11 @@ namespace BLL.Services.Recipe
     public interface IRecipeService
     {
         List<CongThuc> GetRecipeList();
+        bool InsertRecipe(CongThuc congThuc);
+        string GenerateRecipeCode();
+        bool DeleteRecipe(string maCT);
+
+        bool UpdateRecipe(CongThuc updated);
+        List<CongThuc> SearchRecipe(string keyword);
     }
 }

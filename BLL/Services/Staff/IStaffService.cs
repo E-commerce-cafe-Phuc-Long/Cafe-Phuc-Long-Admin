@@ -16,10 +16,9 @@ namespace BLL.Services.Staff
         bool VerifyHashedPassword(string hashedPassword, string providedPassword);
         dynamic GetStaffWithRoleNames();
         bool InsertStaff(NhanVien newStaff);
-
         bool DeleteStaff(string maNV);
         bool UpdateStaff(NhanVien nv);
-
         dynamic SearchStaff(string keyword);
+        NhanVien GetStaffByUsername(string username);
     }
 }

@@ -42,7 +42,7 @@ namespace GUI
                         string connectionString = "Data Source=MSI;Initial Catalog=E-Commerce_Coffee_And_Tea;Integrated Security=True;Encrypt=False";
                         return new E_Commerce_Coffee_And_TeaDataContext(connectionString);
                     });
-
+                    services.AddSingleton<SessionManager>();
                     services.AddRepositories();
                     services.AddServices();
                     services.AddForms();

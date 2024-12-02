@@ -1,4 +1,7 @@
 ﻿using BLL.Services;
+using BLL.Services.Auth;
+using BLL.Services.Staff;
+using DTO;
 using GUI.Forms;
 using GUI.Forms.Manager;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,9 +20,20 @@ namespace GUI
     public partial class frmLogin : Form
     {
         private readonly IServiceProvider _serviceProvider;
-        public frmLogin(IServiceProvider serviceProvider)
+        private readonly IAuthService _authService;
+        private readonly IStaffService _staffService;
+        private readonly SessionManager _sessionManager;
+        public frmLogin(
+            IServiceProvider serviceProvider,
+            IAuthService authService,
+            IStaffService staffService,
+            SessionManager sessionManager
+            )
         {
             this._serviceProvider = serviceProvider;
+            this._authService = authService;
+            this._staffService = staffService;
+            this._sessionManager = sessionManager;
             InitializeComponent();
             this.Load += FrmLogin_Load;
         }
@@ -33,12 +47,30 @@ namespace GUI
         private void Btn_LoginSubmit_Click(object sender, EventArgs e)
         {
             //Cần xử lý kiểm tra thông tin đăng nhập manager/staff để điều hướng form
-            this.Hide();
-            //frmMainSale frmMainSale = _serviceProvider.GetRequiredService<frmMainSale>();
-            //frmMainSale.ShowDialog();
-            frmMainManagement frmMainManagement = _serviceProvider.GetRequiredService<frmMainManagement>();
-            frmMainManagement.ShowDialog();
-            //Cần xử lý ngoại lệ, thông báo lỗi đăng nhập
+            string username = txtBox_Login.Text.Trim();
+            string password = txtBox_Password.Text;
+            NhanVien user = _staffService.GetStaffByUsername(username);
+            string role = _authService.getRoleByUsernamePassword(username);
+
+            // Lưu thông tin vào SessionManager
+            _sessionManager.Staff = user;
+
+            if (role == "Manager")
+            { 
+                this.Hide();
+                frmMainManagement frmMainManagement = _serviceProvider.GetRequiredService<frmMainManagement>();
+                frmMainManagement.ShowDialog();
+            }
+            else if (role == "Staff")
+            {
+                this.Hide();
+                frmMainSale frmMainSale = _serviceProvider.GetRequiredService<frmMainSale>();
+                frmMainSale.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản này không hợp lệ. Vui lòng đăng nhập lại");
+            }
         }
     }
 }

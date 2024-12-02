@@ -43,8 +43,10 @@ namespace BLL.Services.Customer
         public dynamic SearchCustomer(string keyword)
         { return _repository.SearchCustomer(keyword);}
 
-       
-
+         public KhachHang GetCustomerByPhone(string phone)
+        {
+            return _repository.GetCustomerByPhone(phone);
+        }
 
     }
 }

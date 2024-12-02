@@ -38,7 +38,8 @@ namespace GUI.Forms.Manager.Customer
 
         private void LoadCustomerToDataGridView()
         {
-
+            dtpNgaySinh.Format = DateTimePickerFormat.Custom;
+            dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
             dgvKhachHang.DataSource = _customerService.GetCustomersList();
             dgvKhachHang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -239,9 +240,6 @@ namespace GUI.Forms.Manager.Customer
             }
         }
 
-
-
-    
     }
 }
 
