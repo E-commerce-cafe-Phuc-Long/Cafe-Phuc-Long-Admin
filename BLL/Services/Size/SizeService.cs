@@ -23,6 +23,10 @@ namespace BLL.Services.Size
         {
             return _repository.GetSizesByProductId(productId);
         }
+        public DTO.Size GetSizeByCode(string sizeCode)
+        {
+            return _repository.GetSizeByCode(sizeCode);
+        }
         public string GenerateSizeCode()
         {
             var lastSizeCode = _repository.GetLastSizeCode();

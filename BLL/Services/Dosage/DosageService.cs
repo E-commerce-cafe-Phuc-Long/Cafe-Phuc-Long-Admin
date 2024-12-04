@@ -19,5 +19,9 @@ namespace BLL.Services.Dosage
         {
             return _repository.GetAll();
         }
+        public LieuLuong Get(string id)
+        {
+            return _repository.Get(id);
+        }
     }
 }

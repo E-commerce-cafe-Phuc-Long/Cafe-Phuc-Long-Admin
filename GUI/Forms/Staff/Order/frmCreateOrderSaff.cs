@@ -186,13 +186,13 @@ namespace GUI.Forms
             listView_cart.GridLines = true;
             listView_cart.MultiSelect = false;
             listView_cart.Items.Clear();
-            listView_cart.Columns.Add("Tên sản phẩm", 200);
-            listView_cart.Columns.Add("Số lượng", 100);
-            listView_cart.Columns.Add("Size", 100);
-            listView_cart.Columns.Add("Đá", 100);
-            listView_cart.Columns.Add("Đường", 100);
-            listView_cart.Columns.Add("Trà", 100);
-            listView_cart.Columns.Add("Giá", 200);
+            listView_cart.Columns.Add("Tên sản phẩm", 150);
+            listView_cart.Columns.Add("Số lượng", 70);
+            listView_cart.Columns.Add("Size", 50);
+            listView_cart.Columns.Add("Đá", 50);
+            listView_cart.Columns.Add("Đường", 50);
+            listView_cart.Columns.Add("Trà", 50);
+            listView_cart.Columns.Add("Giá", 100);
         }
         
         private void UC_Product_Click(object sender, EventArgs e)

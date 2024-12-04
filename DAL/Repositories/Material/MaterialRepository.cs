@@ -104,5 +104,26 @@ namespace DAL.Repositories.Material
                 return new List<NguyenLieu>();
             }
         }
+        public string GetCode()
+        {
+            return _context.PhieuNhaps
+                .OrderByDescending(ma => ma.maPhieuNhap)
+                .Select(ma => ma.maPhieuNhap)
+                .FirstOrDefault();
+        }
+        public string GetMaterialNameById(string maNL)
+        {
+            try
+            {
+                var material = _context.NguyenLieus.FirstOrDefault(nl => nl.maNL == maNL);
+
+                return material?.tenNL ?? "Không tìm thấy nguyên liệu";
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi lấy tên nguyên liệu: " + ex.Message);
+            }
+        }
+
     }
 }

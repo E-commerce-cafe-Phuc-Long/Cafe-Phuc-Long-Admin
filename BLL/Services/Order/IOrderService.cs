@@ -11,6 +11,8 @@ namespace BLL.Services.Order
     {
         List<DonHang> GetOrdersList();
         bool InsertOrder(DonHang p);
+        bool UpdateStatusOrder(string maDH, string maTT);
+        List<DonHang> GetOrdersListByTT(string maTT);
         string GenerateOrderCode();
     }
 }

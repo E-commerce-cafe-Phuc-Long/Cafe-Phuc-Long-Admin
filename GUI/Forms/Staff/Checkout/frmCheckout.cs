@@ -15,7 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace GUI.Forms
 {
@@ -45,11 +45,12 @@ namespace GUI.Forms
             this._orderDetailService = orderDetailService;
             this._sessionManager = sessionManager;
             this.user = sessionManager.Staff;
+           
             InitializeComponent();
             this.Load += FrmCheckout_Load;
             btn_search.Click += Btn_search_Click;
         }
-
+        
         private void Btn_search_Click(object sender, EventArgs e)
         {
             string sdt = txt_customer.Text;
@@ -83,6 +84,8 @@ namespace GUI.Forms
             lb_cus.Hide();
             lb_customer.Hide();
             lb_totalPrice.Text = totalPrice().ToString("#,###");
+            string ngay = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            lb_date.Text = ngay;
         }
         private double totalPrice()
         {

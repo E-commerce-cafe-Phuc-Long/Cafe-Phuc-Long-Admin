@@ -20,7 +20,16 @@ namespace DAL.Repositories.Category.GoodsReceipt
         {
             return _context.PhieuNhaps.ToList();
         }
-        
+
+        //tạo mã code
+        public string GetCode()
+        {
+            return _context.PhieuNhaps
+                .OrderByDescending(ma => ma.maPhieuNhap)
+                .Select(ma => ma.maPhieuNhap)
+                .FirstOrDefault();
+        }
+
 
         //lấy danh sách bảng
         public dynamic GetData()
@@ -39,117 +48,71 @@ namespace DAL.Repositories.Category.GoodsReceipt
             }).ToList();
         }
 
-        //Thêm
-        public bool Insert(PhieuNhap p)
+
+        //Tạo phiếu nhập
+        public void SaveGoodsReceipt(string maPhieuNhap, string maNCC, DateTime ngayNhap, List<ChiTietPhieuNhap> details)
         {
             try
             {
-                _context.PhieuNhaps.InsertOnSubmit(p);
+                if (string.IsNullOrEmpty(maPhieuNhap))
+                {
+                    maPhieuNhap = GetCode(); 
+                }
+
+                var existingReceipt = _context.PhieuNhaps.FirstOrDefault(p => p.maPhieuNhap == maPhieuNhap);
+
+                if (existingReceipt != null)
+                {
+                    existingReceipt.maNCC = maNCC;
+                    existingReceipt.ngayNhapHang = ngayNhap;
+
+                    var oldDetails = _context.ChiTietPhieuNhaps.Where(d => d.maPhieuNhap == maPhieuNhap).ToList();
+                    _context.ChiTietPhieuNhaps.DeleteAllOnSubmit(oldDetails);
+
+                    foreach (var detail in details)
+                    {
+                        detail.maPhieuNhap = maPhieuNhap;
+                    }
+
+                    _context.ChiTietPhieuNhaps.InsertAllOnSubmit(details);
+                }
+                else
+                {
+                    var phieuNhap = new PhieuNhap
+                    {
+                        maPhieuNhap = maPhieuNhap,
+                        maNCC = maNCC,
+                        ngayNhapHang = ngayNhap,
+                        tongTien = details.Sum(d => d.thanhTien)
+                    };
+
+
+                    _context.PhieuNhaps.InsertOnSubmit(phieuNhap);
+
+                    foreach (var detail in details)
+                    {
+                        detail.maPhieuNhap = maPhieuNhap;
+                    }
+
+                    _context.ChiTietPhieuNhaps.InsertAllOnSubmit(details);
+                }
 
                 _context.SubmitChanges();
-
-                return true;
-
-            }
-            catch
-            {
-                return false;
-            }
-        }
-        //Xóa
-        public bool Delete(string maPhieuNhap)
-        {
-            try
-            {
-                var kh = _context.PhieuNhaps.SingleOrDefault(p => p.maPhieuNhap == maPhieuNhap);
-
-                if (kh != null)
-                {
-                    _context.PhieuNhaps.DeleteOnSubmit(kh);
-                    _context.SubmitChanges();
-                    return true;
-                }
-                return false;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-        //Sửa
-        public bool Update(PhieuNhap updated)
-        {
-            try
-            {
-                var nv = _context.PhieuNhaps.SingleOrDefault(p => p.maNCC == updated.maNCC);
-
-                if (nv != null)
-                {
-                    nv.ngayNhapHang = updated.ngayNhapHang;
-                    nv.maNCC = updated.maNCC;
-                    nv.tongTien = updated.tongTien;
-
-                    _context.SubmitChanges();
-                    return true;
-                }
-                return false;
             }
             catch (Exception ex)
             {
-
-                return false;
+                throw new Exception($"Lỗi khi lưu phiếu nhập: {ex.Message}");
             }
         }
 
-
-        //tìm kiếm
-        //public dynamic Search(string keyword)
-        //{
-        //    try
-        //    {
-        //        if (string.IsNullOrEmpty(keyword))
-        //        {
-        //            return GetData();
-        //        }
-
-        //        var NCCDictionary = _context.NhaCungCaps.ToDictionary(ncc => ncc.maNCC, ncc => ncc.tenNCC);
-
-        //        var result = _context.PhieuNhaps
-        //            .Where(nv => nv.maPhieuNhap.Contains(keyword) ||
-        //                         nv.tenNV.Contains(keyword))
-        //               .Select(staff => new
-        //               {
-        //                   staff.maNV,
-        //                   staff.username,
-        //                   staff.matKhau,
-        //                   staff.tenNV,
-        //                   staff.ngaySinh,
-        //                   staff.soDT,
-        //                   staff.diaChi,
-        //                   staff.email,
-        //                   staff.maVaiTro,
-        //                   tenVaiTro = staff.maVaiTro != null && roleDictionary.ContainsKey(staff.maVaiTro.ToString())
-        //                                                 ? roleDictionary[staff.maVaiTro.ToString()]
-        //                                                 : null
-        //               })
-        //                               .ToList();
-
-        //        return result;
-        //    }
-
-        //    catch
-        //    {
-        //        return new List<NhanVien>();
-        //    }
-        //}
-
-
-
-
-
-
     }
+
 }
+
+
+
+    
+
 
                
 

@@ -34,6 +34,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Account\AccountRepository.cs" />
+    <Compile Include="Repositories\Account\IAccountRepository.cs" />
     <Compile Include="Repositories\Auth\AuthRepository.cs" />
     <Compile Include="Repositories\Auth\IAuthRepository.cs" />
     <Compile Include="Repositories\Category\CategoryRepository.cs" />
@@ -71,12 +76,16 @@
     <Compile Include="Repositories\Recipe\RecipeRepository.cs" />
     <Compile Include="Repositories\Recipe_material\IRecipe_materialRepository.cs" />
     <Compile Include="Repositories\Recipe_material\Recipe_materialRepository.cs" />
+    <Compile Include="Repositories\Report\IReportRepository.cs" />
+    <Compile Include="Repositories\Report\ReportRepository.cs" />
     <Compile Include="Repositories\Role\IRoleRepository.cs" />
     <Compile Include="Repositories\Role\RoleRepository.cs" />
     <Compile Include="Repositories\Size\ISizeRepository.cs" />
     <Compile Include="Repositories\Size\SizeRepository.cs" />
     <Compile Include="Repositories\Staff\IStaffRepository.cs" />
     <Compile Include="Repositories\Staff\StaffRepository.cs" />
+    <Compile Include="Repositories\StatusOrder\IStatusOrderRepository.cs" />
+    <Compile Include="Repositories\StatusOrder\StatusOrderRepository.cs" />
     <Compile Include="Repositories\Supplier\ISupplierRepository.cs" />
     <Compile Include="Repositories\Supplier\SupplierRepository.cs" />
   </ItemGroup>
@@ -86,6 +95,5 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

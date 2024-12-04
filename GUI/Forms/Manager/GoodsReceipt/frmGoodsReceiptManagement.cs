@@ -35,30 +35,27 @@ namespace GUI.Forms.Manager.GoodsReceipt
             this._goodsreceiptdetailsService = goodsreceiptdetailsService;
             this._materialService = materialService;
             InitializeComponent();
-            this.Load += frmGoodsReceiptManagement_Load;
+            // this.Load += frmGoodsReceiptManagement_Load;
+            this.Shown += FrmGoodsReceiptManagement_Shown;
         }
-
+        private void FrmGoodsReceiptManagement_Shown(object sender, EventArgs e)
+        {
+            // Tải lại dữ liệu mỗi khi form được hiển thị
+            LoadGoodsReceiptToDataGridView();
+        }
 
         private void frmGoodsReceiptManagement_Load(object sender, EventArgs e)
         {
-            dtp_ngayNhap.Format = DateTimePickerFormat.Custom;
-            dtp_ngayNhap.CustomFormat = "dd/MM/yyyy";
-            LoadSupplierToComboBox();
+            txt_maPhieuNhap.Enabled = false;
             LoadGoodsReceiptToDataGridView();
             dgvGoodsReceipt.CellClick += dgvGoodsReceipt_CellClick;
-            txt_tongTien.ReadOnly = true;
-            Reset();
+
+
+
 
         }
-        private void LoadSupplierToComboBox()
-        {
-            var roles = _supplierService.GetSupplierList();
-            comboBox_Supplier.DataSource = roles;
-            comboBox_Supplier.DisplayMember = "tenNCC";
-            comboBox_Supplier.ValueMember = "maNCC";
 
-        }
-       
+
 
         private void LoadGoodsReceiptToDataGridView()
         {
@@ -82,43 +79,12 @@ namespace GUI.Forms.Manager.GoodsReceipt
                 DataGridViewRow row = dgvGoodsReceipt.Rows[e.RowIndex];
 
                 txt_maPhieuNhap.Text = row.Cells["maPhieuNhap"].Value?.ToString() ?? string.Empty;
-                dtp_ngayNhap.Value = DateTime.TryParse(row.Cells["ngayNhapHang"].Value?.ToString(), out DateTime ngaySinh) ? ngaySinh : DateTime.Now;
-                var maNCC = row.Cells["maNCC"].Value?.ToString();
-                if (!string.IsNullOrEmpty(maNCC))
-                {
-                    comboBox_Supplier.SelectedValue = maNCC;
-                }
-                txt_tongTien.Text = row.Cells["tongTien"].Value?.ToString() ?? string.Empty;
+              
                
             }
         }
-        void Reset()
-        {
-            txt_maPhieuNhap.Clear();         
-            dtp_ngayNhap.Value = DateTime.Now;
-            comboBox_Supplier.SelectedIndex = -1;
-            txt_tongTien.Clear();
-            LoadGoodsReceiptToDataGridView();                                                                                                                 
-            txt_Search.Clear();
-        }
 
-        private void btn_Clear_Click(object sender, EventArgs e)
-        {
-            Reset();
-        }
 
-        private void btn_Search_Click(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //    string keyword = txt_Search.Text.Trim();
-            //    dgvGoodsReceipt.DataSource = _goodsreceiptService.Search(keyword);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-        }
 
 
         private void btn_Detail_Click(object sender, EventArgs e)
@@ -128,26 +94,41 @@ namespace GUI.Forms.Manager.GoodsReceipt
                 MessageBox.Show("Vui lòng chọn một phiếu nhập hàng để xem chi tiết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string maPhieuNhap = txt_maPhieuNhap.Text;
-            frmGoodsReceiptDetailsManagement detailsForm = new frmGoodsReceiptDetailsManagement(maPhieuNhap,_supplierService, _goodsreceiptdetailsService,_materialService);
-            detailsForm.ShowDialog();
 
+            string maPhieuNhap = txt_maPhieuNhap.Text;
+
+            // Mở form chi tiết
+            using (frmGoodsReceiptDetailsManagement detailsForm = new frmGoodsReceiptDetailsManagement(maPhieuNhap, _goodsreceiptdetailsService, _materialService))
+            {
+                detailsForm.ShowDialog();
+
+                decimal tongTien = detailsForm.CalculateTongTien(); 
+                UpdateTongTienInDataGrid(maPhieuNhap, tongTien); 
+            }
         }
+        private void UpdateTongTienInDataGrid(string maPhieuNhap, decimal tongTien)
+        {
+            foreach (DataGridViewRow row in dgvGoodsReceipt.Rows)
+            {
+                if (row.Cells["maPhieuNhap"].Value != null &&
+                    row.Cells["maPhieuNhap"].Value.ToString() == maPhieuNhap)
+                {
+                    row.Cells["tongTien"].Value = tongTien.ToString(); 
+                    break;
+                }
+            }
+        }
+
+
 
         private void btn_Insert_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmCreategoodsreceiptManagement form = new frmCreategoodsreceiptManagement(_goodsreceiptService, _supplierService, _goodsreceiptdetailsService, _materialService);
+            form.ShowDialog();
         }
 
-        private void btn_Update_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Delete_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
     

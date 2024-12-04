@@ -10,5 +10,9 @@ namespace BLL.Services.Role
     public interface IRoleService
     {
         List<VaiTro> GetRoleList();
+    
+        bool Insert(VaiTro p);
+        bool Delete(string maVaiTro);
+        bool Update(VaiTro updated);
     }
 }

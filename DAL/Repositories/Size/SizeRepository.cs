@@ -26,6 +26,11 @@ namespace DAL.Repositories.Size
                 .Distinct()
                 .ToList();
         }
+        public DTO.Size GetSizeByCode(string sizeCode)
+        {
+            return _context.Sizes
+                .FirstOrDefault(size => size.maSize == sizeCode);
+        }
         public string GetLastSizeCode()
         {
             return _context.Sizes

@@ -19,6 +19,14 @@ namespace DAL.Repositories.Supplier
         {
             return _context.NhaCungCaps.ToList();
         }
+        public string GetCode()
+        {
+            return _context.NhaCungCaps
+                .OrderByDescending(n => n.maNCC)
+                .Select(n => n.maNCC)
+                .FirstOrDefault();
+        }
+
 
 
         public bool Insert(NhaCungCap p)

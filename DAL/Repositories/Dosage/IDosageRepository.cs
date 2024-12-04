@@ -10,5 +10,6 @@ namespace DAL.Repositories.Dosage
     public interface IDosageRepository
     {
         List<LieuLuong> GetAll();
+        LieuLuong Get(string id);
     }
 }

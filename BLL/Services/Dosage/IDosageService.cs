@@ -10,5 +10,7 @@ namespace BLL.Services.Dosage
     public interface IDosageService
     {
         List<LieuLuong> GetAll();
+        LieuLuong Get(string id);
+
     }
 }

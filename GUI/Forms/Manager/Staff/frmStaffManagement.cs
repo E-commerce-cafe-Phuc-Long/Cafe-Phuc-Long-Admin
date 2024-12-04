@@ -31,6 +31,7 @@ namespace GUI.Forms.Manager.Staff
 
         private void FrmStaffManagement_Load(object sender, EventArgs e)
         {
+            txt_maNV.Enabled = false;
             dtpNgaySinh.Format = DateTimePickerFormat.Custom;
             dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
             LoadRoleToComboBox();
@@ -62,6 +63,7 @@ namespace GUI.Forms.Manager.Staff
             dgvNhanVien.Columns["diaChi"].HeaderText = "Địa Chỉ";
             dgvNhanVien.Columns["email"].HeaderText = "Email";
             dgvNhanVien.Columns["maVaiTro"].Visible = false;
+            //dgvNhanVien.Columns["maVaiTro"].HeaderText = "Mã Vai Trò";
             dgvNhanVien.Columns["tenVaiTro"].HeaderText = "Vai Trò";
 
            
@@ -89,22 +91,21 @@ namespace GUI.Forms.Manager.Staff
                 }
             }
         }
-
+        
         private void btn_Insert_Click(object sender, EventArgs e)
         {
+            // Băm mật khẩu trước khi lưu
+            string hashedPassword = _staffService.HashPassword(txt_password.Text);
             try
             {
-                if (string.IsNullOrWhiteSpace(txt_maNV.Text))
-                {
-                    MessageBox.Show("Mã nhân viên không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+               
+                string maNV1 = _staffService.GenerateStaffCode();
 
                 NhanVien nv = new NhanVien
                 {
-                    maNV = txt_maNV.Text,
+                    maNV = maNV1,
                     username = txt_username.Text,
-                    matKhau = txt_password.Text,
+                    matKhau = hashedPassword,  // Lưu mật khẩu đã băm
                     tenNV = txt_tenNV.Text,
                     ngaySinh = dtpNgaySinh.Value,
                     soDT = txt_soDT.Text,
@@ -166,12 +167,14 @@ namespace GUI.Forms.Manager.Staff
                 MessageBox.Show("Vui lòng nhập mã nhân viên cần sửa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            // Băm mật khẩu trước khi lưu
+            string hashedPassword = _staffService.HashPassword(txt_password.Text);
 
             NhanVien nv = new NhanVien
             {
                 maNV = txt_maNV.Text,
                 username = txt_username.Text,
-                matKhau = txt_password.Text,
+                matKhau = hashedPassword,
                 tenNV = txt_tenNV.Text,
                 ngaySinh = dtpNgaySinh.Value,
                 soDT = txt_soDT.Text,
@@ -227,30 +230,7 @@ namespace GUI.Forms.Manager.Staff
             }
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_Search_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmStaffManagement_Load_1(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 
 

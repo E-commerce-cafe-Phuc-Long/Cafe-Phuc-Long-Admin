@@ -10,6 +10,7 @@ namespace BLL.Services.Supplier
     public interface ISupplierService
     {
         List<NhaCungCap> GetSupplierList();
+        string GenerateCode();
         bool Insert(NhaCungCap p);
         bool Update(NhaCungCap updated);
         bool Delete(string maNCC);

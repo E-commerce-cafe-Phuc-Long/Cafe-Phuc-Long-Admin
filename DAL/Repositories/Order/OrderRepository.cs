@@ -16,7 +16,14 @@ namespace DAL.Repositories.Order
         }
         public List<DonHang> GetOrdersList()
         {
-            return _context.DonHangs.ToList();
+            return _context.DonHangs.OrderByDescending(kh => kh.ngayLapDH).ToList();
+        }
+        public List<DonHang> GetOrdersListByTT(string maTT)
+        {
+            return _context.DonHangs
+                .Where(kh => kh.maTT == maTT)
+                .OrderByDescending(kh => kh.ngayLapDH)
+                .ToList();
         }
         public string GetLastOrderCode()
         {
@@ -35,6 +42,28 @@ namespace DAL.Repositories.Order
 
                 return true;
 
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool UpdateStatusOrder(string maDH,string maTT)
+        {
+            try
+            {
+                var order = _context.DonHangs.SingleOrDefault(p => p.maDH == maDH);
+
+                if (order != null)
+                {
+                    order.maTT = maTT;
+
+                    _context.SubmitChanges();
+
+                    return true;
+                }
+
+                return false;
             }
             catch
             {

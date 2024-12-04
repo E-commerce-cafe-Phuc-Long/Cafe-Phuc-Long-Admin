@@ -26,6 +26,10 @@ namespace BLL.Services
         {
             return _repository.GetProductByCategoryId(categoryId);
         }
+        public SanPham GetProductByCode(string productId)
+        {
+            return _repository.GetProductByCode(productId);
+        }
         public string UploadImage(string imageUrl)
         {
             // Đọc các biến môi trường từ file .env

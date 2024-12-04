@@ -10,5 +10,10 @@ namespace DAL.Repositories.Role
     public interface IRoleRepository
     {
         List<VaiTro> GetRoleList();
+
+
+        bool Insert(VaiTro p);
+        bool Delete(string maVaiTro);
+        bool Update(VaiTro updated);
     }
 }

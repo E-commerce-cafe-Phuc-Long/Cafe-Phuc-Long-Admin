@@ -13,6 +13,7 @@ namespace DAL.Repositories.Product
         List<SanPham> GetProductByCategoryId(string categoryId);
         SanPham GetProductByName(string productName);
         List<SanPham> GetProductListByName(string productName);
+        SanPham GetProductByCode(string productId);
         bool InsertProduct(SanPham p);
         bool DeleteProduct(string masp);
         bool UpdateProduct(SanPham p);

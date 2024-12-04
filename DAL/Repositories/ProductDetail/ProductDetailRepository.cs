@@ -29,6 +29,11 @@ namespace DAL.Repositories.ProductDetail
             return _context.ChiTietSanPhams
                 .FirstOrDefault(prod => prod.maSP == productId && prod.Size.maSize == sizeId);
         }
+        public ChiTietSanPham GetProductDetailByCode(string productDetailId)
+        {
+            return _context.ChiTietSanPhams
+                .FirstOrDefault(prod => prod.maCTSP == productDetailId);
+        }
         public bool InsertProductDetail(ChiTietSanPham p)
         {
             try

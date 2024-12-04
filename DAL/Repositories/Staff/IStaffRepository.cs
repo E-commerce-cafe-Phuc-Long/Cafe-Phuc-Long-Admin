@@ -10,7 +10,7 @@ namespace DAL.Repositories.Staff
     public interface IStaffRepository
     {
         List<NhanVien> GetStaffList();
-
+        string GetLastStaffCode();
         dynamic GetStaffWithRoleNames();
 
         bool InsertStaff(NhanVien staff);

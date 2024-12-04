@@ -23,6 +23,7 @@ namespace GUI.Forms.Manager.Supplier
         }
         private void frmSupplierManagement_Load(object sender, EventArgs e)
         {
+            txt_maNCC.Enabled = false;
             LoadSupplierToDataGridView();
             dgv_NCC.CellClick += dgv_NCC_CellClick;
         }
@@ -67,15 +68,11 @@ namespace GUI.Forms.Manager.Supplier
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txt_maNCC.Text))
-                {
-                    MessageBox.Show("Mã nhà cung cấp không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                string maNCC = _supplierService.GenerateCode();
 
                 NhaCungCap ncc = new NhaCungCap
                 {
-                    maNCC = txt_maNCC.Text,
+                    maNCC = maNCC,
                     tenNCC = txt_tenNCC.Text,
                     diaChi = txt_diaChi.Text,
                 };
@@ -168,6 +165,24 @@ namespace GUI.Forms.Manager.Supplier
             }
         }
 
-       
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

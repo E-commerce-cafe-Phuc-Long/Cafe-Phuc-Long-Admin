@@ -35,6 +35,7 @@ namespace GUI
             this._staffService = staffService;
             this._sessionManager = sessionManager;
             InitializeComponent();
+            txtBox_Password.PasswordChar = '*';
             this.Load += FrmLogin_Load;
         }
 
@@ -48,8 +49,28 @@ namespace GUI
         {
             //Cần xử lý kiểm tra thông tin đăng nhập manager/staff để điều hướng form
             string username = txtBox_Login.Text.Trim();
-            string password = txtBox_Password.Text;
+            string password = txtBox_Password.Text.Trim();
+
+            if(string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+            
             NhanVien user = _staffService.GetStaffByUsername(username);
+            if (user == null)
+            {
+                MessageBox.Show("Username không hợp lệ!");
+                return;
+            }
+            string hashPassword = user.matKhau;
+            bool result = _staffService.VerifyHashedPassword(hashPassword, password);
+            if( result == false )
+            {
+                MessageBox.Show("Mật khẩu không hợp lệ!");
+                return;
+            }
+
             string role = _authService.getRoleByUsernamePassword(username);
 
             // Lưu thông tin vào SessionManager
