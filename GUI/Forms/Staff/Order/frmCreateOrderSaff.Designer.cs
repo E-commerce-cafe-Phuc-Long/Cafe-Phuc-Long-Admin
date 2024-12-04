@@ -46,36 +46,36 @@
             // 
             // panel_category
             // 
-            this.panel_category.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.panel_category.Location = new System.Drawing.Point(0, 130);
+            this.panel_category.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_category.Location = new System.Drawing.Point(0, 141);
             this.panel_category.Name = "panel_category";
-            this.panel_category.Size = new System.Drawing.Size(359, 589);
+            this.panel_category.Size = new System.Drawing.Size(359, 570);
             this.panel_category.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(821, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 45);
+            this.label1.Size = new System.Drawing.Size(314, 44);
             this.label1.TabIndex = 2;
             this.label1.Text = "TẠO ĐƠN HÀNG";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.listView_cart);
-            this.panel3.Location = new System.Drawing.Point(1311, 130);
+            this.panel3.Location = new System.Drawing.Point(1263, 141);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(471, 589);
+            this.panel3.Size = new System.Drawing.Size(519, 573);
             this.panel3.TabIndex = 4;
             // 
             // listView_cart
             // 
             this.listView_cart.HideSelection = false;
-            this.listView_cart.Location = new System.Drawing.Point(4, 3);
+            this.listView_cart.Location = new System.Drawing.Point(3, 3);
             this.listView_cart.Name = "listView_cart";
-            this.listView_cart.Size = new System.Drawing.Size(462, 528);
+            this.listView_cart.Size = new System.Drawing.Size(511, 567);
             this.listView_cart.TabIndex = 0;
             this.listView_cart.UseCompatibleStateImageBehavior = false;
             this.listView_cart.SelectedIndexChanged += new System.EventHandler(this.listView_cart_SelectedIndexChanged);
@@ -84,7 +84,7 @@
             // 
             this.groupBox_product.Location = new System.Drawing.Point(365, 133);
             this.groupBox_product.Name = "groupBox_product";
-            this.groupBox_product.Size = new System.Drawing.Size(940, 579);
+            this.groupBox_product.Size = new System.Drawing.Size(892, 579);
             this.groupBox_product.TabIndex = 5;
             this.groupBox_product.TabStop = false;
             // 
@@ -123,7 +123,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.DarkGray;
             this.panel2.Controls.Add(this.btn_checkout);
             this.panel2.Controls.Add(this.label_tongTien);
             this.panel2.Controls.Add(this.label2);
@@ -135,15 +135,16 @@
             // 
             // txt_search
             // 
-            this.txt_search.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_search.Location = new System.Drawing.Point(345, 92);
+            this.txt_search.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.Location = new System.Drawing.Point(364, 95);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(264, 27);
             this.txt_search.TabIndex = 10;
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(615, 89);
+            this.btn_search.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.Location = new System.Drawing.Point(634, 92);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(130, 35);
             this.btn_search.TabIndex = 11;
@@ -153,7 +154,8 @@
             // 
             // btn_deleteCart
             // 
-            this.btn_deleteCart.Location = new System.Drawing.Point(1647, 88);
+            this.btn_deleteCart.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteCart.Location = new System.Drawing.Point(1647, 100);
             this.btn_deleteCart.Name = "btn_deleteCart";
             this.btn_deleteCart.Size = new System.Drawing.Size(130, 35);
             this.btn_deleteCart.TabIndex = 12;

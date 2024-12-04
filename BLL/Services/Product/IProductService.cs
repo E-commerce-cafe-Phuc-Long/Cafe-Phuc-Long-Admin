@@ -13,6 +13,7 @@ namespace BLL.Services
         string UploadImage(string imageUrl);
         List<SanPham> GetProductByCategoryId(string categoryId);
         SanPham GetProductByName(string productName);
+        SanPham GetProductByCode(string productId);
         List<SanPham> GetProductListByName(string productName);
         bool InsertProduct(SanPham nv);
         bool DeleteProduct(string masp);

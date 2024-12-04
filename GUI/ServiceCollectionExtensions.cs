@@ -56,6 +56,8 @@ using BLL.Services.Report;
 using DAL.Repositories.Account;
 using BLL.Services.Account;
 using GUI.Forms.Manager.Account;
+using BLL.Services.StatusOrder;
+using DAL.Repositories.StatusOrder;
 
 namespace GUI
 {
@@ -84,6 +86,8 @@ namespace GUI
             services.AddTransient<IMethodRepository, MethodRepository>();
             services.AddTransient<IReportRepository, ReportRepository>();
             services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<IStatusOrderRepository, StatusOrderRepository>();
+
 
         }
         public static void AddServices(this IServiceCollection services)
@@ -109,9 +113,7 @@ namespace GUI
             services.AddTransient<IMethodService, MethodService>();
             services.AddTransient<IReportService, ReportService>();
             services.AddTransient<IAccountService, AccountService>();
-
-
-
+            services.AddTransient<IStatusOrderService, StatusOrderService>();
 
         }
         public static void AddForms(this IServiceCollection services)

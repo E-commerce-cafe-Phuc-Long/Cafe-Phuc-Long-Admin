@@ -31,6 +31,11 @@ namespace DAL.Repositories.Product
                 .FirstOrDefault(prod => prod.tenSP.ToLower().Contains(productName.ToLower()));
 
         }
+        public SanPham GetProductByCode(string productId)
+        {
+            return _context.SanPhams
+                .FirstOrDefault(prod => prod.maSP == productId);
+        }
         public List<SanPham> GetProductListByName(string productName)
         {
             return _context.SanPhams

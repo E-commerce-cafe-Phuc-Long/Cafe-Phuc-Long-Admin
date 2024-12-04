@@ -27,6 +27,10 @@ namespace BLL.Services.ProductDetail
         {
             return _repository.GetProductDetailByIdAndSizeId(productId, sizeId);
         }
+        public ChiTietSanPham GetProductDetailByCode(string productDetailId)
+        {
+            return _repository.GetProductDetailByCode(productDetailId);
+        }
         public bool InsertProductDetail(ChiTietSanPham p)
         {
             return _repository.InsertProductDetail(p);
