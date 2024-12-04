@@ -49,6 +49,8 @@ using GUI.Forms.Manager.Supplier;
 using BLL.Services.Auth;
 using DAL.Repositories.Auth;
 using DTO;
+using BLL.Services.StatusOrder;
+using DAL.Repositories.StatusOrder;
 
 namespace GUI
 {
@@ -75,6 +77,8 @@ namespace GUI
             services.AddTransient<IAuthRepository, AuthRepository>();
             services.AddTransient<IDosageRepository, DosageRepository>(); 
             services.AddTransient<IMethodRepository, MethodRepository>();
+            services.AddTransient<IStatusOrderRepository, StatusOrderRepository>();
+
 
         }
         public static void AddServices(this IServiceCollection services)
@@ -97,7 +101,8 @@ namespace GUI
             services.AddTransient<IGoodsReceiptDetailsService, GoodsReceiptDetailsService>();
             services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IDosageService, DosageService>();
-            services.AddTransient<IMethodService, MethodService>();
+            services.AddTransient<IMethodService, MethodService>(); 
+            services.AddTransient<IStatusOrderService, StatusOrderService>();
 
         }
         public static void AddForms(this IServiceCollection services)

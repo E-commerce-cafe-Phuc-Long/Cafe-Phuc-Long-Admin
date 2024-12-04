@@ -19,6 +19,14 @@ namespace BLL.Services.Order
         {
             return _repository.GetOrdersList();
         }
+        public List<DonHang> GetOrdersListByTT(string maTT)
+        {
+            return _repository.GetOrdersListByTT(maTT);
+        }
+        public bool UpdateStatusOrder(string maDH, string maTT)
+        {
+            return _repository.UpdateStatusOrder(maDH, maTT);
+        }
         public bool InsertOrder(DonHang p)
         {
             return _repository.InsertOrder(p);

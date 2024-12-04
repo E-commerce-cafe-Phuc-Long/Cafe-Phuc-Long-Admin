@@ -49,6 +49,11 @@ namespace GUI
             //Cần xử lý kiểm tra thông tin đăng nhập manager/staff để điều hướng form
             string username = txtBox_Login.Text.Trim();
             string password = txtBox_Password.Text;
+            if(username == "" || password == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                return;
+            }
             NhanVien user = _staffService.GetStaffByUsername(username);
             string role = _authService.getRoleByUsernamePassword(username);
 

@@ -77,6 +77,8 @@
     <Compile Include="Repositories\Size\SizeRepository.cs" />
     <Compile Include="Repositories\Staff\IStaffRepository.cs" />
     <Compile Include="Repositories\Staff\StaffRepository.cs" />
+    <Compile Include="Repositories\StatusOrder\IStatusOrderRepository.cs" />
+    <Compile Include="Repositories\StatusOrder\StatusOrderRepository.cs" />
     <Compile Include="Repositories\Supplier\ISupplierRepository.cs" />
     <Compile Include="Repositories\Supplier\SupplierRepository.cs" />
   </ItemGroup>

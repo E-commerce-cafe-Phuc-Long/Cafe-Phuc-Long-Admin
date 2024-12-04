@@ -143,6 +143,8 @@
     <Compile Include="Services\Size\SizeService.cs" />
     <Compile Include="Services\Staff\IStaffService.cs" />
     <Compile Include="Services\Staff\StaffService.cs" />
+    <Compile Include="Services\StatusOrder\IStatusOrderService.cs" />
+    <Compile Include="Services\StatusOrder\StatusOrderService.cs" />
     <Compile Include="Services\Supplier\ISupplierService.cs" />
     <Compile Include="Services\Supplier\SupplierService.cs" />
   </ItemGroup>

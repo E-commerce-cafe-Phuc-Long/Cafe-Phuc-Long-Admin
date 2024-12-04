@@ -18,5 +18,9 @@ namespace DAL.Repositories.Dosage
         {
             return _context.LieuLuongs.ToList();
         }
+        public LieuLuong Get(string id)
+        {
+            return _context.LieuLuongs.FirstOrDefault(x => x.maLL == id);
+        }
     }
 }

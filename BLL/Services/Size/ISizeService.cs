@@ -12,6 +12,7 @@ namespace BLL.Services.Size
     {
         List<DTO.Size> GetSizeList();
         List<DTO.Size> GetSizesByProductId(string productId);
+        DTO.Size GetSizeByCode(string sizeCode);
         string GenerateSizeCode();
         bool InsertSize(DTO.Size size);
         bool UpdateSize(DTO.Size size);
