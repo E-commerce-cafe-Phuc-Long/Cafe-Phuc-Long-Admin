@@ -37,6 +37,7 @@ using GUI.Forms.Manager;
 using GUI.Forms.Manager.GoodsReceipt;
 using GUI.Forms.Manager.Staff;
 using GUI.Forms.Manager.Customer;
+using GUI.Forms.Manager.Role;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -49,6 +50,12 @@ using GUI.Forms.Manager.Supplier;
 using BLL.Services.Auth;
 using DAL.Repositories.Auth;
 using DTO;
+using GUI.Forms.Manager.Report;
+using DAL.Repositories.Report;
+using BLL.Services.Report;
+using DAL.Repositories.Account;
+using BLL.Services.Account;
+using GUI.Forms.Manager.Account;
 
 namespace GUI
 {
@@ -75,6 +82,8 @@ namespace GUI
             services.AddTransient<IAuthRepository, AuthRepository>();
             services.AddTransient<IDosageRepository, DosageRepository>(); 
             services.AddTransient<IMethodRepository, MethodRepository>();
+            services.AddTransient<IReportRepository, ReportRepository>();
+            services.AddTransient<IAccountRepository, AccountRepository>();
 
         }
         public static void AddServices(this IServiceCollection services)
@@ -98,6 +107,11 @@ namespace GUI
             services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IDosageService, DosageService>();
             services.AddTransient<IMethodService, MethodService>();
+            services.AddTransient<IReportService, ReportService>();
+            services.AddTransient<IAccountService, AccountService>();
+
+
+
 
         }
         public static void AddForms(this IServiceCollection services)
@@ -109,6 +123,7 @@ namespace GUI
             services.AddTransient<frmProductManagement>();
             services.AddTransient<frmMaterialManagement>();
             services.AddTransient<FrmCustomerManagement>();
+            services.AddTransient<frmRoleManagement>();
             services.AddTransient<frmMainSale>();
             services.AddTransient<frmCreateOrderSaff>();
             services.AddTransient<frmOrderManagement>();
@@ -117,8 +132,13 @@ namespace GUI
             services.AddTransient<frmGoodsReceiptManagement>();
             services.AddTransient<frmSelectDrink>();
             services.AddTransient<frmCheckout>();
+            services.AddTransient<frmReportManagement>();
+            services.AddTransient<frmAccountManagement>();
+
 
 
         }
+
+
     }
 }

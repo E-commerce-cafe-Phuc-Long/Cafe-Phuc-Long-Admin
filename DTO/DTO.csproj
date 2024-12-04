@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account_DTO.cs" />
     <Compile Include="E-Commerce_Coffee_And_Tea.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

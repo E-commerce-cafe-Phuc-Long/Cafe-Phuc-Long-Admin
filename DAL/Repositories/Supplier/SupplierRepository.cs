@@ -27,6 +27,8 @@ namespace DAL.Repositories.Supplier
                 .FirstOrDefault();
         }
 
+
+
         public bool Insert(NhaCungCap p)
         {
             try

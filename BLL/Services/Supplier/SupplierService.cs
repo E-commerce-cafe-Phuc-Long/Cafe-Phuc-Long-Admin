@@ -16,6 +16,7 @@ namespace BLL.Services.Supplier
         {
             this._repository = repository;
         }
+
         public string GenerateCode()
         {
             var lastCode = _repository.GetCode();
@@ -23,13 +24,15 @@ namespace BLL.Services.Supplier
             // Nếu chưa có nhân viên thì khởi tạo mã NV: NV001
             if (string.IsNullOrEmpty(lastCode))
             {
-                return "NCC01";
+                return "NCC001";
             }
 
             var number = int.Parse(lastCode.Substring(3));
 
             return $"NCC{(number + 1):D3}";
         }
+         
+
         public List<NhaCungCap> GetSupplierList()
         {
             return _repository.GetSupplierList();

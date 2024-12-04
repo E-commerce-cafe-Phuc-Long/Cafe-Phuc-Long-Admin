@@ -3,6 +3,8 @@ using GUI.Forms.Manager.GoodsReceipt;
 using GUI.Forms.Manager.Supplier;
 using GUI.Forms.Manager.Staff;
 using GUI.Forms.Manager.Customer;
+using GUI.Forms.Manager.Role;
+using GUI.Forms.Manager.Report;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,6 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
+using GUI.Forms.Manager.Account;
 
 namespace GUI.Forms.Manager
 {
@@ -98,6 +101,32 @@ namespace GUI.Forms.Manager
             this.Hide();
             frmSupplierManagement frmSupplierManagement= _serviceProvider.GetRequiredService<frmSupplierManagement>();
             frmSupplierManagement.ShowDialog();
+            this.Show();
+        }
+
+        private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmRoleManagement frmRoleManegement = _serviceProvider.GetRequiredService<frmRoleManagement>();
+            frmRoleManegement.ShowDialog();
+            this.Show();
+        }
+
+       
+
+        private void báoCáoThốngKêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmReportManagement frmReportManegement = _serviceProvider.GetRequiredService<frmReportManagement>();
+            frmReportManegement.ShowDialog();
+            this.Show();
+        }
+
+        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAccountManagement frmAccountManegement = _serviceProvider.GetRequiredService<frmAccountManagement>();
+            frmAccountManegement.ShowDialog();
             this.Show();
         }
     }
