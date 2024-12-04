@@ -165,6 +165,24 @@ namespace GUI.Forms.Manager.Supplier
             }
         }
 
-       
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

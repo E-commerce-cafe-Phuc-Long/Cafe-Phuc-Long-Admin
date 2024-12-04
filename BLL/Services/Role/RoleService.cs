@@ -19,6 +19,17 @@ namespace BLL.Services.Role
         {
             return _repository.GetRoleList();
         }
+      
+     
+
+      
+        public bool Insert(VaiTro p)
+        { return _repository.Insert(p); }
+        public bool Update(VaiTro updated)
+        { return _repository.Update(updated); }
+        public bool Delete(string maVaiTro)
+        { return _repository.Delete(maVaiTro); }
+
     }
     
 }

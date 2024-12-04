@@ -21,11 +21,13 @@ namespace DAL.Repositories.Supplier
         }
         public string GetCode()
         {
-            return _context.PhieuNhaps
-                .OrderByDescending(ma => ma.maPhieuNhap)
-                .Select(ma => ma.maPhieuNhap)
+            return _context.NhaCungCaps
+                .OrderByDescending(ma => ma.maNCC)
+                .Select(ma => ma.maNCC)
                 .FirstOrDefault();
         }
+
+
 
         public bool Insert(NhaCungCap p)
         {
