@@ -26,7 +26,7 @@ namespace BLL.Services.Supplier
                 return "NCC01";
             }
 
-            var number = int.Parse(lastCode.Substring(2));
+            var number = int.Parse(lastCode.Substring(3));
 
             return $"NCC{(number + 1):D3}";
         }

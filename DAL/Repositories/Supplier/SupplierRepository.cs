@@ -21,9 +21,9 @@ namespace DAL.Repositories.Supplier
         }
         public string GetCode()
         {
-            return _context.PhieuNhaps
-                .OrderByDescending(ma => ma.maPhieuNhap)
-                .Select(ma => ma.maPhieuNhap)
+            return _context.NhaCungCaps
+                .OrderByDescending(n => n.maNCC)
+                .Select(n => n.maNCC)
                 .FirstOrDefault();
         }
 

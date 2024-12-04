@@ -40,6 +40,8 @@
             this.userManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.openOrderToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
             this.fileToolStripMenuItem.Text = "Bán hàng";
             // 
             // newOrderToolStripMenuItem
@@ -93,19 +95,19 @@
             this.generalSettingsToolStripMenuItem,
             this.systemSettingsToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // generalSettingsToolStripMenuItem
             // 
             this.generalSettingsToolStripMenuItem.Name = "generalSettingsToolStripMenuItem";
-            this.generalSettingsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.generalSettingsToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.generalSettingsToolStripMenuItem.Text = "General Settings";
             // 
             // systemSettingsToolStripMenuItem
             // 
             this.systemSettingsToolStripMenuItem.Name = "systemSettingsToolStripMenuItem";
-            this.systemSettingsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.systemSettingsToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.systemSettingsToolStripMenuItem.Text = "System Settings";
             // 
             // helpToolStripMenuItem
@@ -115,7 +117,7 @@
             this.aboutToolStripMenuItem,
             this.supportToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // userManualToolStripMenuItem
@@ -136,11 +138,33 @@
             this.supportToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.supportToolStripMenuItem.Text = "Support";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(113, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(571, 62);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Phần mềm đặt đơn hàng";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(50, 220);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(687, 62);
+            this.label2.TabIndex = 2;
+            this.label2.Text = " dành cho nhân viên bán hàng";
+            // 
             // frmMainSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.mainMenuStrip);
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "frmMainSale";
@@ -166,5 +190,7 @@
         private System.Windows.Forms.ToolStripMenuItem userManualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supportToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

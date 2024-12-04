@@ -33,8 +33,8 @@
             this.viewOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ViewMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ViewMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,6 +53,7 @@
             this.userManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,17 +108,17 @@
             this.menuManagementToolStripMenuItem.Size = new System.Drawing.Size(101, 27);
             this.menuManagementToolStripMenuItem.Text = "Sản phẩm";
             // 
-            // ViewMaterialToolStripMenuItem
-            // 
-            this.ViewMaterialToolStripMenuItem.Name = "ViewMaterialToolStripMenuItem";
-            this.ViewMaterialToolStripMenuItem.Size = new System.Drawing.Size(280, 28);
-            this.ViewMaterialToolStripMenuItem.Text = "Công thức - nguyên liệu";
-            // 
             // viewProductToolStripMenuItem
             // 
             this.viewProductToolStripMenuItem.Name = "viewProductToolStripMenuItem";
             this.viewProductToolStripMenuItem.Size = new System.Drawing.Size(280, 28);
             this.viewProductToolStripMenuItem.Text = "Quản lý sản phẩm";
+            // 
+            // ViewMaterialToolStripMenuItem
+            // 
+            this.ViewMaterialToolStripMenuItem.Name = "ViewMaterialToolStripMenuItem";
+            this.ViewMaterialToolStripMenuItem.Size = new System.Drawing.Size(280, 28);
+            this.ViewMaterialToolStripMenuItem.Text = "Công thức - nguyên liệu";
             // 
             // employeeToolStripMenuItem
             // 
@@ -250,11 +251,22 @@
             this.supportToolStripMenuItem.Size = new System.Drawing.Size(256, 28);
             this.supportToolStripMenuItem.Text = "Hỗ trợ";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(112, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(781, 62);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Quản Trị Hệ Thống Cửa Hàng Cafe";
+            // 
             // frmMainManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.mainMenuStrip);
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "frmMainManagement";
@@ -293,5 +305,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewGoodsReceiptToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supplierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewSupplierToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }

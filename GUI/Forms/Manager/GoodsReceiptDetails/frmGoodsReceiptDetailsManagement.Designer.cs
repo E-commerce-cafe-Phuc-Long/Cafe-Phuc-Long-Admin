@@ -44,7 +44,7 @@
             // dgv_Detail
             // 
             this.dgv_Detail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Detail.Location = new System.Drawing.Point(29, 401);
+            this.dgv_Detail.Location = new System.Drawing.Point(29, 271);
             this.dgv_Detail.Name = "dgv_Detail";
             this.dgv_Detail.RowHeadersWidth = 51;
             this.dgv_Detail.RowTemplate.Height = 24;
@@ -55,7 +55,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(298, 24);
+            this.label4.Location = new System.Drawing.Point(368, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(283, 34);
             this.label4.TabIndex = 40;
@@ -99,7 +99,6 @@
             this.txt_maPhieuNhap.Name = "txt_maPhieuNhap";
             this.txt_maPhieuNhap.Size = new System.Drawing.Size(265, 22);
             this.txt_maPhieuNhap.TabIndex = 10;
-
             // 
             // label2
             // 
@@ -118,9 +117,9 @@
             this.groupBox4.Controls.Add(this.txt_maPhieuNhap);
             this.groupBox4.Controls.Add(this.txt_tongTien);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Location = new System.Drawing.Point(29, 72);
+            this.groupBox4.Location = new System.Drawing.Point(276, 77);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(465, 248);
+            this.groupBox4.Size = new System.Drawing.Size(458, 179);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin chi tiết phiếu nhập";
@@ -129,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 662);
+            this.ClientSize = new System.Drawing.Size(1030, 525);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgv_Detail);
             this.Controls.Add(this.groupBox4);
