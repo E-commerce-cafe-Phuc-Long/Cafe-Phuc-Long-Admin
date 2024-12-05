@@ -16,8 +16,9 @@
 
 ## :pushpin: Công cụ được sử dụng trong dự án :sparkles:
 
-1. :triangular_flag_on_post: (Đang cập nhật ...) :heavy_check_mark:
-2. :triangular_flag_on_post: (Đang cập nhật ...):heavy_check_mark:
+1. :triangular_flag_on_post: Sử dụng ASP.NET MVC C#,Winform :heavy_check_mark:
+2. :triangular_flag_on_post: SQL Server 2022,Visual Studio 2022:heavy_check_mark:
+
 
 ---
 
@@ -27,7 +28,7 @@
 
 ### :pushpin: Mô Tả: :sparkles:
 
-(Đang cập nhật ...)
+Xây dựng một hệ thống phần mềm web-app quản lý quán cà phê, hoạt động linh hoạt cả online và offline. 
 
 ### :pushpin: Yêu Cầu: :sparkles:
 
@@ -37,9 +38,9 @@
 
 |STT|    Công Việc    |      Phân Công      |
 |:-:|:----------:|:-------------------:|
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
+| 1 | Xây dựng chức năng quản lý danh mục, sản phẩm, size, quản lý công thức-nguyên liệu, quản lý đơn hàng, tạo đơn hàng, thanh toán. | Cao Nhật Linh |
+| 2 | Thiết kế cơ sở dữ liệu. Xây dựng chức năng  Đăng ký, đăng nhập, hiển thị danh sách sản phẩm, lịch sử đơn hàng, tìm kiếm, đặt đơn hàng, quản lý hồ sơ người dùng |Bạch Minh Tuyên|
+| 3 | Xây dựng chức năng quản lí tài khoản, nhà cung cấp , vai trò, nhân viên, khách hàng, chi tiết phiếu nhập -phiếu nhâp,word| Nguyễn Thị Xuân Lan  |
 
 (Đang cập nhật ...)
 
