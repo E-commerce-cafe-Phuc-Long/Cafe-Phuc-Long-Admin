@@ -26,7 +26,10 @@ namespace GUI.Forms
             _sessionManager = sessionManager;
             user = sessionManager.Staff;
             InitializeComponent();
-            this.Load += FrmMainSale_Load; ;
+            this.Load += FrmMainSale_Load;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void FrmMainSale_Load(object sender, EventArgs e)

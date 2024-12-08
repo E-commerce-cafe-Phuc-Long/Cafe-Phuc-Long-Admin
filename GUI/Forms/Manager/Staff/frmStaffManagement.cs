@@ -81,8 +81,8 @@ namespace GUI.Forms.Manager.Staff
                 txt_tenNV.Text = row.Cells["tenNV"].Value?.ToString() ?? string.Empty;
                 dtpNgaySinh.Value = DateTime.TryParse(row.Cells["ngaySinh"].Value?.ToString(), out DateTime ngaySinh) ? ngaySinh : DateTime.Now;
                 txt_soDT.Text = row.Cells["soDT"].Value?.ToString() ?? string.Empty;
-                txt_email.Text = row.Cells["diaChi"].Value?.ToString() ?? string.Empty;
-                txt_diaChi.Text = row.Cells["email"].Value?.ToString() ?? string.Empty;
+                txt_email.Text = row.Cells["email"].Value?.ToString() ?? string.Empty;
+                txt_diaChi.Text = row.Cells["diaChi"].Value?.ToString() ?? string.Empty;
 
                 var roleId = row.Cells["maVaiTro"].Value?.ToString();
                 if (!string.IsNullOrEmpty(roleId))

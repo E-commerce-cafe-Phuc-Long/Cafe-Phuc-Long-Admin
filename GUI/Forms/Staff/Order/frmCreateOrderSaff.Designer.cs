@@ -47,6 +47,7 @@
             // panel_category
             // 
             this.panel_category.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_category.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_category.Location = new System.Drawing.Point(0, 141);
             this.panel_category.Name = "panel_category";
             this.panel_category.Size = new System.Drawing.Size(359, 570);
@@ -55,10 +56,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(821, 29);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(812, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(314, 44);
+            this.label1.Size = new System.Drawing.Size(287, 46);
             this.label1.TabIndex = 2;
             this.label1.Text = "TẠO ĐƠN HÀNG";
             // 
@@ -72,6 +73,7 @@
             // 
             // listView_cart
             // 
+            this.listView_cart.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_cart.HideSelection = false;
             this.listView_cart.Location = new System.Drawing.Point(3, 3);
             this.listView_cart.Name = "listView_cart";
@@ -82,6 +84,7 @@
             // 
             // groupBox_product
             // 
+            this.groupBox_product.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_product.Location = new System.Drawing.Point(365, 133);
             this.groupBox_product.Name = "groupBox_product";
             this.groupBox_product.Size = new System.Drawing.Size(892, 579);
@@ -91,9 +94,9 @@
             // btn_checkout
             // 
             this.btn_checkout.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_checkout.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_checkout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_checkout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_checkout.Location = new System.Drawing.Point(1315, 7);
+            this.btn_checkout.Location = new System.Drawing.Point(1266, 10);
             this.btn_checkout.Name = "btn_checkout";
             this.btn_checkout.Size = new System.Drawing.Size(236, 63);
             this.btn_checkout.TabIndex = 6;
@@ -103,21 +106,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(1557, 27);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1546, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 23);
+            this.label2.Size = new System.Drawing.Size(108, 28);
             this.label2.TabIndex = 7;
             this.label2.Text = "Tổng tiền:";
             // 
             // label_tongTien
             // 
             this.label_tongTien.AutoSize = true;
-            this.label_tongTien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label_tongTien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_tongTien.ForeColor = System.Drawing.Color.Red;
             this.label_tongTien.Location = new System.Drawing.Point(1660, 27);
             this.label_tongTien.Name = "label_tongTien";
-            this.label_tongTien.Size = new System.Drawing.Size(20, 23);
+            this.label_tongTien.Size = new System.Drawing.Size(24, 28);
             this.label_tongTien.TabIndex = 8;
             this.label_tongTien.Text = "0";
             // 
@@ -128,9 +131,9 @@
             this.panel2.Controls.Add(this.label_tongTien);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 718);
+            this.panel2.Location = new System.Drawing.Point(0, 721);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1784, 100);
+            this.panel2.Size = new System.Drawing.Size(1788, 100);
             this.panel2.TabIndex = 9;
             // 
             // txt_search
@@ -143,7 +146,7 @@
             // 
             // btn_search
             // 
-            this.btn_search.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_search.Location = new System.Drawing.Point(634, 92);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(130, 35);
@@ -154,7 +157,7 @@
             // 
             // btn_deleteCart
             // 
-            this.btn_deleteCart.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteCart.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_deleteCart.Location = new System.Drawing.Point(1647, 100);
             this.btn_deleteCart.Name = "btn_deleteCart";
             this.btn_deleteCart.Size = new System.Drawing.Size(130, 35);
@@ -168,7 +171,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1784, 818);
+            this.ClientSize = new System.Drawing.Size(1788, 821);
             this.Controls.Add(this.btn_deleteCart);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
@@ -178,7 +181,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel_category);
             this.Name = "frmCreateOrderSaff";
-            this.Text = "frmOrderSaff";
+            this.Text = "Tạo đơn hàng";
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

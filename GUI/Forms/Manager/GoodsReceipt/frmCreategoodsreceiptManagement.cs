@@ -256,7 +256,10 @@ namespace GUI.Forms.Manager.GoodsReceipt
                 DateTime ngayNhap = dtp_ngayNhap.Value;
 
                 _goodsreceiptService.SaveGoodsReceipt(maPhieuNhap, maNCC, ngayNhap, tempDetails);
-
+                foreach (var detail in tempDetails)
+                {
+                    _goodsreceiptdetailsService.UpdateMaterialQuantity(detail.maNL, detail.soLuongNhap);
+                }
 
                 MessageBox.Show("Phiếu nhập đã được lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

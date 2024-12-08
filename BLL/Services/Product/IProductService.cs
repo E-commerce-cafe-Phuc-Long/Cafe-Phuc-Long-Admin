@@ -21,5 +21,9 @@ namespace BLL.Services
         List<SanPham> SearchProduct(string keyword);
         List<TrangThai_SP> trangThai_SPs();
         string GenerateProductCode();
+
+        List<SanPham> SearchProduct_Manager(string keyword);
+        List<SanPham> GetProductList_Manager();
+        List<SanPham> GetProductByCategoryId_Manager(string categoryId);
     }
 }

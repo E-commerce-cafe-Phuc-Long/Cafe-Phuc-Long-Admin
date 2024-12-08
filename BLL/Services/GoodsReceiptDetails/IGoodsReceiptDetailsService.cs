@@ -13,6 +13,7 @@ namespace BLL.Services.GoodsReceiptDetails
 
         dynamic GetDetailsByGoodsReceiptId(string maPhieuNhap);
         bool Insert(string maPhieuNhap, ChiTietPhieuNhap p);
-
+        void UpdateMaterialQuantity(string maNL, decimal? soLuongNhap);
+        void Update(NguyenLieu material);
     }
 }

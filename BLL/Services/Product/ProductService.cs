@@ -114,5 +114,17 @@ namespace BLL.Services
 
             return $"SP{(number + 1):D3}";
         }
+        public List<SanPham> SearchProduct_Manager(string keyword)
+        {
+            return _repository.SearchProduct_Manager(keyword);
+        }
+        public List<SanPham> GetProductList_Manager()
+        {
+            return _repository.GetProductList_Manager();
+        }
+        public List<SanPham> GetProductByCategoryId_Manager(string categoryId)
+        {
+            return _repository.GetProductByCategoryId(categoryId);
+        }
     }
 }

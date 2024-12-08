@@ -41,11 +41,49 @@ namespace DAL.Repositories.GoodsReceiptDetails
             return details;
         }
 
+        public NguyenLieu GetMaterialById(string materialId)
+        {
+            try
+            {
+                // Truy vấn nguyên liệu theo maNL
+                var material = _context.NguyenLieus.SingleOrDefault(m => m.maNL == materialId);
+                return material; // Nếu tìm thấy, trả về nguyên liệu; nếu không, trả về null
+            }
+            catch (Exception ex)
+            {
+                // Ghi log hoặc xử lý lỗi nếu có
+                Console.WriteLine($"Lỗi khi tìm nguyên liệu: {ex.Message}");
+                throw; // Ném lại lỗi để phía Service có thể xử lý
+            }
+        }
 
-        //
+        public void Update(NguyenLieu material)
+        {
+            try
+            {
+                // Tìm nguyên liệu theo MaNL
+                var existingMaterial = _context.NguyenLieus.SingleOrDefault(m => m.maNL == material.maNL);
 
+                if (existingMaterial != null)
+                {
+                    // Cập nhật thuộc tính SoLuong
+                    existingMaterial.soLuong = material.soLuong;
 
-
+                    // Lưu thay đổi vào cơ sở dữ liệu
+                    _context.SubmitChanges();
+                }
+                else
+                {
+                    throw new Exception("Không tìm thấy nguyên liệu cần cập nhật.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Ghi log hoặc xử lý lỗi
+                Console.WriteLine($"Lỗi khi cập nhật nguyên liệu: {ex.Message}");
+                throw;
+            }
+        }
         //thêm
         public bool Insert(string maPhieuNhap, ChiTietPhieuNhap p)
         {

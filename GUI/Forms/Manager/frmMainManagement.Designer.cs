@@ -39,6 +39,7 @@
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goodsRecieptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +56,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
             this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,9 +75,9 @@
             this.helpToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
-            this.mainMenuStrip.Size = new System.Drawing.Size(1002, 31);
+            this.mainMenuStrip.Size = new System.Drawing.Size(946, 31);
             this.mainMenuStrip.TabIndex = 0;
-            this.mainMenuStrip.Text = "menuStrip1";
+            this.mainMenuStrip.Text = "menuStrip_Main";
             // 
             // orderManagementToolStripMenuItem
             // 
@@ -153,6 +154,13 @@
             this.rolesToolStripMenuItem.Size = new System.Drawing.Size(254, 28);
             this.rolesToolStripMenuItem.Text = "Vai trò";
             this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
+            // 
+            // tàiKhoảnToolStripMenuItem
+            // 
+            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(254, 28);
+            this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
+            this.tàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem_Click);
             // 
             // customerToolStripMenuItem
             // 
@@ -267,28 +275,35 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 128);
+            this.label1.Location = new System.Drawing.Point(130, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(781, 62);
+            this.label1.Size = new System.Drawing.Size(671, 62);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Quản Trị Hệ Thống Cửa Hàng Cafe";
-            // tàiKhoảnToolStripMenuItem
+            this.label1.Text = "Quản Trị Hệ Thống Cửa Hàng";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(254, 28);
-            this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
-            this.tàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem_Click);
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(248, 188);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(414, 62);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Cà Phê và Trà Sữa";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMainManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 450);
+            this.ClientSize = new System.Drawing.Size(946, 335);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mainMenuStrip);
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "frmMainManagement";
-            this.Text = "frmMainManagement";
+            this.Text = "Hệ Thống Quản Lý Cửa Hàng";
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -326,5 +341,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem báoCáoThốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.Label label2;
     }
 }

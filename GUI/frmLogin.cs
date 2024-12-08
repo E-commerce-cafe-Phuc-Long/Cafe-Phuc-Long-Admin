@@ -37,6 +37,10 @@ namespace GUI
             InitializeComponent();
             txtBox_Password.PasswordChar = '*';
             this.Load += FrmLogin_Load;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            panel_Container.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)

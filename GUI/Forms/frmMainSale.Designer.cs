@@ -54,9 +54,9 @@
             this.helpToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
-            this.mainMenuStrip.Size = new System.Drawing.Size(800, 28);
+            this.mainMenuStrip.Size = new System.Drawing.Size(852, 28);
             this.mainMenuStrip.TabIndex = 0;
-            this.mainMenuStrip.Text = "menuStrip1";
+            this.mainMenuStrip.Text = "menuStrip_Main";
             // 
             // fileToolStripMenuItem
             // 
@@ -65,7 +65,7 @@
             this.openOrderToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.fileToolStripMenuItem.Text = "Bán hàng";
             // 
             // newOrderToolStripMenuItem
@@ -95,7 +95,7 @@
             this.generalSettingsToolStripMenuItem,
             this.systemSettingsToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // generalSettingsToolStripMenuItem
@@ -117,7 +117,7 @@
             this.aboutToolStripMenuItem,
             this.supportToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // userManualToolStripMenuItem
@@ -142,7 +142,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(113, 116);
+            this.label1.Location = new System.Drawing.Point(108, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(571, 62);
             this.label1.TabIndex = 1;
@@ -152,7 +152,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 220);
+            this.label2.Location = new System.Drawing.Point(50, 230);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(687, 62);
             this.label2.TabIndex = 2;
@@ -162,13 +162,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(852, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mainMenuStrip);
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "frmMainSale";
-            this.Text = "frmMainSale";
+            this.Text = "Phần mềm đặt đơn hàng";
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
             this.ResumeLayout(false);

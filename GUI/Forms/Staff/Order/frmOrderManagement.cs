@@ -227,7 +227,7 @@ namespace GUI.Forms
             }
             var order = (DonHang)listBox_order.SelectedItem;
             var status = (TrangThai_DH)comboBox_status.SelectedItem;
-            if (order.maTT == "TTDH_03")
+            if (order.maTT == "TTDH003")
             {
                 MessageBox.Show("Đơn hàng đã hoàn thành không thể cập nhật trạng thái");
                 return;

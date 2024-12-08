@@ -79,7 +79,7 @@ namespace GUI.Forms.Manager
         private void LoadProductsToListView()
         {
             listView_ProductList.Items.Clear();
-            var products = _productService.GetProductList();
+            var products = _productService.GetProductList_Manager();
 
             foreach (var product in products)
             {
@@ -122,7 +122,7 @@ namespace GUI.Forms.Manager
         private void LoadProductsByCategoryId(string categoryId)
         {
             listView_ProductList.Items.Clear();
-            var products = _productService.GetProductByCategoryId(categoryId);
+            var products = _productService.GetProductByCategoryId_Manager(categoryId);
 
             foreach (var product in products)
             {
@@ -557,7 +557,7 @@ namespace GUI.Forms.Manager
            
             string keyword = txt_searchProduct.Text;
             listView_ProductList.Items.Clear();
-            List<SanPham> products = _productService.SearchProduct(keyword);
+            List<SanPham> products = _productService.SearchProduct_Manager(keyword);
             foreach (var product in products)
             {
                 ListViewItem item = new ListViewItem(product.maSP);

@@ -17,12 +17,14 @@ namespace DAL.Repositories.Product
 
         public List<SanPham> GetProductList()
         {
-            return _context.SanPhams.ToList();
+            return _context.SanPhams
+                .Where(sp => sp.maTT == "TT001")
+                .ToList();
         }
         public List<SanPham> GetProductByCategoryId(string categoryId)
         {
             return _context.SanPhams
-                .Where(prod => prod.maDM == categoryId)
+                .Where(prod => prod.maDM == categoryId && prod.maTT == "TT001")
                 .ToList();
         }
         public SanPham GetProductByName(string productName)
@@ -117,10 +119,8 @@ namespace DAL.Repositories.Product
                 }
 
                 var result = _context.SanPhams
-                   .Where(nv => nv.maSP.Contains(keyword) ||
-                             nv.tenSP.Contains(keyword))
-                  
-                                   .ToList();
+                   .Where(nv => nv.maSP.Contains(keyword) || nv.tenSP.Contains(keyword) || nv.maTT == "TT001")
+                  .ToList();
                
 
                 return result;
@@ -141,6 +141,42 @@ namespace DAL.Repositories.Product
                 .OrderByDescending(kh => kh.maSP)
                 .Select(kh => kh.maSP)
                 .FirstOrDefault();
+        }
+        public List<SanPham> SearchProduct_Manager(string keyword)
+        {
+            try
+            {
+
+                if (string.IsNullOrEmpty(keyword))
+                {
+                    return GetProductList();
+                }
+
+                var result = _context.SanPhams
+                   .Where(nv => nv.maSP.Contains(keyword) ||
+                             nv.tenSP.Contains(keyword))
+
+                                   .ToList();
+
+
+                return result;
+            }
+
+            catch
+            {
+                return new List<SanPham>();
+            }
+        }
+        public List<SanPham> GetProductList_Manager()
+        {
+            return _context.SanPhams
+                .ToList();
+        }
+        public List<SanPham> GetProductByCategoryId_Manager(string categoryId)
+        {
+            return _context.SanPhams
+                .Where(prod => prod.maDM == categoryId)
+                .ToList();
         }
     }
 }
