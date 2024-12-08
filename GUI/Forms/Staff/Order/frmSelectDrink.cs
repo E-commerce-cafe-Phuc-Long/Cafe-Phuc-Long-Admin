@@ -38,6 +38,9 @@ namespace GUI.Forms
             this.tra = tra;
             this.sl = sl;
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Load += FrmSelectDrink_Load;
         }
         private void FrmSelectDrink_Load(object sender, EventArgs e)

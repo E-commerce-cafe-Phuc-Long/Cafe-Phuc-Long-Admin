@@ -44,70 +44,74 @@
             // dgv_Detail
             // 
             this.dgv_Detail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Detail.Location = new System.Drawing.Point(29, 271);
+            this.dgv_Detail.Location = new System.Drawing.Point(12, 245);
+            this.dgv_Detail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_Detail.Name = "dgv_Detail";
             this.dgv_Detail.RowHeadersWidth = 51;
             this.dgv_Detail.RowTemplate.Height = 24;
-            this.dgv_Detail.Size = new System.Drawing.Size(975, 231);
+            this.dgv_Detail.Size = new System.Drawing.Size(866, 332);
             this.dgv_Detail.TabIndex = 39;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(368, 25);
+            this.label4.Location = new System.Drawing.Point(252, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(283, 34);
+            this.label4.Size = new System.Drawing.Size(374, 34);
             this.label4.TabIndex = 40;
-            this.label4.Text = "Chi tiết phiếu nhập";
+            this.label4.Text = "Chi Tiết Phiếu Nhập Hàng";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 93);
+            this.label6.Location = new System.Drawing.Point(26, 74);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 16);
+            this.label6.Size = new System.Drawing.Size(87, 23);
             this.label6.TabIndex = 47;
-            this.label6.Text = "Tổng tiền :";
+            this.label6.Text = "Tổng tiền:";
             // 
             // txt_tongTien
             // 
-            this.txt_tongTien.Location = new System.Drawing.Point(151, 93);
+            this.txt_tongTien.Location = new System.Drawing.Point(182, 71);
+            this.txt_tongTien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_tongTien.Name = "txt_tongTien";
-            this.txt_tongTien.Size = new System.Drawing.Size(265, 22);
+            this.txt_tongTien.Size = new System.Drawing.Size(309, 30);
             this.txt_tongTien.TabIndex = 47;
             // 
             // txt_tongSoLuong
             // 
-            this.txt_tongSoLuong.Location = new System.Drawing.Point(141, 139);
+            this.txt_tongSoLuong.Location = new System.Drawing.Point(182, 109);
+            this.txt_tongSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_tongSoLuong.Name = "txt_tongSoLuong";
-            this.txt_tongSoLuong.Size = new System.Drawing.Size(275, 22);
+            this.txt_tongSoLuong.Size = new System.Drawing.Size(309, 30);
             this.txt_tongSoLuong.TabIndex = 48;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 139);
+            this.label7.Location = new System.Drawing.Point(26, 112);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 16);
+            this.label7.Size = new System.Drawing.Size(129, 23);
             this.label7.TabIndex = 49;
-            this.label7.Text = "Tổng số lượng : ";
+            this.label7.Text = "Tổng số lượng: ";
             // 
             // txt_maPhieuNhap
             // 
-            this.txt_maPhieuNhap.Location = new System.Drawing.Point(151, 32);
+            this.txt_maPhieuNhap.Location = new System.Drawing.Point(182, 31);
+            this.txt_maPhieuNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_maPhieuNhap.Name = "txt_maPhieuNhap";
-            this.txt_maPhieuNhap.Size = new System.Drawing.Size(265, 22);
+            this.txt_maPhieuNhap.Size = new System.Drawing.Size(309, 30);
             this.txt_maPhieuNhap.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 35);
+            this.label2.Location = new System.Drawing.Point(26, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 16);
+            this.label2.Size = new System.Drawing.Size(130, 23);
             this.label2.TabIndex = 40;
-            this.label2.Text = "Mã phiếu nhập :";
+            this.label2.Text = "Mã phiếu nhập:";
             // 
             // groupBox4
             // 
@@ -117,23 +121,27 @@
             this.groupBox4.Controls.Add(this.txt_maPhieuNhap);
             this.groupBox4.Controls.Add(this.txt_tongTien);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Location = new System.Drawing.Point(276, 77);
+            this.groupBox4.Location = new System.Drawing.Point(185, 65);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(458, 179);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox4.Size = new System.Drawing.Size(515, 159);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin chi tiết phiếu nhập";
             // 
             // frmGoodsReceiptDetailsManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1030, 525);
+            this.ClientSize = new System.Drawing.Size(899, 590);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgv_Detail);
             this.Controls.Add(this.groupBox4);
+            this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmGoodsReceiptDetailsManagement";
-            this.Text = "frmGoodsReceiptDetailsManagement";
+            this.Text = "Chi Tiết Phiếu Nhập Hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Detail)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();

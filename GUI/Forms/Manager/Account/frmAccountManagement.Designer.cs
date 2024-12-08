@@ -28,45 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_title = new System.Windows.Forms.Label();
             this.dgv_taiKhoan = new System.Windows.Forms.DataGridView();
             this.txt_Search = new System.Windows.Forms.TextBox();
             this.btn_search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_taiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lb_title
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(312, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 34);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Quản lý tài khoản";
+            this.lb_title.AutoSize = true;
+            this.lb_title.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_title.Location = new System.Drawing.Point(328, 19);
+            this.lb_title.Name = "lb_title";
+            this.lb_title.Size = new System.Drawing.Size(314, 46);
+            this.lb_title.TabIndex = 36;
+            this.lb_title.Text = "Quản Lý Tài Khoản";
             // 
             // dgv_taiKhoan
             // 
             this.dgv_taiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_taiKhoan.Location = new System.Drawing.Point(25, 204);
+            this.dgv_taiKhoan.Location = new System.Drawing.Point(28, 154);
+            this.dgv_taiKhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_taiKhoan.Name = "dgv_taiKhoan";
             this.dgv_taiKhoan.RowHeadersWidth = 51;
             this.dgv_taiKhoan.RowTemplate.Height = 24;
-            this.dgv_taiKhoan.Size = new System.Drawing.Size(819, 326);
+            this.dgv_taiKhoan.Size = new System.Drawing.Size(935, 322);
             this.dgv_taiKhoan.TabIndex = 37;
             // 
             // txt_Search
             // 
-            this.txt_Search.Location = new System.Drawing.Point(25, 130);
+            this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Search.Location = new System.Drawing.Point(28, 94);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Search.Name = "txt_Search";
-            this.txt_Search.Size = new System.Drawing.Size(380, 22);
+            this.txt_Search.Size = new System.Drawing.Size(427, 30);
             this.txt_Search.TabIndex = 40;
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(452, 130);
+            this.btn_search.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.Location = new System.Drawing.Point(492, 88);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(75, 23);
+            this.btn_search.Size = new System.Drawing.Size(135, 41);
             this.btn_search.TabIndex = 41;
             this.btn_search.Text = "Tìm kiếm";
             this.btn_search.UseVisualStyleBackColor = true;
@@ -74,15 +79,17 @@
             // 
             // frmAccountManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 582);
+            this.ClientSize = new System.Drawing.Size(998, 504);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.dgv_taiKhoan);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lb_title);
+            this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAccountManagement";
-            this.Text = "frmAccountManagement";
+            this.Text = "Quản Lý Tài Khoản";
             this.Load += new System.EventHandler(this.frmAccountManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_taiKhoan)).EndInit();
             this.ResumeLayout(false);
@@ -92,7 +99,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_title;
         private System.Windows.Forms.DataGridView dgv_taiKhoan;
         private System.Windows.Forms.TextBox txt_Search;
         private System.Windows.Forms.Button btn_search;

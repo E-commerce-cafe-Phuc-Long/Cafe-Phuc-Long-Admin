@@ -30,8 +30,25 @@ namespace BLL.Services.GoodsReceiptDetails
              { return _repository.Insert(maPhieuNhap,p); }
 
 
+        public void UpdateMaterialQuantity(string maNL, decimal? soLuongNhap)
+        {
+            // Lấy thông tin nguyên liệu theo mã nguyên liệu (maNL)
+            var material = _repository.GetMaterialById(maNL);
 
+            // Kiểm tra nếu material không tồn tại
+            if (material == null)
+            {
+                throw new Exception("Nguyên liệu không tồn tại!");
+            }
 
+            // Nếu soLuong là null, gán giá trị mặc định là 0
+            material.soLuong = (material.soLuong ?? 0) + (soLuongNhap ?? 0);  // Cộng thêm soLuongNhap vào soLuong
+
+            // Cập nhật thông tin nguyên liệu vào kho dữ liệu
+            _repository.Update(material);
+        }
+        public void Update(NguyenLieu material)
+        { _repository.Update(material); }
 
 
     }

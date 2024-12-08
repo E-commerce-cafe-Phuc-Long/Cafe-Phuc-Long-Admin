@@ -14,6 +14,7 @@ namespace DAL.Repositories.GoodsReceiptDetails
         dynamic GetDetailsByGoodsReceiptId(string maPhieuNhap);
         bool Insert(string maPhieuNhap,ChiTietPhieuNhap p);
 
-
+        NguyenLieu GetMaterialById(string materialId);
+        void Update(NguyenLieu material);
     }
 }

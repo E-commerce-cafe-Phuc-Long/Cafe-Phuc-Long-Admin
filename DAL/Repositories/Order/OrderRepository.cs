@@ -52,7 +52,7 @@ namespace DAL.Repositories.Order
         {
             try
             {
-                var order = _context.DonHangs.SingleOrDefault(p => p.maDH == maDH);
+                DonHang order = _context.DonHangs.SingleOrDefault(p => p.maDH == maDH);
 
                 if (order != null)
                 {
